@@ -5,79 +5,119 @@
 </td></tr><tr><td>
 ********** Mapped Logic **********
 </td></tr><tr><td>
-</td></tr><tr><td>
-N_PZ_135 <= ((NOT lineCount(8) AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(1) AND columnCount(5) AND NOT columnCount(7) AND columnCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT lineCount(8) AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(3) AND columnCount(5) AND NOT columnCount(7) AND columnCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT lineCount(8) AND columnCount(4) AND NOT columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(3) AND columnCount(5) AND NOT columnCount(7) AND columnCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9)));
-</td></tr><tr><td>
 FDCPE_columnCount0: FDCPE port map (columnCount(0),columnCount_D(0),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_D(0) <= (NOT csync AND NOT columnCount(0));
 </td></tr><tr><td>
 FDCPE_columnCount1: FDCPE port map (columnCount(1),columnCount_D(1),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_D(1) <= ((NOT csync AND columnCount(0) AND NOT columnCount(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND NOT columnCount(0) AND columnCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_D(1) <= ((NOT csync AND columnCount(1) AND NOT columnCount(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND NOT columnCount(1) AND columnCount(0)));
 </td></tr><tr><td>
 FTCPE_columnCount2: FTCPE port map (columnCount(2),columnCount_T(2),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(2) <= ((csync AND columnCount(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(0) AND columnCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(1) AND columnCount(0)));
 </td></tr><tr><td>
 FTCPE_columnCount3: FTCPE port map (columnCount(3),columnCount_T(3),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(3) <= ((csync AND columnCount(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(2) AND columnCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(3) <= ((columnCount(3) AND csync)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(1) AND columnCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(2)));
 </td></tr><tr><td>
 FTCPE_columnCount4: FTCPE port map (columnCount(4),columnCount_T(4),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(4) <= ((csync AND columnCount(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(2) AND columnCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2)));
 </td></tr><tr><td>
 FTCPE_columnCount5: FTCPE port map (columnCount(5),columnCount_T(5),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(5) <= ((csync AND columnCount(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(1) AND columnCount(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2) AND columnCount(4)));
 </td></tr><tr><td>
 FTCPE_columnCount6: FTCPE port map (columnCount(6),columnCount_T(6),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(6) <= ((csync AND columnCount(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(1) AND columnCount(3) AND columnCount(5)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2) AND columnCount(4) AND columnCount(5)));
 </td></tr><tr><td>
 FTCPE_columnCount7: FTCPE port map (columnCount(7),columnCount_T(7),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(7) <= ((csync AND columnCount(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(1) AND columnCount(3) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2) AND columnCount(4) AND columnCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6)));
 </td></tr><tr><td>
 FTCPE_columnCount8: FTCPE port map (columnCount(8),columnCount_T(8),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(8) <= ((csync AND columnCount(8))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(1) AND columnCount(3) AND columnCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(7) AND columnCount(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND columnCount(7)));
 </td></tr><tr><td>
 FTCPE_columnCount9: FTCPE port map (columnCount(9),columnCount_T(9),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(9) <= ((csync AND columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(4) AND columnCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(1) AND columnCount(3) AND columnCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(7) AND columnCount(6) AND columnCount(8)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0) AND columnCount(2) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND columnCount(7) AND columnCount(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-gate_b <= NOT io(32);
+gate_b <= NOT ('0');
 </td></tr><tr><td>
 </td></tr><tr><td>
-gate_w <= NOT io(31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT lineCount(2) AND NOT lineCount(3) AND NOT lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(5) AND NOT lineCount(6) AND lineCount(7) AND N_PZ_135)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND lineCount(0) AND lineCount(3) AND 
+gate_w <= ((columnCount(3) AND NOT columnCount(1) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(1) AND NOT lineCount(3) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(1) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6) AND NOT lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(1) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(3) AND NOT lineCount(2) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(1) AND NOT lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(3) AND NOT lineCount(2) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(2) AND NOT lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(3) AND NOT lineCount(2) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT columnCount(3) AND columnCount(2) AND NOT lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(3) AND NOT lineCount(2) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(1) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(0) AND lineCount(3) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(1) AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(2) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(2) AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(2) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT columnCount(3) AND columnCount(1) AND columnCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(1) AND NOT lineCount(3) AND NOT lineCount(2) AND NOT lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(5) AND NOT lineCount(6) AND lineCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT columnCount(3) AND columnCount(2) AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(2) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT columnCount(3) AND columnCount(1) AND columnCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(0) AND lineCount(3) AND lineCount(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(4) AND lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_135)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND lineCount(1) AND lineCount(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(4) AND lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_135));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(8) AND columnCount(4) AND columnCount(5) AND columnCount(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(7) AND NOT columnCount(8) AND NOT lineCount(9) AND NOT columnCount(9)));
 </td></tr><tr><td>
 </td></tr><tr><td>
 io(27) <= vsync;
@@ -104,49 +144,49 @@ FDCPE_lineCount0: FDCPE port map (lineCount(0),lineCount_D(0),csync,'0','0','1')
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_D(0) <= (NOT vsync AND NOT lineCount(0));
 </td></tr><tr><td>
 FDCPE_lineCount1: FDCPE port map (lineCount(1),lineCount_D(1),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_D(1) <= ((NOT vsync AND lineCount(0) AND NOT lineCount(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND NOT lineCount(0) AND lineCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_D(1) <= ((lineCount(1) AND NOT vsync AND NOT lineCount(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT lineCount(1) AND NOT vsync AND lineCount(0)));
 </td></tr><tr><td>
 FTCPE_lineCount2: FTCPE port map (lineCount(2),lineCount_T(2),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(2) <= ((lineCount(2) AND vsync)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND lineCount(0) AND lineCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(2) <= ((vsync AND lineCount(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0)));
 </td></tr><tr><td>
 FTCPE_lineCount3: FTCPE port map (lineCount(3),lineCount_T(3),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(3) <= ((vsync AND lineCount(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(2)));
 </td></tr><tr><td>
 FTCPE_lineCount4: FTCPE port map (lineCount(4),lineCount_T(4),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(4) <= ((vsync AND lineCount(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2)));
 </td></tr><tr><td>
 FTCPE_lineCount5: FTCPE port map (lineCount(5),lineCount_T(5),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(5) <= ((vsync AND lineCount(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3) AND lineCount(4)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4)));
 </td></tr><tr><td>
 FTCPE_lineCount6: FTCPE port map (lineCount(6),lineCount_T(6),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(6) <= ((vsync AND lineCount(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3) AND lineCount(4) AND lineCount(5)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5)));
 </td></tr><tr><td>
 FTCPE_lineCount7: FTCPE port map (lineCount(7),lineCount_T(7),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(7) <= ((vsync AND lineCount(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6)));
 </td></tr><tr><td>
 FTCPE_lineCount8: FTCPE port map (lineCount(8),lineCount_T(8),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(8) <= ((vsync AND lineCount(8))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6) AND lineCount(7)));
 </td></tr><tr><td>
 FTCPE_lineCount9: FTCPE port map (lineCount(9),lineCount_T(9),csync,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(9) <= ((vsync AND lineCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND NOT vsync AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6) AND lineCount(7) AND lineCount(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>

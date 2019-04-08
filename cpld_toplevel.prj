@@ -1,4 +1,3 @@
 verilog work "enDetector.v"
 verilog work "counter.v"
-verilog work "comp.v"
 verilog work "cpld_toplevel.v"
