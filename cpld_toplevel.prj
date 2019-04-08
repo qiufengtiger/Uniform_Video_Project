@@ -1,3 +1,4 @@
 verilog work "enDetector.v"
 verilog work "counter.v"
+verilog work "crosshair_module.v"
 verilog work "cpld_toplevel.v"

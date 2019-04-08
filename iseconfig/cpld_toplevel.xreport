@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-04-07T20:44:08</DateModified>
+  <DateModified>2019-04-08T19:05:58</DateModified>
   <ModuleName>cpld_toplevel</ModuleName>
-  <SummaryTimeStamp>2019-04-07T20:35:41</SummaryTimeStamp>
+  <SummaryTimeStamp>2019-04-08T18:59:24</SummaryTimeStamp>
   <SavedFilePath>P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/iseconfig/cpld_toplevel.xreport</SavedFilePath>
   <ImplementationReportsDirectory>P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project\</ImplementationReportsDirectory>
   <DateInitialized>2019-04-02T15:31:08</DateInitialized>

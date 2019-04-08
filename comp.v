@@ -1,5 +1,6 @@
 // result = 1 if t1 <= i1 <= t2
 // result = 0 otherwise 
+//no longer used
 module comp(
 	input [9 : 0] i1,
 	input [9 : 0] t1,
