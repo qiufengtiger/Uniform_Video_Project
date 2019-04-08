@@ -1,0 +1,1599 @@
+NDS Database:  version P.20131013
+
+NDS_INFO | xbr | 2C64A44VQ | XC2C64A-5-VQ44
+
+DEVICE | 2C64A | 2C64A44VQ | 
+
+NETWORK | cpld_toplevel | 0 | 0 | 16390 | 0
+
+INPUT_INSTANCE | 0 | 0 | NULL | burst_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | burst | 3052 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | burst_II/UIM | 3191 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | burst_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | clk4mhz_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | clk4mhz | 3053 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 3 | 5 | II_FCLK
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+
+INPUT_INSTANCE | 0 | 0 | NULL | csync_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | csync | 3054 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+
+INPUT_INSTANCE | 0 | 0 | NULL | field_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | field | 3055 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | field_II/UIM | 3198 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | field_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | NULL | gate_b_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | io<32>_II/UIM | 3060 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<32>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | gate_b_MC.Q | 3062 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | gate_b_MC.Q | gate_b_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | gate_b_MC.SI | gate_b_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | io<32>_II/UIM | 3060 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<32>_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gate_b_MC.D1 | 3057 | ? | 0 | 0 | gate_b_MC | NULL | NULL | gate_b_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | io<32>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gate_b_MC.D2 | 3058 | ? | 0 | 0 | gate_b_MC | NULL | NULL | gate_b_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | gate_b_MC.REG | gate_b_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gate_b_MC.D | 3056 | ? | 0 | 0 | gate_b_MC | NULL | NULL | gate_b_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gate_b_MC.Q | 3061 | ? | 0 | 0 | gate_b_MC | NULL | NULL | gate_b_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | io<32>_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | io<32> | 3059 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | io<32>_II/UIM | 3060 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<32>_II | 0 | 5 | II_IMUX
+
+OUTPUT_INSTANCE | 0 | gate_b | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | gate_b_MC.Q | 3062 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | gate_b_MC.Q | gate_b_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | gate_b | 3063 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | gate_b | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | gate_w_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 10 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | io<31>_II/UIM | 3068 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<31>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_135 | 3113 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | N_PZ_135_MC.Q | N_PZ_135_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | gate_w_MC.Q | 3180 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | gate_w_MC.Q | gate_w_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | gate_w_MC.SI | gate_w_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | io<31>_II/UIM | 3068 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<31>_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | N_PZ_135 | 3113 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | N_PZ_135_MC.Q | N_PZ_135_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | gate_w_MC.D1 | 3065 | ? | 0 | 0 | gate_w_MC | NULL | NULL | gate_w_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_FALSE | io<31>_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | gate_w_MC.D2 | 3066 | ? | 0 | 0 | gate_w_MC | NULL | NULL | gate_w_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 7 | IV_FALSE | lineCount<2> | IV_FALSE | lineCount<3> | IV_FALSE | lineCount<4> | IV_FALSE | lineCount<5> | IV_FALSE | lineCount<6> | IV_TRUE | lineCount<7> | IV_TRUE | N_PZ_135
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_FALSE | lineCount<7> | IV_TRUE | N_PZ_135
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_FALSE | lineCount<7> | IV_TRUE | N_PZ_135
+
+SRFF_INSTANCE | gate_w_MC.REG | gate_w_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | gate_w_MC.D | 3064 | ? | 0 | 0 | gate_w_MC | NULL | NULL | gate_w_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | gate_w_MC.Q | 3179 | ? | 0 | 0 | gate_w_MC | NULL | NULL | gate_w_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | io<31>_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | io<31> | 3067 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | io<31>_II/UIM | 3068 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<31>_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<2>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<2>_MC.SI | lineCount<2>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<2>_MC.D1 | 3073 | ? | 0 | 0 | lineCount<2>_MC | NULL | NULL | lineCount<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<2>_MC.D2 | 3072 | ? | 0 | 0 | lineCount<2>_MC | NULL | NULL | lineCount<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | lineCount<2> | IV_TRUE | vsync_II/UIM
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1>
+
+SRFF_INSTANCE | lineCount<2>_MC.REG | lineCount<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<2>_MC.D | 3071 | ? | 0 | 0 | lineCount<2>_MC | NULL | NULL | lineCount<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<2>_MC.Q | 3070 | ? | 0 | 0 | lineCount<2>_MC | NULL | NULL | lineCount<2>_MC.REG | 0 | 8 | SRFF_Q
+
+INPUT_INSTANCE | 0 | 0 | NULL | vsync_II | cpld_toplevel_COPY_0_COPY_0 | 8 | 1 | 1
+INPUT_NODE_TYPE | 0 | 5 | II_IN
+NODE | vsync | 3074 | PI | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | NULL | 0 | 100 | NOTYPE
+OUTPUT_NODE_TYPE | 0 | 5 | II_IMUX
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+
+MACROCELL_INSTANCE | PrldLow | lineCount<0>_MC | cpld_toplevel_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<0>_MC.SI | lineCount<0>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<0>_MC.D1 | 3079 | ? | 0 | 0 | lineCount<0>_MC | NULL | NULL | lineCount<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | vsync_II/UIM | IV_FALSE | lineCount<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<0>_MC.D2 | 3080 | ? | 0 | 0 | lineCount<0>_MC | NULL | NULL | lineCount<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | lineCount<0>_MC.REG | lineCount<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<0>_MC.D | 3078 | ? | 0 | 0 | lineCount<0>_MC | NULL | NULL | lineCount<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<0>_MC.Q | 3077 | ? | 0 | 0 | lineCount<0>_MC | NULL | NULL | lineCount<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | lineCount<1>_MC | cpld_toplevel_COPY_0_COPY_0 | 1024 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<1>_MC.SI | lineCount<1>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<1>_MC.D1 | 3087 | ? | 0 | 0 | lineCount<1>_MC | NULL | NULL | lineCount<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<1>_MC.D2 | 3086 | ? | 0 | 0 | lineCount<1>_MC | NULL | NULL | lineCount<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_FALSE | lineCount<1>
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_FALSE | lineCount<0> | IV_TRUE | lineCount<1>
+
+SRFF_INSTANCE | lineCount<1>_MC.REG | lineCount<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<1>_MC.D | 3085 | ? | 0 | 0 | lineCount<1>_MC | NULL | NULL | lineCount<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<1>_MC.Q | 3084 | ? | 0 | 0 | lineCount<1>_MC | NULL | NULL | lineCount<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<3>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<3>_MC.SI | lineCount<3>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<3>_MC.D1 | 3092 | ? | 0 | 0 | lineCount<3>_MC | NULL | NULL | lineCount<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<3>_MC.D2 | 3091 | ? | 0 | 0 | lineCount<3>_MC | NULL | NULL | lineCount<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<3>
+SPPTERM | 4 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1>
+
+SRFF_INSTANCE | lineCount<3>_MC.REG | lineCount<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<3>_MC.D | 3090 | ? | 0 | 0 | lineCount<3>_MC | NULL | NULL | lineCount<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<3>_MC.Q | 3089 | ? | 0 | 0 | lineCount<3>_MC | NULL | NULL | lineCount<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<4>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<4>_MC.SI | lineCount<4>_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<4>_MC.D1 | 3097 | ? | 0 | 0 | lineCount<4>_MC | NULL | NULL | lineCount<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<4>_MC.D2 | 3096 | ? | 0 | 0 | lineCount<4>_MC | NULL | NULL | lineCount<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<4>
+SPPTERM | 5 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3>
+
+SRFF_INSTANCE | lineCount<4>_MC.REG | lineCount<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<4>_MC.D | 3095 | ? | 0 | 0 | lineCount<4>_MC | NULL | NULL | lineCount<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<4>_MC.Q | 3094 | ? | 0 | 0 | lineCount<4>_MC | NULL | NULL | lineCount<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<5>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<5>_MC.SI | lineCount<5>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<5>_MC.D1 | 3102 | ? | 0 | 0 | lineCount<5>_MC | NULL | NULL | lineCount<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<5>_MC.D2 | 3101 | ? | 0 | 0 | lineCount<5>_MC | NULL | NULL | lineCount<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<5>
+SPPTERM | 6 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4>
+
+SRFF_INSTANCE | lineCount<5>_MC.REG | lineCount<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<5>_MC.D | 3100 | ? | 0 | 0 | lineCount<5>_MC | NULL | NULL | lineCount<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<5>_MC.Q | 3099 | ? | 0 | 0 | lineCount<5>_MC | NULL | NULL | lineCount<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<6>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<6>_MC.SI | lineCount<6>_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<6>_MC.D1 | 3107 | ? | 0 | 0 | lineCount<6>_MC | NULL | NULL | lineCount<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<6>_MC.D2 | 3106 | ? | 0 | 0 | lineCount<6>_MC | NULL | NULL | lineCount<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<6>
+SPPTERM | 7 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5>
+
+SRFF_INSTANCE | lineCount<6>_MC.REG | lineCount<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<6>_MC.D | 3105 | ? | 0 | 0 | lineCount<6>_MC | NULL | NULL | lineCount<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<6>_MC.Q | 3104 | ? | 0 | 0 | lineCount<6>_MC | NULL | NULL | lineCount<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<7>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 10 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<7>_MC.SI | lineCount<7>_MC | 0 | 9 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<7>_MC.D1 | 3112 | ? | 0 | 0 | lineCount<7>_MC | NULL | NULL | lineCount<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<7>_MC.D2 | 3111 | ? | 0 | 0 | lineCount<7>_MC | NULL | NULL | lineCount<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<7>
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6>
+
+SRFF_INSTANCE | lineCount<7>_MC.REG | lineCount<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<7>_MC.D | 3110 | ? | 0 | 0 | lineCount<7>_MC | NULL | NULL | lineCount<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<7>_MC.Q | 3109 | ? | 0 | 0 | lineCount<7>_MC | NULL | NULL | lineCount<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | NULL | N_PZ_135_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<9> | 3169 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<9>_MC.Q | lineCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<9> | 3174 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<9>_MC.Q | columnCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | N_PZ_135 | 3113 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | N_PZ_135_MC.Q | N_PZ_135_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | N_PZ_135_MC.SI | N_PZ_135_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<9> | 3169 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<9>_MC.Q | lineCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<9> | 3174 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<9>_MC.Q | columnCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | N_PZ_135_MC.D1 | 3117 | ? | 0 | 0 | N_PZ_135_MC | NULL | NULL | N_PZ_135_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | N_PZ_135_MC.D2 | 3116 | ? | 0 | 0 | N_PZ_135_MC | NULL | NULL | N_PZ_135_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_FALSE | columnCount<1> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_FALSE | columnCount<3> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_FALSE | columnCount<2> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+
+SRFF_INSTANCE | N_PZ_135_MC.REG | N_PZ_135_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | N_PZ_135_MC.D | 3115 | ? | 0 | 0 | N_PZ_135_MC | NULL | NULL | N_PZ_135_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | N_PZ_135_MC.Q | 3114 | ? | 0 | 0 | N_PZ_135_MC | NULL | NULL | N_PZ_135_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<8>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<8>_MC.SI | lineCount<8>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<8>_MC.D1 | 3122 | ? | 0 | 0 | lineCount<8>_MC | NULL | NULL | lineCount<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<8>_MC.D2 | 3121 | ? | 0 | 0 | lineCount<8>_MC | NULL | NULL | lineCount<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<8>
+SPPTERM | 9 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_TRUE | lineCount<7>
+
+SRFF_INSTANCE | lineCount<8>_MC.REG | lineCount<8>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<8>_MC.D | 3120 | ? | 0 | 0 | lineCount<8>_MC | NULL | NULL | lineCount<8>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<8>_MC.Q | 3119 | ? | 0 | 0 | lineCount<8>_MC | NULL | NULL | lineCount<8>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<4>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 7 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<4>_MC.SI | columnCount<4>_MC | 0 | 6 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<4>_MC.D1 | 3127 | ? | 0 | 0 | columnCount<4>_MC | NULL | NULL | columnCount<4>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<4>_MC.D2 | 3126 | ? | 0 | 0 | columnCount<4>_MC | NULL | NULL | columnCount<4>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<4>
+SPPTERM | 5 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3>
+
+SRFF_INSTANCE | columnCount<4>_MC.REG | columnCount<4>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<4>_MC.D | 3125 | ? | 0 | 0 | columnCount<4>_MC | NULL | NULL | columnCount<4>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<4>_MC.Q | 3124 | ? | 0 | 0 | columnCount<4>_MC | NULL | NULL | columnCount<4>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<2>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 5 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<2>_MC.SI | columnCount<2>_MC | 0 | 4 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<2>_MC.D1 | 3132 | ? | 0 | 0 | columnCount<2>_MC | NULL | NULL | columnCount<2>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<2>_MC.D2 | 3131 | ? | 0 | 0 | columnCount<2>_MC | NULL | NULL | columnCount<2>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<2>
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1>
+
+SRFF_INSTANCE | columnCount<2>_MC.REG | columnCount<2>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<2>_MC.D | 3130 | ? | 0 | 0 | columnCount<2>_MC | NULL | NULL | columnCount<2>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<2>_MC.Q | 3129 | ? | 0 | 0 | columnCount<2>_MC | NULL | NULL | columnCount<2>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | columnCount<0>_MC | cpld_toplevel_COPY_0_COPY_0 | 1024 | 3 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<0>_MC.SI | columnCount<0>_MC | 0 | 2 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<0>_MC.D1 | 3136 | ? | 0 | 0 | columnCount<0>_MC | NULL | NULL | columnCount<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 2 | IV_FALSE | csync_II/UIM | IV_FALSE | columnCount<0>
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<0>_MC.D2 | 3137 | ? | 0 | 0 | columnCount<0>_MC | NULL | NULL | columnCount<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | columnCount<0>_MC.REG | columnCount<0>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<0>_MC.D | 3135 | ? | 0 | 0 | columnCount<0>_MC | NULL | NULL | columnCount<0>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<0>_MC.Q | 3134 | ? | 0 | 0 | columnCount<0>_MC | NULL | NULL | columnCount<0>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow | columnCount<1>_MC | cpld_toplevel_COPY_0_COPY_0 | 1024 | 4 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<1>_MC.SI | columnCount<1>_MC | 0 | 3 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<1>_MC.D1 | 3143 | ? | 0 | 0 | columnCount<1>_MC | NULL | NULL | columnCount<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<1>_MC.D2 | 3142 | ? | 0 | 0 | columnCount<1>_MC | NULL | NULL | columnCount<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<0> | IV_FALSE | columnCount<1>
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_FALSE | columnCount<0> | IV_TRUE | columnCount<1>
+
+SRFF_INSTANCE | columnCount<1>_MC.REG | columnCount<1>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<1>_MC.D | 3141 | ? | 0 | 0 | columnCount<1>_MC | NULL | NULL | columnCount<1>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<1>_MC.Q | 3140 | ? | 0 | 0 | columnCount<1>_MC | NULL | NULL | columnCount<1>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<3>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 6 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<3>_MC.SI | columnCount<3>_MC | 0 | 5 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<3>_MC.D1 | 3148 | ? | 0 | 0 | columnCount<3>_MC | NULL | NULL | columnCount<3>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<3>_MC.D2 | 3147 | ? | 0 | 0 | columnCount<3>_MC | NULL | NULL | columnCount<3>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<3>
+SPPTERM | 4 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1>
+
+SRFF_INSTANCE | columnCount<3>_MC.REG | columnCount<3>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<3>_MC.D | 3146 | ? | 0 | 0 | columnCount<3>_MC | NULL | NULL | columnCount<3>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<3>_MC.Q | 3145 | ? | 0 | 0 | columnCount<3>_MC | NULL | NULL | columnCount<3>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<5>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 8 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<5>_MC.SI | columnCount<5>_MC | 0 | 7 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<5>_MC.D1 | 3153 | ? | 0 | 0 | columnCount<5>_MC | NULL | NULL | columnCount<5>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<5>_MC.D2 | 3152 | ? | 0 | 0 | columnCount<5>_MC | NULL | NULL | columnCount<5>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<5>
+SPPTERM | 6 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3>
+
+SRFF_INSTANCE | columnCount<5>_MC.REG | columnCount<5>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<5>_MC.D | 3151 | ? | 0 | 0 | columnCount<5>_MC | NULL | NULL | columnCount<5>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<5>_MC.Q | 3150 | ? | 0 | 0 | columnCount<5>_MC | NULL | NULL | columnCount<5>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<7>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 10 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<7>_MC.SI | columnCount<7>_MC | 0 | 9 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<7>_MC.D1 | 3158 | ? | 0 | 0 | columnCount<7>_MC | NULL | NULL | columnCount<7>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<7>_MC.D2 | 3157 | ? | 0 | 0 | columnCount<7>_MC | NULL | NULL | columnCount<7>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<7>
+SPPTERM | 8 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<6>
+
+SRFF_INSTANCE | columnCount<7>_MC.REG | columnCount<7>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<7>_MC.D | 3156 | ? | 0 | 0 | columnCount<7>_MC | NULL | NULL | columnCount<7>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<7>_MC.Q | 3155 | ? | 0 | 0 | columnCount<7>_MC | NULL | NULL | columnCount<7>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<6>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 9 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<6>_MC.SI | columnCount<6>_MC | 0 | 8 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<6>_MC.D1 | 3163 | ? | 0 | 0 | columnCount<6>_MC | NULL | NULL | columnCount<6>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<6>_MC.D2 | 3162 | ? | 0 | 0 | columnCount<6>_MC | NULL | NULL | columnCount<6>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<6>
+SPPTERM | 7 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5>
+
+SRFF_INSTANCE | columnCount<6>_MC.REG | columnCount<6>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<6>_MC.D | 3161 | ? | 0 | 0 | columnCount<6>_MC | NULL | NULL | columnCount<6>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<6>_MC.Q | 3160 | ? | 0 | 0 | columnCount<6>_MC | NULL | NULL | columnCount<6>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<8>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 11 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<8>_MC.SI | columnCount<8>_MC | 0 | 10 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<8>_MC.D1 | 3168 | ? | 0 | 0 | columnCount<8>_MC | NULL | NULL | columnCount<8>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<8>_MC.D2 | 3167 | ? | 0 | 0 | columnCount<8>_MC | NULL | NULL | columnCount<8>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<8>
+SPPTERM | 9 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<7> | IV_TRUE | columnCount<6>
+
+SRFF_INSTANCE | columnCount<8>_MC.REG | columnCount<8>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<8>_MC.D | 3166 | ? | 0 | 0 | columnCount<8>_MC | NULL | NULL | columnCount<8>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<8>_MC.Q | 3165 | ? | 0 | 0 | columnCount<8>_MC | NULL | NULL | columnCount<8>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | lineCount<9>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<9> | 3169 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<9>_MC.Q | lineCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | lineCount<9> | 3169 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<9>_MC.Q | lineCount<9>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | lineCount<9>_MC.SI | lineCount<9>_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<9> | 3169 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<9>_MC.Q | lineCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<2> | 3069 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<2>_MC.Q | lineCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<0> | 3076 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<0>_MC.Q | lineCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<1> | 3083 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<1>_MC.Q | lineCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<3> | 3088 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<3>_MC.Q | lineCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<4> | 3093 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<4>_MC.Q | lineCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<5> | 3098 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<5>_MC.Q | lineCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<6> | 3103 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<6>_MC.Q | lineCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<7> | 3108 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<7>_MC.Q | lineCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | lineCount<8> | 3118 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | lineCount<8>_MC.Q | lineCount<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | lineCount<9>_MC.D1 | 3173 | ? | 0 | 0 | lineCount<9>_MC | NULL | NULL | lineCount<9>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | lineCount<9>_MC.D2 | 3172 | ? | 0 | 0 | lineCount<9>_MC | NULL | NULL | lineCount<9>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<9>
+SPPTERM | 10 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_TRUE | lineCount<7> | IV_TRUE | lineCount<8>
+
+SRFF_INSTANCE | lineCount<9>_MC.REG | lineCount<9>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | lineCount<9>_MC.D | 3171 | ? | 0 | 0 | lineCount<9>_MC | NULL | NULL | lineCount<9>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | lineCount<9>_MC.Q | 3170 | ? | 0 | 0 | lineCount<9>_MC | NULL | NULL | lineCount<9>_MC.REG | 0 | 8 | SRFF_Q
+
+MACROCELL_INSTANCE | PrldLow+Tff | columnCount<9>_MC | cpld_toplevel_COPY_0_COPY_0 | 5120 | 12 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<9> | 3174 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<9>_MC.Q | columnCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 1 | 0 | MC_UIM
+NODE | columnCount<9> | 3174 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<9>_MC.Q | columnCount<9>_MC | 1 | 0 | MC_UIM
+
+SIGNAL_INSTANCE | columnCount<9>_MC.SI | columnCount<9>_MC | 0 | 11 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<9> | 3174 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<9>_MC.Q | columnCount<9>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<4> | 3123 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<4>_MC.Q | columnCount<4>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<2> | 3128 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<2>_MC.Q | columnCount<2>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<0> | 3133 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<0>_MC.Q | columnCount<0>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<1> | 3139 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<1>_MC.Q | columnCount<1>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<3> | 3144 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<3>_MC.Q | columnCount<3>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<5> | 3149 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<5>_MC.Q | columnCount<5>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<7> | 3154 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<7>_MC.Q | columnCount<7>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<6> | 3159 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<6>_MC.Q | columnCount<6>_MC | 1 | 0 | MC_UIM
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | columnCount<8> | 3164 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | columnCount<8>_MC.Q | columnCount<8>_MC | 1 | 0 | MC_UIM
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | columnCount<9>_MC.D1 | 3178 | ? | 0 | 0 | columnCount<9>_MC | NULL | NULL | columnCount<9>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | columnCount<9>_MC.D2 | 3177 | ? | 0 | 0 | columnCount<9>_MC | NULL | NULL | columnCount<9>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<9>
+SPPTERM | 10 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<7> | IV_TRUE | columnCount<6> | IV_TRUE | columnCount<8>
+
+SRFF_INSTANCE | columnCount<9>_MC.REG | columnCount<9>_MC | 0 | 2 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | columnCount<9>_MC.D | 3176 | ? | 0 | 0 | columnCount<9>_MC | NULL | NULL | columnCount<9>_MC.XOR | 0 | 7 | ALU_F
+INPUT_NODE_TYPE | 1 | 8 | SRFF_C
+NODE | clk4mhz_II/FCLK | 3138 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | clk4mhz_II | 3 | 5 | II_FCLK
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | columnCount<9>_MC.Q | 3175 | ? | 0 | 0 | columnCount<9>_MC | NULL | NULL | columnCount<9>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | gate_w | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | gate_w_MC.Q | 3180 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | gate_w_MC.Q | gate_w_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | gate_w | 3181 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | gate_w | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | io<27>_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io<27>_MC.Q | 3186 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<27>_MC.Q | io<27>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io<27>_MC.SI | io<27>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | vsync_II/UIM | 3075 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | vsync_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io<27>_MC.D1 | 3183 | ? | 0 | 0 | io<27>_MC | NULL | NULL | io<27>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | vsync_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io<27>_MC.D2 | 3184 | ? | 0 | 0 | io<27>_MC | NULL | NULL | io<27>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io<27>_MC.REG | io<27>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io<27>_MC.D | 3182 | ? | 0 | 0 | io<27>_MC | NULL | NULL | io<27>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io<27>_MC.Q | 3185 | ? | 0 | 0 | io<27>_MC | NULL | NULL | io<27>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io<27> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io<27>_MC.Q | 3186 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<27>_MC.Q | io<27>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io<27> | 3187 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<27> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | io<28>_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | burst_II/UIM | 3191 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | burst_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io<28>_MC.Q | 3193 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<28>_MC.Q | io<28>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io<28>_MC.SI | io<28>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | burst_II/UIM | 3191 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | burst_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io<28>_MC.D1 | 3189 | ? | 0 | 0 | io<28>_MC | NULL | NULL | io<28>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | burst_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io<28>_MC.D2 | 3190 | ? | 0 | 0 | io<28>_MC | NULL | NULL | io<28>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io<28>_MC.REG | io<28>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io<28>_MC.D | 3188 | ? | 0 | 0 | io<28>_MC | NULL | NULL | io<28>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io<28>_MC.Q | 3192 | ? | 0 | 0 | io<28>_MC | NULL | NULL | io<28>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io<28> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io<28>_MC.Q | 3193 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<28>_MC.Q | io<28>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io<28> | 3194 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<28> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | io<29>_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | field_II/UIM | 3198 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | field_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io<29>_MC.Q | 3200 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<29>_MC.Q | io<29>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io<29>_MC.SI | io<29>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | field_II/UIM | 3198 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | field_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io<29>_MC.D1 | 3196 | ? | 0 | 0 | io<29>_MC | NULL | NULL | io<29>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | field_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io<29>_MC.D2 | 3197 | ? | 0 | 0 | io<29>_MC | NULL | NULL | io<29>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io<29>_MC.REG | io<29>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io<29>_MC.D | 3195 | ? | 0 | 0 | io<29>_MC | NULL | NULL | io<29>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io<29>_MC.Q | 3199 | ? | 0 | 0 | io<29>_MC | NULL | NULL | io<29>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io<29> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io<29>_MC.Q | 3200 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<29>_MC.Q | io<29>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io<29> | 3201 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<29> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | io<30>_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io<30>_MC.Q | 3206 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<30>_MC.Q | io<30>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io<30>_MC.SI | io<30>_MC | 0 | 1 | 2
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io<30>_MC.D1 | 3203 | ? | 0 | 0 | io<30>_MC | NULL | NULL | io<30>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io<30>_MC.D2 | 3204 | ? | 0 | 0 | io<30>_MC | NULL | NULL | io<30>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io<30>_MC.REG | io<30>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io<30>_MC.D | 3202 | ? | 0 | 0 | io<30>_MC | NULL | NULL | io<30>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io<30>_MC.Q | 3205 | ? | 0 | 0 | io<30>_MC | NULL | NULL | io<30>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io<30> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io<30>_MC.Q | 3206 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<30>_MC.Q | io<30>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io<30> | 3207 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<30> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | NULL | io<33>_MC | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | io<33>_MC.Q | 3212 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<33>_MC.Q | io<33>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | io<33>_MC.SI | io<33>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | io<33>_MC.D1 | 3210 | ? | 0 | 0 | io<33>_MC | NULL | NULL | io<33>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | io<33>_MC.D2 | 3209 | ? | 0 | 0 | io<33>_MC | NULL | NULL | io<33>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | io<33>_MC.REG | io<33>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | io<33>_MC.D | 3208 | ? | 0 | 0 | io<33>_MC | NULL | NULL | io<33>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | io<33>_MC.Q | 3211 | ? | 0 | 0 | io<33>_MC | NULL | NULL | io<33>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | io<33> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | io<33>_MC.Q | 3212 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | io<33>_MC.Q | io<33>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | io<33> | 3213 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | io<33> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | led<0>_MC | cpld_toplevel_COPY_0_COPY_0 | 256 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | led<0>_MC.Q | 3218 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | led<0>_MC.Q | led<0>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | led<0>_MC.SI | led<0>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | led<0>_MC.D1 | 3216 | ? | 0 | 0 | led<0>_MC | NULL | NULL | led<0>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | led<0>_MC.D2 | 3215 | ? | 0 | 0 | led<0>_MC | NULL | NULL | led<0>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | led<0>_MC.REG | led<0>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | led<0>_MC.D | 3214 | ? | 0 | 0 | led<0>_MC | NULL | NULL | led<0>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | led<0>_MC.Q | 3217 | ? | 0 | 0 | led<0>_MC | NULL | NULL | led<0>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | led<0> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | led<0>_MC.Q | 3218 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | led<0>_MC.Q | led<0>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | led<0> | 3219 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | led<0> | 0 | 6 | OI_OUT
+
+MACROCELL_INSTANCE | Inv | led<1>_MC | cpld_toplevel_COPY_0_COPY_0 | 256 | 0 | 1
+OUTPUT_NODE_TYPE | 0 | 0 | MC_Q
+NODE | led<1>_MC.Q | 3224 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | led<1>_MC.Q | led<1>_MC | 0 | 0 | MC_Q
+
+SIGNAL_INSTANCE | led<1>_MC.SI | led<1>_MC | 0 | 0 | 2
+OUTPUT_NODE_TYPE | 1 | 9 | MC_SI_D1
+SIGNAL | NODE | led<1>_MC.D1 | 3222 | ? | 0 | 0 | led<1>_MC | NULL | NULL | led<1>_MC.SI | 1 | 9 | MC_SI_D1
+SPPTERM | 0 | IV_ZERO
+OUTPUT_NODE_TYPE | 2 | 9 | MC_SI_D2
+SIGNAL | NODE | led<1>_MC.D2 | 3221 | ? | 0 | 0 | led<1>_MC | NULL | NULL | led<1>_MC.SI | 2 | 9 | MC_SI_D2
+SPPTERM | 0 | IV_ZERO
+
+SRFF_INSTANCE | led<1>_MC.REG | led<1>_MC | 0 | 1 | 1
+INPUT_NODE_TYPE | 0 | 8 | SRFF_D
+NODE | led<1>_MC.D | 3220 | ? | 0 | 0 | led<1>_MC | NULL | NULL | led<1>_MC.XOR | 0 | 7 | ALU_F
+OUTPUT_NODE_TYPE | 0 | 8 | SRFF_Q
+NODE | led<1>_MC.Q | 3223 | ? | 0 | 0 | led<1>_MC | NULL | NULL | led<1>_MC.REG | 0 | 8 | SRFF_Q
+
+OUTPUT_INSTANCE | 0 | led<1> | cpld_toplevel_COPY_0_COPY_0 | 3 | 1 | 1
+INPUT_NODE_TYPE | 0 | 6 | OI_IN
+NODE | led<1>_MC.Q | 3224 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | led<1>_MC.Q | led<1>_MC | 0 | 0 | MC_Q
+OUTPUT_NODE_TYPE | 0 | 6 | OI_OUT
+NODE | led<1> | 3225 | PO | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | led<1> | 0 | 6 | OI_OUT
+
+FB_INSTANCE | FOOBAR1_ | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | gate_b_MC | 1 | NULL | 0 | gate_b | 1 | 38 | 49152
+FBPIN | 2 | gate_w_MC | 1 | NULL | 0 | gate_w | 1 | 37 | 49152
+FBPIN | 3 | columnCount<1>_MC | 1 | NULL | 0 | NULL | 0 | 36 | 49152
+FBPIN | 4 | lineCount<2>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | lineCount<3>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 6 | lineCount<4>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 7 | lineCount<5>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 8 | lineCount<6>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 9 | columnCount<0>_MC | 1 | NULL | 0 | NULL | 0 | 34 | 53248
+FBPIN | 10 | io<33>_MC | 1 | NULL | 0 | io<33> | 1 | 33 | 53248
+FBPIN | 11 | lineCount<0>_MC | 1 | io<32>_II | 1 | NULL | 0 | 32 | 53248
+FBPIN | 12 | lineCount<1>_MC | 1 | io<31>_II | 1 | NULL | 0 | 31 | 53248
+FBPIN | 13 | io<30>_MC | 1 | NULL | 0 | io<30> | 1 | 30 | 51200
+FBPIN | 14 | lineCount<9>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | lineCount<8>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | lineCount<7>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR2_ | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | NULL | 0 | csync_II | 1 | NULL | 0 | 39 | 49152
+FBPIN | 2 | NULL | 0 | field_II | 1 | NULL | 0 | 40 | 49152
+FBPIN | 3 | columnCount<8>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 4 | columnCount<7>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 5 | NULL | 0 | burst_II | 1 | NULL | 0 | 41 | 49152
+FBPIN | 6 | NULL | 0 | vsync_II | 1 | NULL | 0 | 42 | 49152
+FBPIN | 9 | columnCount<6>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 10 | NULL | 0 | clk4mhz_II | 1 | NULL | 0 | 1 | 57344
+FBPIN | 11 | columnCount<5>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 12 | N_PZ_135_MC | 1 | NULL | 0 | NULL | 0 | 2 | 49152
+FBPIN | 13 | columnCount<9>_MC | 1 | NULL | 0 | NULL | 0 | 3 | 49152
+FBPIN | 14 | columnCount<4>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 15 | columnCount<3>_MC | 1 | NULL | 0 | NULL | 0
+FBPIN | 16 | columnCount<2>_MC | 1 | NULL | 0 | NULL | 0
+
+FB_INSTANCE | FOOBAR3_ | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+FBPIN | 1 | io<29>_MC | 1 | NULL | 0 | io<29> | 1 | 29 | 49152
+FBPIN | 2 | io<28>_MC | 1 | NULL | 0 | io<28> | 1 | 28 | 49152
+FBPIN | 3 | io<27>_MC | 1 | NULL | 0 | io<27> | 1 | 27 | 49152
+FBPIN | 12 | led<0>_MC | 1 | NULL | 0 | led<0> | 1 | 20 | 49152
+FBPIN | 14 | led<1>_MC | 1 | NULL | 0 | led<1> | 1 | 19 | 49152
+
+FB_INSTANCE | FOOBAR4_ | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+FB_INSTANCE | INPUTPINS_FOOBAR5_ | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR1_ | FOOBAR1__ctinst | cpld_toplevel_COPY_0_COPY_0 | 0 | 1 | 1
+INPUT_NODE_TYPE | 1 | 100 | NOTYPE
+NODE | csync_II/UIM | 3082 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | csync_II | 0 | 5 | II_IMUX
+OUTPUT_NODE_TYPE | 4 | 12 | CT_SI4
+SIGNAL | NODE | FOOBAR1__ctinst/4 | 3081 | ? | 0 | 0 | cpld_toplevel_COPY_0_COPY_0 | NULL | NULL | FOOBAR1__ctinst | 4 | 12 | CT_SI4
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+
+CT_INSTANCE | FOOBAR2_ | FOOBAR2__ctinst | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR3_ | FOOBAR3__ctinst | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+CT_INSTANCE | FOOBAR4_ | FOOBAR4__ctinst | cpld_toplevel_COPY_0_COPY_0 | 0 | 0 | 0
+
+PLA | FOOBAR1_ | 29
+PLA_TERM | 0 | 
+SPPTERM | 7 | IV_FALSE | lineCount<2> | IV_FALSE | lineCount<3> | IV_FALSE | lineCount<4> | IV_FALSE | lineCount<5> | IV_FALSE | lineCount<6> | IV_TRUE | lineCount<7> | IV_TRUE | N_PZ_135
+PLA_TERM | 1 | 
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_FALSE | lineCount<7> | IV_TRUE | N_PZ_135
+PLA_TERM | 2 | 
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_FALSE | lineCount<7> | IV_TRUE | N_PZ_135
+PLA_TERM | 3 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<7>
+PLA_TERM | 4 | 
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+PLA_TERM | 5 | 
+SPPTERM | 8 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6>
+PLA_TERM | 6 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<8>
+PLA_TERM | 7 | 
+SPPTERM | 9 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_TRUE | lineCount<7>
+PLA_TERM | 8 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<9>
+PLA_TERM | 9 | 
+SPPTERM | 10 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5> | IV_TRUE | lineCount<6> | IV_TRUE | lineCount<7> | IV_TRUE | lineCount<8>
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_FALSE | io<32>_II/UIM
+PLA_TERM | 11 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<6>
+PLA_TERM | 12 | 
+SPPTERM | 7 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4> | IV_TRUE | lineCount<5>
+PLA_TERM | 13 | 
+SPPTERM | 1 | IV_FALSE | io<31>_II/UIM
+PLA_TERM | 14 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<5>
+PLA_TERM | 15 | 
+SPPTERM | 6 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3> | IV_TRUE | lineCount<4>
+PLA_TERM | 16 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<4>
+PLA_TERM | 17 | 
+SPPTERM | 5 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1> | IV_TRUE | lineCount<3>
+PLA_TERM | 18 | 
+SPPTERM | 2 | IV_TRUE | vsync_II/UIM | IV_TRUE | lineCount<3>
+PLA_TERM | 19 | 
+SPPTERM | 4 | IV_TRUE | lineCount<2> | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1>
+PLA_TERM | 20 | 
+SPPTERM | 2 | IV_TRUE | lineCount<2> | IV_TRUE | vsync_II/UIM
+PLA_TERM | 21 | 
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_TRUE | lineCount<1>
+PLA_TERM | 22 | 
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_FALSE | lineCount<0> | IV_TRUE | lineCount<1>
+PLA_TERM | 23 | 
+SPPTERM | 3 | IV_FALSE | vsync_II/UIM | IV_TRUE | lineCount<0> | IV_FALSE | lineCount<1>
+PLA_TERM | 24 | 
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_FALSE | columnCount<0> | IV_TRUE | columnCount<1>
+PLA_TERM | 25 | 
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<0> | IV_FALSE | columnCount<1>
+PLA_TERM | 34 | 
+SPPTERM | 2 | IV_FALSE | csync_II/UIM | IV_FALSE | columnCount<0>
+PLA_TERM | 40 | 
+SPPTERM | 2 | IV_FALSE | vsync_II/UIM | IV_FALSE | lineCount<0>
+PLA_TERM | 46 | 
+SPPTERM | 1 | IV_TRUE | csync_II/UIM
+
+PLA | FOOBAR2_ | 19
+PLA_TERM | 0 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<2>
+PLA_TERM | 1 | 
+SPPTERM | 3 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1>
+PLA_TERM | 2 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<3>
+PLA_TERM | 3 | 
+SPPTERM | 4 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1>
+PLA_TERM | 4 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<4>
+PLA_TERM | 5 | 
+SPPTERM | 5 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3>
+PLA_TERM | 6 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<5>
+PLA_TERM | 7 | 
+SPPTERM | 6 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3>
+PLA_TERM | 8 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<6>
+PLA_TERM | 9 | 
+SPPTERM | 7 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5>
+PLA_TERM | 10 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<7>
+PLA_TERM | 11 | 
+SPPTERM | 8 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<6>
+PLA_TERM | 12 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<8>
+PLA_TERM | 13 | 
+SPPTERM | 9 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<7> | IV_TRUE | columnCount<6>
+PLA_TERM | 14 | 
+SPPTERM | 2 | IV_TRUE | csync_II/UIM | IV_TRUE | columnCount<9>
+PLA_TERM | 15 | 
+SPPTERM | 10 | IV_FALSE | csync_II/UIM | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_TRUE | columnCount<0> | IV_TRUE | columnCount<1> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_TRUE | columnCount<7> | IV_TRUE | columnCount<6> | IV_TRUE | columnCount<8>
+PLA_TERM | 16 | 
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_FALSE | columnCount<2> | IV_TRUE | columnCount<3> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+PLA_TERM | 17 | 
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_FALSE | columnCount<3> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+PLA_TERM | 18 | 
+SPPTERM | 10 | IV_FALSE | lineCount<8> | IV_TRUE | columnCount<4> | IV_TRUE | columnCount<2> | IV_FALSE | columnCount<1> | IV_TRUE | columnCount<5> | IV_FALSE | columnCount<7> | IV_TRUE | columnCount<6> | IV_FALSE | columnCount<8> | IV_FALSE | lineCount<9> | IV_FALSE | columnCount<9>
+
+PLA | FOOBAR3_ | 3
+PLA_TERM | 10 | 
+SPPTERM | 1 | IV_TRUE | field_II/UIM
+PLA_TERM | 13 | 
+SPPTERM | 1 | IV_TRUE | burst_II/UIM
+PLA_TERM | 16 | 
+SPPTERM | 1 | IV_TRUE | vsync_II/UIM
+
+BUSINFO | IO<33:27> | 7 | 0 | 2 | io<27> | 6 | io<28> | 5 | io<29> | 4 | io<30> | 3 | io<31> | 2 | io<32> | 1 | io<33> | 0
+BUSINFO | LED<1:0> | 2 | 0 | 1 | led<0> | 1 | led<1> | 0
+
+IOSTD | LVCMOS33
+burst | LVCMOS33
+clk4mhz | LVCMOS33
+csync | LVCMOS33
+field | LVCMOS33
+io<32> | LVCMOS33
+gate_b | LVCMOS33
+io<31> | LVCMOS33
+vsync | LVCMOS33
+gate_w | LVCMOS33
+io<27> | LVCMOS33
+io<28> | LVCMOS33
+io<29> | LVCMOS33
+io<30> | LVCMOS33
+io<33> | LVCMOS33
+led<0> | LVCMOS33
+led<1> | LVCMOS33
+
+
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 0 | lineCount<3> | NULL | 1 | lineCount<7> | NULL | 2 | N_PZ_135 | NULL | 3 | lineCount<1> | NULL | 4 | lineCount<5> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 6 | lineCount<9> | NULL | 7 | columnCount<1> | NULL | 8 | lineCount<8> | NULL | 9 | lineCount<0> | NULL | 10 | lineCount<2> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 12 | csync | 39 | 13 | lineCount<6> | NULL | 15 | lineCount<4> | NULL | 16 | columnCount<0> | NULL | 20 | io<31> | 31
+FB_ORDER_OF_INPUTS | FOOBAR1_ | 26 | vsync | 42 | 29 | io<32> | 32
+
+FB_IMUX_INDEX | FOOBAR1_ | 68 | 79 | 91 | 75 | 70 | -1 | 77 | 66 | 78 | 74 | 67 | -1 | 16 | 71 | -1 | 69 | 72 | -1 | -1 | -1 | 11 | -1 | -1 | -1 | -1 | -1 | 21 | -1 | -1 | 10 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 0 | columnCount<9> | NULL | 1 | columnCount<6> | NULL | 4 | columnCount<2> | NULL | 5 | columnCount<8> | NULL | 6 | columnCount<3> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 7 | columnCount<1> | NULL | 8 | columnCount<4> | NULL | 9 | columnCount<5> | NULL | 12 | csync | 39 | 14 | columnCount<7> | NULL
+FB_ORDER_OF_INPUTS | FOOBAR2_ | 16 | columnCount<0> | NULL | 20 | lineCount<8> | NULL | 21 | lineCount<9> | NULL
+
+FB_IMUX_INDEX | FOOBAR2_ | 92 | 88 | -1 | -1 | 95 | 82 | 94 | 66 | 93 | 90 | -1 | -1 | 16 | -1 | 83 | -1 | 72 | -1 | -1 | -1 | 78 | 77 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+FB_ORDER_OF_INPUTS | FOOBAR3_ | 3 | vsync | 42 | 4 | field | 40 | 7 | burst | 41
+
+FB_IMUX_INDEX | FOOBAR3_ | -1 | -1 | -1 | 21 | 17 | -1 | -1 | 20 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1 | -1
+
+
+GLOBAL_FCLK | clk4mhz | 2 | 2

@@ -1,7 +1,7 @@
 module counter(
 	input clk,
-	input reset,
 	input en,
+	input reset,
 	output reg [9 : 0] cnt
     );
 
@@ -9,5 +9,5 @@ module counter(
 		if(reset)
 			cnt <= 0;
 		else if(en)
-			cnt <= cnt + 1'b1;
+			cnt <= cnt + 1'd1;
 endmodule
