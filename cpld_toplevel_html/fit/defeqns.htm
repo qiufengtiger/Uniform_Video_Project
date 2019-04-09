@@ -6,9 +6,12 @@
 ********** Mapped Logic **********
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_143 <= ((NOT cm/columnCount(2) AND NOT cm/columnCount(3))
+N_PZ_144 <= ((NOT cm/columnCount(2) AND NOT cm/columnCount(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND cm/columnCount(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+az <= NOT ('0');
 </td></tr><tr><td>
 FDCPE_cm/columnCount1: FDCPE port map (cm/columnCount(1),cm/columnCount_D(1),clk4mhz,'0','0','1');
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_D(1) <= ((NOT csync AND cm/columnCount(1) AND 
@@ -116,6 +119,9 @@ FTCPE_cm/lineCount9: FTCPE port map (cm/lineCount(9),cm/lineCount_T(9),csync,'0'
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+el <= NOT ('0');
+</td></tr><tr><td>
+</td></tr><tr><td>
 gate_b <= NOT io(32);
 </td></tr><tr><td>
 </td></tr><tr><td>
@@ -125,7 +131,7 @@ gate_w <= NOT io(31)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(6) AND cm/lineCount(7) AND NOT cm/lineCount(8) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(4) AND cm/columnCount(5) AND cm/columnCount(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(9) AND NOT N_PZ_143)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(9) AND NOT N_PZ_144)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND cm/lineCount(3) AND cm/lineCount(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(4) AND cm/lineCount(5) AND cm/lineCount(6) AND 
@@ -137,7 +143,7 @@ gate_w <= NOT io(31)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5) AND cm/lineCount(6) AND NOT cm/lineCount(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_143)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND NOT cm/lineCount(1) AND NOT cm/lineCount(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(4) AND NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND 
@@ -155,13 +161,13 @@ gate_w <= NOT io(31)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND cm/lineCount(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_143)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(3) AND NOT cm/lineCount(2) AND NOT cm/lineCount(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND cm/lineCount(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_143)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND cm/lineCount(1) AND cm/lineCount(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(4) AND cm/lineCount(5) AND 
@@ -183,10 +189,7 @@ io(29) <= field;
 io(30) <= csync;
 </td></tr><tr><td>
 </td></tr><tr><td>
-io(33) <= '0';
-</td></tr><tr><td>
-</td></tr><tr><td>
-led(0) <= NOT ('0');
+led(0) <= io(33);
 </td></tr><tr><td>
 </td></tr><tr><td>
 led(1) <= NOT ('0');

@@ -1,7 +1,8 @@
 MO d_flipflop NULL d_flipflop.v vlg4F/d__flipflop.bin 1554686293
 MO pulseToLevel NULL pulseToLevel.v vlg24/pulse_to_level.bin 1554686293
-MO enDetector NULL enDetector.v vlg69/en_detector.bin 1554764877
-MO counter NULL counter.v vlg10/counter.bin 1554764877
-MO crosshair_module NULL crosshair_module.v vlg77/crosshair__module.bin 1554764877
+MO tracking_module NULL tracking_module.v vlg08/tracking__module.bin 1554772956
+MO enDetector NULL enDetector.v vlg69/en_detector.bin 1554772956
+MO counter NULL counter.v vlg10/counter.bin 1554772956
+MO crosshair_module NULL crosshair_module.v vlg77/crosshair__module.bin 1554772956
 MO comp NULL comp.v vlg3F/comp.bin 1554690018
-MO cpld_toplevel NULL cpld_toplevel.v vlg65/cpld__toplevel.bin 1554764877
+MO cpld_toplevel NULL cpld_toplevel.v vlg65/cpld__toplevel.bin 1554772956

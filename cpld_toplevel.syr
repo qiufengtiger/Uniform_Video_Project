@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: cpld_toplevel.prj
 
@@ -78,8 +78,10 @@ wysiwyg                            : NO
 Compiling verilog file "enDetector.v" in library work
 Compiling verilog file "counter.v" in library work
 Module <enDetector> compiled
-Compiling verilog file "crosshair_module.v" in library work
+Compiling verilog file "tracking_module.v" in library work
 Module <counter> compiled
+Compiling verilog file "crosshair_module.v" in library work
+Module <tracking_module> compiled
 Compiling verilog file "cpld_toplevel.v" in library work
 Module <crosshair_module> compiled
 Module <cpld_toplevel> compiled
@@ -93,6 +95,8 @@ Analysis of file <"cpld_toplevel.prj"> succeeded.
 Analyzing hierarchy for module <cpld_toplevel> in library <work>.
 
 Analyzing hierarchy for module <crosshair_module> in library <work>.
+
+Analyzing hierarchy for module <tracking_module> in library <work>.
 
 Analyzing hierarchy for module <enDetector> in library <work>.
 
@@ -114,12 +118,21 @@ Module <enDetector> is correct for synthesis.
 Analyzing module <counter> in library <work>.
 Module <counter> is correct for synthesis.
  
+Analyzing module <tracking_module> in library <work>.
+Module <tracking_module> is correct for synthesis.
+ 
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Performing bidirectional port resolution...
+
+Synthesizing Unit <tracking_module>.
+    Related source file is "tracking_module.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <tracking_module> synthesized.
+
 
 Synthesizing Unit <enDetector>.
     Related source file is "enDetector.v".
@@ -136,18 +149,14 @@ Unit <counter> synthesized.
 
 Synthesizing Unit <crosshair_module>.
     Related source file is "crosshair_module.v".
-WARNING:Xst:646 - Signal <lineUpperThreshold> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <lineLowerThreshold> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <columnUpperThreshold> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <columnLowerThreshold> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0000> created at line 27.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0001> created at line 27.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0002> created at line 27.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0003> created at line 27.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0000> created at line 27.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0001> created at line 27.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0002> created at line 27.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0003> created at line 27.
+    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0000> created at line 21.
+    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0001> created at line 21.
+    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0002> created at line 21.
+    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0003> created at line 21.
+    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0000> created at line 21.
+    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0001> created at line 21.
+    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0002> created at line 21.
+    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0003> created at line 21.
     Summary:
 	inferred   8 Comparator(s).
 Unit <crosshair_module> synthesized.
@@ -195,6 +204,8 @@ Macro Statistics
 
 Optimizing unit <cpld_toplevel> ...
 
+Optimizing unit <tracking_module> ...
+
 Optimizing unit <enDetector> ...
 
 Optimizing unit <counter> ...
@@ -228,34 +239,34 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 16
+# IOs                              : 18
 
 Cell Usage :
 # BELS                             : 147
 #      AND2                        : 54
 #      AND3                        : 5
 #      AND4                        : 2
-#      GND                         : 3
+#      GND                         : 2
 #      INV                         : 52
 #      OR2                         : 11
-#      VCC                         : 1
+#      VCC                         : 2
 #      XOR2                        : 19
 # FlipFlops/Latches                : 20
 #      FDCE                        : 20
-# IO Buffers                       : 16
-#      IBUF                        : 7
-#      OBUF                        : 9
+# IO Buffers                       : 18
+#      IBUF                        : 8
+#      OBUF                        : 10
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.09 secs
+Total CPU time to Xst completion: 4.85 secs
  
 --> 
 
-Total memory usage is 4535404 kilobytes
+Total memory usage is 4535424 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

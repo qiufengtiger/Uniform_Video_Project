@@ -3,11 +3,13 @@
 <script src="paths.js"></script><script src="eqns.js"></script><script>
       var design = "cpld_toplevel";
       var device = "XC2C64A";
-      signals = new Array("N_PZ_143","cmcolumnCount1_SPECSIG","cmcolumnCount2_SPECSIG","cmcolumnCount3_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","cmcolumnCount7_SPECSIG","cmcolumnCount8_SPECSIG","cmcolumnCount9_SPECSIG","cmcolumnCountercnt0_SPECSIG","cmlineCount0_SPECSIG","cmlineCount1_SPECSIG","cmlineCount2_SPECSIG","cmlineCount3_SPECSIG","cmlineCount4_SPECSIG","cmlineCount5_SPECSIG","cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","cmlineCount8_SPECSIG","cmlineCount9_SPECSIG","gate_b","gate_w","io27_SPECSIG","io28_SPECSIG","io29_SPECSIG","io30_SPECSIG","io33_SPECSIG","led0_SPECSIG","led1_SPECSIG");
-      sigNegs = new Array("OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON");
-      sigTypes = new Array("","DFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","DFF","DFF","DFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","","","","","","","","","");
+      signals = new Array("N_PZ_144","az","cmcolumnCount1_SPECSIG","cmcolumnCount2_SPECSIG","cmcolumnCount3_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","cmcolumnCount7_SPECSIG","cmcolumnCount8_SPECSIG","cmcolumnCount9_SPECSIG","cmcolumnCountercnt0_SPECSIG","cmlineCount0_SPECSIG","cmlineCount1_SPECSIG","cmlineCount2_SPECSIG","cmlineCount3_SPECSIG","cmlineCount4_SPECSIG","cmlineCount5_SPECSIG","cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","cmlineCount8_SPECSIG","cmlineCount9_SPECSIG","el","gate_b","gate_w","io27_SPECSIG","io28_SPECSIG","io29_SPECSIG","io30_SPECSIG","led0_SPECSIG","led1_SPECSIG");
+      sigNegs = new Array("OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON");
+      sigTypes = new Array("","","DFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","DFF","DFF","DFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","TFF","","","","","","","","","");
 
       
+           iostyle["io33_SPECSIG"]=new Array("PU");
+        
            iostyle["io32_SPECSIG"]=new Array("PU");
         
            iostyle["io31_SPECSIG"]=new Array("PU");
@@ -26,19 +28,17 @@
       
         specSig["io31_SPECSIG"]=new Array("io<31>");
       
+        specSig["io33_SPECSIG"]=new Array("io<33>");
+      
         specSig["b_SPECSIG"]=new Array("(b)");
       
+        specSig["cmcolumnCount3_SPECSIG"]=new Array("cm/columnCount<3>");
+      
         specSig["cmlineCount4_SPECSIG"]=new Array("cm/lineCount<4>");
-      
-        specSig["cmcolumnCount4_SPECSIG"]=new Array("cm/columnCount<4>");
-      
-        specSig["io33_SPECSIG"]=new Array("io<33>");
       
         specSig["io30_SPECSIG"]=new Array("io<30>");
       
         specSig["cmlineCount3_SPECSIG"]=new Array("cm/lineCount<3>");
-      
-        specSig["cmlineCount2_SPECSIG"]=new Array("cm/lineCount<2>");
       
         specSig["io29_SPECSIG"]=new Array("io<29>");
       
@@ -60,6 +60,8 @@
       
         specSig["cmlineCount8_SPECSIG"]=new Array("cm/lineCount<8>");
       
+        specSig["cmcolumnCount4_SPECSIG"]=new Array("cm/columnCount<4>");
+      
         specSig["cmlineCount5_SPECSIG"]=new Array("cm/lineCount<5>");
       
         specSig["cmcolumnCount5_SPECSIG"]=new Array("cm/columnCount<5>");
@@ -74,13 +76,13 @@
       
         specSig["cmcolumnCount2_SPECSIG"]=new Array("cm/columnCount<2>");
       
-        specSig["cmcolumnCount3_SPECSIG"]=new Array("cm/columnCount<3>");
-      
         specSig["cmcolumnCountercnt0_SPECSIG"]=new Array("cm/columnCounter/cnt<0>");
       
         specSig["cmlineCount0_SPECSIG"]=new Array("cm/lineCount<0>");
       
         specSig["cmlineCount1_SPECSIG"]=new Array("cm/lineCount<1>");
+      
+        specSig["cmlineCount2_SPECSIG"]=new Array("cm/lineCount<2>");
       
             pterms["FB1_0"]=new Array("io31_SPECSIG","/cmcolumnCount2_SPECSIG","/cmcolumnCount1_SPECSIG","cmcolumnCount3_SPECSIG","/cmlineCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG");
           
@@ -92,13 +94,13 @@
           
             pterms["FB1_4"]=new Array("csync");
           
-            pterms["FB1_5"]=new Array("/cmlineCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount2_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_143");
+            pterms["FB1_5"]=new Array("/cmlineCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount2_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_144");
           
-            pterms["FB1_6"]=new Array("/io31_SPECSIG","/cmcolumnCount2_SPECSIG","/cmcolumnCount1_SPECSIG","/cmlineCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_143");
+            pterms["FB1_6"]=new Array("/io31_SPECSIG","/cmcolumnCount2_SPECSIG","/cmcolumnCount1_SPECSIG","/cmlineCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_144");
           
-            pterms["FB1_7"]=new Array("/io31_SPECSIG","/cmcolumnCount2_SPECSIG","/cmcolumnCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount2_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_143");
+            pterms["FB1_7"]=new Array("/io31_SPECSIG","/cmcolumnCount2_SPECSIG","/cmcolumnCount1_SPECSIG","/cmlineCount3_SPECSIG","/cmlineCount2_SPECSIG","/cmlineCount4_SPECSIG","/cmlineCount5_SPECSIG","/cmlineCount6_SPECSIG","cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_144");
           
-            pterms["FB1_8"]=new Array("cmlineCount1_SPECSIG","cmlineCount0_SPECSIG","cmlineCount3_SPECSIG","cmlineCount2_SPECSIG","cmlineCount4_SPECSIG","cmlineCount5_SPECSIG","cmlineCount6_SPECSIG","/cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_143");
+            pterms["FB1_8"]=new Array("cmlineCount1_SPECSIG","cmlineCount0_SPECSIG","cmlineCount3_SPECSIG","cmlineCount2_SPECSIG","cmlineCount4_SPECSIG","cmlineCount5_SPECSIG","cmlineCount6_SPECSIG","/cmlineCount7_SPECSIG","/cmlineCount8_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","/cmcolumnCount7_SPECSIG","/cmcolumnCount8_SPECSIG","/cmlineCount9_SPECSIG","/cmcolumnCount9_SPECSIG","/N_PZ_144");
           
             pterms["FB1_9"]=new Array("cmcolumnCount2_SPECSIG","/csync","cmcolumnCount1_SPECSIG","cmcolumnCountercnt0_SPECSIG","cmcolumnCount3_SPECSIG","cmcolumnCount4_SPECSIG","cmcolumnCount5_SPECSIG","cmcolumnCount6_SPECSIG","cmcolumnCount7_SPECSIG","cmcolumnCount8_SPECSIG");
           
@@ -152,6 +154,10 @@
           
             pterms["FB1_34"]=new Array("vsync","cmlineCount4_SPECSIG");
           
+            pterms["FB1_35"]=new Array("csync","cmcolumnCount3_SPECSIG");
+          
+            pterms["FB1_36"]=new Array("cmcolumnCount2_SPECSIG","/csync","cmcolumnCount1_SPECSIG","cmcolumnCountercnt0_SPECSIG");
+          
             pterms["FB1_46"]=new Array("csync");
           
             pterms["FB2_0"]=new Array("/csync","/cmcolumnCount1_SPECSIG","cmcolumnCountercnt0_SPECSIG");
@@ -164,27 +170,23 @@
           
             pterms["FB2_4"]=new Array("csync");
           
-            pterms["FB2_5"]=new Array("csync","cmcolumnCount3_SPECSIG");
+            pterms["FB2_5"]=new Array("/cmcolumnCount2_SPECSIG","/cmcolumnCount3_SPECSIG");
           
-            pterms["FB2_6"]=new Array("cmcolumnCount2_SPECSIG","/csync","cmcolumnCount1_SPECSIG","cmcolumnCountercnt0_SPECSIG");
+            pterms["FB2_6"]=new Array("cmcolumnCount2_SPECSIG","cmcolumnCount1_SPECSIG","cmcolumnCount3_SPECSIG");
           
-            pterms["FB2_7"]=new Array("/cmcolumnCount2_SPECSIG","/cmcolumnCount3_SPECSIG");
+            pterms["FB2_7"]=new Array("/cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG");
           
-            pterms["FB2_8"]=new Array("cmcolumnCount2_SPECSIG","cmcolumnCount1_SPECSIG","cmcolumnCount3_SPECSIG");
+            pterms["FB2_8"]=new Array("cmlineCount1_SPECSIG","/vsync","/cmlineCount0_SPECSIG");
           
-            pterms["FB2_9"]=new Array("/cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG");
+            pterms["FB2_9"]=new Array("vsync","cmlineCount2_SPECSIG");
           
-            pterms["FB2_10"]=new Array("cmlineCount1_SPECSIG","/vsync","/cmlineCount0_SPECSIG");
+            pterms["FB2_10"]=new Array("cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG");
           
-            pterms["FB2_11"]=new Array("vsync","cmlineCount2_SPECSIG");
+            pterms["FB2_11"]=new Array("cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG","cmlineCount2_SPECSIG");
           
-            pterms["FB2_12"]=new Array("cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG");
+            pterms["FB2_12"]=new Array("vsync","cmlineCount3_SPECSIG");
           
-            pterms["FB2_13"]=new Array("cmlineCount1_SPECSIG","/vsync","cmlineCount0_SPECSIG","cmlineCount2_SPECSIG");
-          
-            pterms["FB2_14"]=new Array("vsync","cmlineCount3_SPECSIG");
-          
-            pterms["FB2_19"]=new Array("/vsync","/cmlineCount0_SPECSIG");
+            pterms["FB2_34"]=new Array("/vsync","/cmlineCount0_SPECSIG");
           
             pterms["FB2_55"]=new Array("/csync","/cmcolumnCountercnt0_SPECSIG");
           
@@ -194,16 +196,18 @@
           
             pterms["FB3_16"]=new Array("vsync");
           
+            pterms["FB3_43"]=new Array("io33_SPECSIG");
+          
           d1["gate_b"]=new Array("FB1_10");
           
           d1["gate_w"]=new Array("FB1_13");
           
           d2["gate_w"]=new Array("FB1_5","FB1_2","FB1_8","FB1_0","FB1_1","FB1_6","FB1_7","FB1_3");
           
-          d2["cmlineCount4_SPECSIG"]=new Array("FB1_34","FB1_33");
+          d2["cmcolumnCount3_SPECSIG"]=new Array("FB1_35","FB1_36");
           
-              clk["cmlineCount4_SPECSIG"]=new Array("FB1_4");
-              prld["cmlineCount4_SPECSIG"]="GND";
+              gblclk["cmcolumnCount3_SPECSIG"]=new Array("clk4mhz");
+            prld["cmcolumnCount3_SPECSIG"]="GND";
           d2["cmlineCount6_SPECSIG"]=new Array("FB1_26","FB1_25");
           
               clk["cmlineCount6_SPECSIG"]=new Array("FB1_4");
@@ -224,12 +228,14 @@
           
               clk["cmlineCount8_SPECSIG"]=new Array("FB1_4");
               prld["cmlineCount8_SPECSIG"]="GND";
+          d2["cmlineCount4_SPECSIG"]=new Array("FB1_34","FB1_33");
+          
+              clk["cmlineCount4_SPECSIG"]=new Array("FB1_4");
+              prld["cmlineCount4_SPECSIG"]="GND";
           d2["cmcolumnCount4_SPECSIG"]=new Array("FB1_31","FB1_32");
           
               gblclk["cmcolumnCount4_SPECSIG"]=new Array("clk4mhz");
             prld["cmcolumnCount4_SPECSIG"]="GND";
-          d2["io33_SPECSIG"]=new Array("GND");
-          
           d2["cmlineCount5_SPECSIG"]=new Array("FB1_30","FB1_29");
           
               clk["cmlineCount5_SPECSIG"]=new Array("FB1_4");
@@ -252,28 +258,24 @@
           
               gblclk["cmcolumnCount9_SPECSIG"]=new Array("clk4mhz");
             prld["cmcolumnCount9_SPECSIG"]="GND";
-          d2["cmlineCount1_SPECSIG"]=new Array("FB2_10","FB2_9");
-          
-              clk["cmlineCount1_SPECSIG"]=new Array("FB2_4");
-              prld["cmlineCount1_SPECSIG"]="GND";
-          d1["cmlineCount0_SPECSIG"]=new Array("FB2_19");
-          
-              clk["cmlineCount0_SPECSIG"]=new Array("FB2_4");
-              prld["cmlineCount0_SPECSIG"]="GND";
-          d2["N_PZ_143"]=new Array("FB2_7","FB2_8");
-          
-          d2["cmcolumnCount3_SPECSIG"]=new Array("FB2_5","FB2_6");
-          
-              gblclk["cmcolumnCount3_SPECSIG"]=new Array("clk4mhz");
-            prld["cmcolumnCount3_SPECSIG"]="GND";
-          d2["cmlineCount3_SPECSIG"]=new Array("FB2_14","FB2_13");
-          
-              clk["cmlineCount3_SPECSIG"]=new Array("FB2_4");
-              prld["cmlineCount3_SPECSIG"]="GND";
-          d2["cmlineCount2_SPECSIG"]=new Array("FB2_11","FB2_12");
+          d2["cmlineCount2_SPECSIG"]=new Array("FB2_9","FB2_10");
           
               clk["cmlineCount2_SPECSIG"]=new Array("FB2_4");
               prld["cmlineCount2_SPECSIG"]="GND";
+          d2["cmlineCount1_SPECSIG"]=new Array("FB2_8","FB2_7");
+          
+              clk["cmlineCount1_SPECSIG"]=new Array("FB2_4");
+              prld["cmlineCount1_SPECSIG"]="GND";
+          d1["cmlineCount0_SPECSIG"]=new Array("FB2_34");
+          
+              clk["cmlineCount0_SPECSIG"]=new Array("FB2_4");
+              prld["cmlineCount0_SPECSIG"]="GND";
+          d2["N_PZ_144"]=new Array("FB2_5","FB2_6");
+          
+          d2["cmlineCount3_SPECSIG"]=new Array("FB2_12","FB2_11");
+          
+              clk["cmlineCount3_SPECSIG"]=new Array("FB2_4");
+              prld["cmlineCount3_SPECSIG"]="GND";
           d2["cmcolumnCount2_SPECSIG"]=new Array("FB2_2","FB2_3");
           
               gblclk["cmcolumnCount2_SPECSIG"]=new Array("clk4mhz");
@@ -292,9 +294,13 @@
           
           d1["io27_SPECSIG"]=new Array("FB3_16");
           
-          d2["led0_SPECSIG"]=new Array("GND");
+          d1["led0_SPECSIG"]=new Array("FB3_43");
           
           d2["led1_SPECSIG"]=new Array("GND");
+          
+          d2["az"]=new Array("GND");
+          
+          d2["el"]=new Array("GND");
           
 
       uimSignals = new Array();
