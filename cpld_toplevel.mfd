@@ -1,17 +1,5 @@
 MDF Database:  version 1.0
 MDF_INFO | cpld_toplevel | XC2C64A-5-VQ44
-MACROCELL | 3 | 0 | az_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 0
-EQ | 1 | 
-   !az = Gnd;	// (0 pt, 0 inp)
-
-MACROCELL | 3 | 1 | el_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 0
-EQ | 1 | 
-   !el = Gnd;	// (0 pt, 0 inp)
-
 MACROCELL | 0 | 0 | gate_b_MC
 ATTRIBUTES | 1074004738 | 0
 INPUTS | 1 | io<32>
@@ -21,392 +9,790 @@ EQ | 1 |
 
 MACROCELL | 0 | 1 | gate_w_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 21 | io<31>  | cm/lineCount<1>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>  | cm/lineCount<5>  | cm/lineCount<6>  | cm/lineCount<7>  | cm/lineCount<8>  | cm/columnCount<4>  | cm/columnCount<5>  | cm/columnCount<6>  | cm/columnCount<7>  | cm/columnCount<8>  | cm/lineCount<9>  | cm/columnCount<9>  | N_PZ_144  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCount<3>  | cm/lineCount<0>
-INPUTMC | 20 | 1 | 3 | 1 | 12 | 1 | 2 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 13 | 0 | 15 | 1 | 10 | 1 | 13 | 1 | 14 | 0 | 2 | 1 | 8
+INPUTS | 19 | io<31>  | lineCount<2>  | lineCount<1>  | lineCount<3>  | lineCount<4>  | lineCount<5>  | lineCount<6>  | lineCount<7>  | columnCount<4>  | columnCount<5>  | columnCount<6>  | columnCount<7>  | lineCount<8>  | columnCount<8>  | N_PZ_309  | columnCount<3>  | columnCount<2>  | columnCount<1>  | lineCount<0>
+INPUTMC | 18 | 1 | 1 | 1 | 4 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 7 | 0 | 14 | 1 | 10 | 0 | 9 | 1 | 13 | 1 | 14 | 2 | 1
 INPUTP | 1 | 80
-EQ | 50 | 
+EQ | 37 | 
    gate_w = !io<31>
-	$ !cm/lineCount<1> & !cm/lineCount<3> & 
-	!cm/lineCount<2> & !cm/lineCount<4> & !cm/lineCount<5> & 
-	!cm/lineCount<6> & cm/lineCount<7> & !cm/lineCount<8> & 
-	cm/columnCount<4> & cm/columnCount<5> & cm/columnCount<6> & 
-	!cm/columnCount<7> & !cm/columnCount<8> & !cm/lineCount<9> & 
-	!cm/columnCount<9> & !N_PZ_144
-	# !cm/columnCount<2> & !cm/columnCount<1> & 
-	cm/columnCount<3> & cm/lineCount<3> & cm/lineCount<2> & 
-	cm/lineCount<4> & cm/lineCount<5> & cm/lineCount<6> & 
-	!cm/lineCount<7> & !cm/lineCount<8> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6> & !cm/columnCount<7> & 
-	!cm/columnCount<8> & !cm/lineCount<9> & !cm/columnCount<9>
-	# cm/lineCount<1> & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4> & 
-	cm/lineCount<5> & cm/lineCount<6> & !cm/lineCount<7> & 
-	!cm/lineCount<8> & cm/columnCount<4> & cm/columnCount<5> & 
-	cm/columnCount<6> & !cm/columnCount<7> & !cm/columnCount<8> & 
-	!cm/lineCount<9> & !cm/columnCount<9> & !N_PZ_144
-	# io<31> & !cm/columnCount<2> & !cm/columnCount<1> & 
-	cm/columnCount<3> & !cm/lineCount<1> & !cm/lineCount<3> & 
-	!cm/lineCount<4> & !cm/lineCount<5> & !cm/lineCount<6> & 
-	cm/lineCount<7> & !cm/lineCount<8> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6> & !cm/columnCount<7> & 
-	!cm/columnCount<8> & !cm/lineCount<9> & !cm/columnCount<9>
-	# io<31> & !cm/columnCount<2> & !cm/columnCount<1> & 
-	cm/columnCount<3> & !cm/lineCount<3> & !cm/lineCount<2> & 
-	!cm/lineCount<4> & !cm/lineCount<5> & !cm/lineCount<6> & 
-	cm/lineCount<7> & !cm/lineCount<8> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6> & !cm/columnCount<7> & 
-	!cm/columnCount<8> & !cm/lineCount<9> & !cm/columnCount<9>
-	# !io<31> & !cm/columnCount<2> & !cm/columnCount<1> & 
-	!cm/lineCount<1> & !cm/lineCount<3> & !cm/lineCount<4> & 
-	!cm/lineCount<5> & !cm/lineCount<6> & cm/lineCount<7> & 
-	!cm/lineCount<8> & cm/columnCount<4> & cm/columnCount<5> & 
-	cm/columnCount<6> & !cm/columnCount<7> & !cm/columnCount<8> & 
-	!cm/lineCount<9> & !cm/columnCount<9> & !N_PZ_144
-	# !io<31> & !cm/columnCount<2> & !cm/columnCount<1> & 
-	!cm/lineCount<3> & !cm/lineCount<2> & !cm/lineCount<4> & 
-	!cm/lineCount<5> & !cm/lineCount<6> & cm/lineCount<7> & 
-	!cm/lineCount<8> & cm/columnCount<4> & cm/columnCount<5> & 
-	cm/columnCount<6> & !cm/columnCount<7> & !cm/columnCount<8> & 
-	!cm/lineCount<9> & !cm/columnCount<9> & !N_PZ_144
-	# !cm/columnCount<2> & !cm/columnCount<1> & 
-	cm/columnCount<3> & cm/lineCount<1> & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<4> & cm/lineCount<5> & 
-	cm/lineCount<6> & !cm/lineCount<7> & !cm/lineCount<8> & 
-	cm/columnCount<4> & cm/columnCount<5> & cm/columnCount<6> & 
-	!cm/columnCount<7> & !cm/columnCount<8> & !cm/lineCount<9> & 
-	!cm/columnCount<9>;	// (9 pt, 21 inp)
+	$ !lineCount<2> & !lineCount<1> & !lineCount<3> & 
+	!lineCount<4> & !lineCount<5> & !lineCount<6> & lineCount<7> & 
+	columnCount<4> & columnCount<5> & columnCount<6> & !columnCount<7> & 
+	!lineCount<8> & !columnCount<8> & !N_PZ_309
+	# columnCount<3> & !columnCount<2> & !columnCount<1> & 
+	!lineCount<2> & !lineCount<3> & !lineCount<4> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & columnCount<4> & columnCount<5> & 
+	columnCount<6> & !columnCount<7> & !lineCount<8> & !columnCount<8>
+	# columnCount<3> & !columnCount<2> & !columnCount<1> & 
+	!lineCount<1> & !lineCount<3> & !lineCount<4> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & columnCount<4> & columnCount<5> & 
+	columnCount<6> & !columnCount<7> & !lineCount<8> & !columnCount<8>
+	# lineCount<2> & lineCount<1> & lineCount<0> & 
+	lineCount<3> & lineCount<4> & lineCount<5> & lineCount<6> & 
+	!lineCount<7> & columnCount<4> & columnCount<5> & columnCount<6> & 
+	!columnCount<7> & !lineCount<8> & !columnCount<8> & !N_PZ_309
+	# io<31> & columnCount<3> & !columnCount<2> & 
+	!columnCount<1> & lineCount<2> & lineCount<3> & lineCount<4> & 
+	lineCount<5> & lineCount<6> & !lineCount<7> & columnCount<4> & 
+	columnCount<5> & columnCount<6> & !columnCount<7> & !lineCount<8> & 
+	!columnCount<8>
+	# !io<31> & !columnCount<2> & !columnCount<1> & 
+	lineCount<2> & lineCount<3> & lineCount<4> & lineCount<5> & 
+	lineCount<6> & !lineCount<7> & columnCount<4> & columnCount<5> & 
+	columnCount<6> & !columnCount<7> & !lineCount<8> & !columnCount<8> & 
+	!N_PZ_309
+	# io<31> & columnCount<3> & !columnCount<2> & 
+	!columnCount<1> & lineCount<1> & lineCount<0> & lineCount<3> & 
+	lineCount<4> & lineCount<5> & lineCount<6> & !lineCount<7> & 
+	columnCount<4> & columnCount<5> & columnCount<6> & !columnCount<7> & 
+	!lineCount<8> & !columnCount<8>
+	# !io<31> & !columnCount<2> & !columnCount<1> & 
+	lineCount<1> & lineCount<0> & lineCount<3> & lineCount<4> & 
+	lineCount<5> & lineCount<6> & !lineCount<7> & columnCount<4> & 
+	columnCount<5> & columnCount<6> & !columnCount<7> & !lineCount<8> & 
+	!columnCount<8> & !N_PZ_309;	// (9 pt, 19 inp)
 
-MACROCELL | 1 | 13 | cm/columnCount<2>_MC
+MACROCELL | 0 | 9 | columnCount<3>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 10 | 1 | 13 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 1 | 10 | 0 | 1
-INPUTS | 4 | cm/columnCount<2>  | csync  | cm/columnCount<1>  | cm/columnCounter/cnt<0>
-INPUTMC | 3 | 1 | 13 | 1 | 14 | 1 | 15
+OUTPUTMC | 10 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 1 | 10 | 0 | 1 | 0 | 15 | 1 | 8
+INPUTS | 5 | columnCount<3>  | csync  | columnCount<2>  | columnCount<1>  | columnCount<0>
+INPUTMC | 4 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15
 INPUTP | 1 | 12
 EQ | 4 | 
-   cm/columnCount<2>.T := cm/columnCount<2> & csync
-	# !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0>;	// (2 pt, 4 inp)
-   cm/columnCount<2>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+   columnCount<3>.T := columnCount<3> & csync
+	# !csync & columnCount<2> & columnCount<1> & 
+	columnCount<0>;	// (2 pt, 5 inp)
+   columnCount<3>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 1 | 14 | cm/columnCount<1>_MC
+MACROCELL | 1 | 13 | columnCount<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 1 | 13 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 1 | 10 | 0 | 1 | 0 | 15
+INPUTS | 4 | csync  | columnCount<2>  | columnCount<1>  | columnCount<0>
+INPUTMC | 3 | 1 | 13 | 1 | 14 | 1 | 15
+INPUTP | 1 | 12
+EQ | 3 | 
+   columnCount<2>.T := csync & columnCount<2>
+	# !csync & columnCount<1> & columnCount<0>;	// (2 pt, 4 inp)
+   columnCount<2>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 14 | columnCount<1>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 11 | 1 | 14 | 1 | 13 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 1 | 10 | 0 | 1
-INPUTS | 3 | csync  | cm/columnCount<1>  | cm/columnCounter/cnt<0>
+OUTPUTMC | 11 | 1 | 14 | 1 | 13 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 1 | 10 | 0 | 1 | 0 | 15
+INPUTS | 3 | csync  | columnCount<1>  | columnCount<0>
 INPUTMC | 2 | 1 | 14 | 1 | 15
 INPUTP | 1 | 12
-EQ | 5 | 
-   cm/columnCount<1> := !csync & cm/columnCount<1> & 
-	!cm/columnCounter/cnt<0>
-	# !csync & !cm/columnCount<1> & 
-	cm/columnCounter/cnt<0>;	// (2 pt, 3 inp)
-   cm/columnCount<1>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+EQ | 3 | 
+   columnCount<1> := !csync & columnCount<1> & !columnCount<0>
+	# !csync & !columnCount<1> & columnCount<0>;	// (2 pt, 3 inp)
+   columnCount<1>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 1 | 15 | cm/columnCounter/cnt<0>_MC
+MACROCELL | 1 | 15 | columnCount<0>_MC
 ATTRIBUTES | 2155905792 | 0
-OUTPUTMC | 10 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15
-INPUTS | 2 | csync  | cm/columnCounter/cnt<0>
+OUTPUTMC | 10 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 0 | 15
+INPUTS | 2 | csync  | columnCount<0>
 INPUTMC | 1 | 1 | 15
 INPUTP | 1 | 12
 EQ | 2 | 
-   cm/columnCounter/cnt<0> := !csync & !cm/columnCounter/cnt<0>;	// (1 pt, 2 inp)
-   cm/columnCounter/cnt<0>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+   columnCount<0> := !csync & !columnCount<0>;	// (1 pt, 2 inp)
+   columnCount<0>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 0 | 2 | cm/columnCount<3>_MC
-ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 9 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 1 | 10 | 0 | 1
-INPUTS | 5 | csync  | cm/columnCount<3>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>
-INPUTMC | 4 | 0 | 2 | 1 | 13 | 1 | 14 | 1 | 15
-INPUTP | 1 | 12
-EQ | 4 | 
-   cm/columnCount<3>.T := csync & cm/columnCount<3>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0>;	// (2 pt, 5 inp)
-   cm/columnCount<3>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | clk4mhz
-
-MACROCELL | 1 | 3 | cm/lineCount<1>_MC
-ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 10 | 1 | 3 | 1 | 2 | 1 | 12 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 3 | cm/lineCount<1>  | vsync  | cm/lineCount<0>
-INPUTMC | 2 | 1 | 3 | 1 | 8
+MACROCELL | 1 | 1 | lineCount<2>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 11 | 1 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 0 | 2 | 1 | 0
+INPUTS | 4 | lineCount<2>  | vsync  | lineCount<1>  | lineCount<0>
+INPUTMC | 3 | 1 | 1 | 1 | 4 | 2 | 1
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 3 | 
-   cm/lineCount<1> := cm/lineCount<1> & !vsync & !cm/lineCount<0>
-	# !cm/lineCount<1> & !vsync & cm/lineCount<0>;	// (2 pt, 3 inp)
-    cm/lineCount<1>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<2>.T := lineCount<2> & vsync
+	# !vsync & lineCount<1> & lineCount<0>;	// (2 pt, 4 inp)
+    lineCount<2>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 1 | 8 | cm/lineCount<0>_MC
+MACROCELL | 1 | 4 | lineCount<1>_MC
 ATTRIBUTES | 2290090752 | 0
-OUTPUTMC | 11 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 12 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 2 | vsync  | cm/lineCount<0>
-INPUTMC | 1 | 1 | 8
+OUTPUTMC | 13 | 1 | 4 | 1 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 2 | 3 | 2 | 14 | 0 | 2 | 1 | 5
+INPUTS | 3 | vsync  | lineCount<1>  | lineCount<0>
+INPUTMC | 2 | 1 | 4 | 2 | 1
+INPUTP | 1 | 17
+LCT | 1 | 2 | Internal_Name
+EQ | 3 | 
+   lineCount<1> := !vsync & lineCount<1> & !lineCount<0>
+	# !vsync & !lineCount<1> & lineCount<0>;	// (2 pt, 3 inp)
+    lineCount<1>.CLK = csync;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 2 | 1 | lineCount<0>_MC
+ATTRIBUTES | 2290090752 | 0
+OUTPUTMC | 14 | 2 | 1 | 1 | 4 | 1 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 2 | 3 | 2 | 14 | 0 | 2 | 1 | 6
+INPUTS | 2 | vsync  | lineCount<0>
+INPUTMC | 1 | 2 | 1
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 2 | 
-   cm/lineCount<0> := !vsync & !cm/lineCount<0>;	// (1 pt, 2 inp)
-    cm/lineCount<0>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<0> := !vsync & !lineCount<0>;	// (1 pt, 2 inp)
+    lineCount<0>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 1 | 12 | cm/lineCount<3>_MC
+MACROCELL | 0 | 8 | lineCount<3>_MC
 ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 8 | 1 | 12 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 5 | vsync  | cm/lineCount<3>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<2>
-INPUTMC | 4 | 1 | 12 | 1 | 3 | 1 | 8 | 1 | 2
+OUTPUTMC | 12 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 3 | 2 | 14 | 0 | 2 | 2 | 15
+INPUTS | 5 | vsync  | lineCount<3>  | lineCount<2>  | lineCount<1>  | lineCount<0>
+INPUTMC | 4 | 0 | 8 | 1 | 1 | 1 | 4 | 2 | 1
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 4 | 
-   cm/lineCount<3>.T := vsync & cm/lineCount<3>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<2>;	// (2 pt, 5 inp)
-    cm/lineCount<3>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<3>.T := vsync & lineCount<3>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0>;	// (2 pt, 5 inp)
+    lineCount<3>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 1 | 2 | cm/lineCount<2>_MC
+MACROCELL | 0 | 10 | lineCount<4>_MC
 ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 9 | 1 | 2 | 1 | 12 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 4 | vsync  | cm/lineCount<2>  | cm/lineCount<1>  | cm/lineCount<0>
-INPUTMC | 3 | 1 | 2 | 1 | 3 | 1 | 8
-INPUTP | 1 | 17
-LCT | 1 | 2 | Internal_Name
-EQ | 3 | 
-   cm/lineCount<2>.T := vsync & cm/lineCount<2>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0>;	// (2 pt, 4 inp)
-    cm/lineCount<2>.CLK = csync;	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 0 | 8 | cm/lineCount<4>_MC
-ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 7 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 6 | vsync  | cm/lineCount<4>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>
-INPUTMC | 5 | 0 | 8 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2
+OUTPUTMC | 11 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 3 | 2 | 14 | 0 | 2 | 2 | 12
+INPUTS | 6 | vsync  | lineCount<4>  | lineCount<2>  | lineCount<1>  | lineCount<0>  | lineCount<3>
+INPUTMC | 5 | 0 | 10 | 1 | 1 | 1 | 4 | 2 | 1 | 0 | 8
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 4 | 
-   cm/lineCount<4>.T := vsync & cm/lineCount<4>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2>;	// (2 pt, 6 inp)
-    cm/lineCount<4>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<4>.T := vsync & lineCount<4>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0> & lineCount<3>;	// (2 pt, 6 inp)
+    lineCount<4>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 10 | cm/lineCount<5>_MC
+MACROCELL | 0 | 12 | lineCount<5>_MC
 ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 6 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 7 | vsync  | cm/lineCount<5>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>
-INPUTMC | 6 | 0 | 10 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2 | 0 | 8
+OUTPUTMC | 7 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 8
+INPUTS | 7 | vsync  | lineCount<5>  | lineCount<2>  | lineCount<1>  | lineCount<0>  | lineCount<3>  | lineCount<4>
+INPUTMC | 6 | 0 | 12 | 1 | 1 | 1 | 4 | 2 | 1 | 0 | 8 | 0 | 10
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 4 | 
-   cm/lineCount<5>.T := vsync & cm/lineCount<5>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4>;	// (2 pt, 7 inp)
-    cm/lineCount<5>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<5>.T := vsync & lineCount<5>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0> & lineCount<3> & lineCount<4>;	// (2 pt, 7 inp)
+    lineCount<5>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 3 | cm/lineCount<6>_MC
+MACROCELL | 0 | 4 | lineCount<6>_MC
 ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 5 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 8 | vsync  | cm/lineCount<6>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>  | cm/lineCount<5>
-INPUTMC | 7 | 0 | 3 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2 | 0 | 8 | 0 | 10
+OUTPUTMC | 6 | 0 | 4 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 7
+INPUTS | 8 | vsync  | lineCount<6>  | lineCount<2>  | lineCount<1>  | lineCount<0>  | lineCount<3>  | lineCount<4>  | lineCount<5>
+INPUTMC | 7 | 0 | 4 | 1 | 1 | 1 | 4 | 2 | 1 | 0 | 8 | 0 | 10 | 0 | 12
+INPUTP | 1 | 17
+LCT | 1 | 2 | Internal_Name
+EQ | 4 | 
+   lineCount<6>.T := vsync & lineCount<6>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0> & lineCount<3> & lineCount<4> & lineCount<5>;	// (2 pt, 8 inp)
+    lineCount<6>.CLK = csync;	// CTC	(1 pt, 1 inp)
+
+MACROCELL | 0 | 6 | lineCount<7>_MC
+ATTRIBUTES | 2285896448 | 0
+OUTPUTMC | 5 | 0 | 6 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 6
+INPUTS | 9 | vsync  | lineCount<7>  | lineCount<2>  | lineCount<1>  | lineCount<0>  | lineCount<3>  | lineCount<4>  | lineCount<5>  | lineCount<6>
+INPUTMC | 8 | 0 | 6 | 1 | 1 | 1 | 4 | 2 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
 EQ | 5 | 
-   cm/lineCount<6>.T := vsync & cm/lineCount<6>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4> & 
-	cm/lineCount<5>;	// (2 pt, 8 inp)
-    cm/lineCount<6>.CLK = csync;	// CTC	(1 pt, 1 inp)
+   lineCount<7>.T := vsync & lineCount<7>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0> & lineCount<3> & lineCount<4> & lineCount<5> & 
+	lineCount<6>;	// (2 pt, 9 inp)
+    lineCount<7>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 5 | cm/lineCount<7>_MC
-ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 4 | 0 | 5 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 9 | vsync  | cm/lineCount<7>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>  | cm/lineCount<5>  | cm/lineCount<6>
-INPUTMC | 8 | 0 | 5 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2 | 0 | 8 | 0 | 10 | 0 | 3
-INPUTP | 1 | 17
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   cm/lineCount<7>.T := vsync & cm/lineCount<7>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4> & 
-	cm/lineCount<5> & cm/lineCount<6>;	// (2 pt, 9 inp)
-    cm/lineCount<7>.CLK = csync;	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 0 | 7 | cm/lineCount<8>_MC
-ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 3 | 0 | 7 | 0 | 13 | 0 | 1
-INPUTS | 10 | vsync  | cm/lineCount<8>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>  | cm/lineCount<5>  | cm/lineCount<6>  | cm/lineCount<7>
-INPUTMC | 9 | 0 | 7 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5
-INPUTP | 1 | 17
-LCT | 1 | 2 | Internal_Name
-EQ | 5 | 
-   cm/lineCount<8>.T := vsync & cm/lineCount<8>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4> & 
-	cm/lineCount<5> & cm/lineCount<6> & cm/lineCount<7>;	// (2 pt, 10 inp)
-    cm/lineCount<8>.CLK = csync;	// CTC	(1 pt, 1 inp)
-
-MACROCELL | 0 | 9 | cm/columnCount<4>_MC
+MACROCELL | 0 | 11 | columnCount<4>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 7 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 0 | 1
-INPUTS | 6 | csync  | cm/columnCount<4>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>
-INPUTMC | 5 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2
+OUTPUTMC | 8 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 0 | 1 | 0 | 15 | 1 | 2
+INPUTS | 6 | csync  | columnCount<4>  | columnCount<3>  | columnCount<2>  | columnCount<1>  | columnCount<0>
+INPUTMC | 5 | 0 | 11 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15
 INPUTP | 1 | 12
 EQ | 4 | 
-   cm/columnCount<4>.T := csync & cm/columnCount<4>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3>;	// (2 pt, 6 inp)
-   cm/columnCount<4>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+   columnCount<4>.T := csync & columnCount<4>
+	# columnCount<3> & !csync & columnCount<2> & 
+	columnCount<1> & columnCount<0>;	// (2 pt, 6 inp)
+   columnCount<4>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 0 | 11 | cm/columnCount<5>_MC
+MACROCELL | 0 | 3 | columnCount<5>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 6 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 0 | 1
-INPUTS | 7 | csync  | cm/columnCount<5>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>  | cm/columnCount<4>
-INPUTMC | 6 | 0 | 11 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2 | 0 | 9
+OUTPUTMC | 7 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 0 | 1 | 0 | 15 | 1 | 12
+INPUTS | 7 | csync  | columnCount<5>  | columnCount<3>  | columnCount<2>  | columnCount<1>  | columnCount<0>  | columnCount<4>
+INPUTMC | 6 | 0 | 3 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 11
 INPUTP | 1 | 12
 EQ | 4 | 
-   cm/columnCount<5>.T := csync & cm/columnCount<5>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3> & cm/columnCount<4>;	// (2 pt, 7 inp)
-   cm/columnCount<5>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+   columnCount<5>.T := csync & columnCount<5>
+	# columnCount<3> & !csync & columnCount<2> & 
+	columnCount<1> & columnCount<0> & columnCount<4>;	// (2 pt, 7 inp)
+   columnCount<5>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 0 | 4 | cm/columnCount<6>_MC
+MACROCELL | 0 | 5 | columnCount<6>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 5 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 0 | 1
-INPUTS | 8 | csync  | cm/columnCount<6>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>  | cm/columnCount<4>  | cm/columnCount<5>
-INPUTMC | 7 | 0 | 4 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2 | 0 | 9 | 0 | 11
+OUTPUTMC | 6 | 0 | 5 | 0 | 13 | 0 | 14 | 0 | 1 | 0 | 15 | 1 | 11
+INPUTS | 8 | csync  | columnCount<6>  | columnCount<3>  | columnCount<2>  | columnCount<1>  | columnCount<0>  | columnCount<4>  | columnCount<5>
+INPUTMC | 7 | 0 | 5 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 11 | 0 | 3
+INPUTP | 1 | 12
+EQ | 4 | 
+   columnCount<6>.T := csync & columnCount<6>
+	# columnCount<3> & !csync & columnCount<2> & 
+	columnCount<1> & columnCount<0> & columnCount<4> & columnCount<5>;	// (2 pt, 8 inp)
+   columnCount<6>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 0 | 13 | columnCount<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 0 | 13 | 0 | 14 | 0 | 1 | 0 | 15 | 1 | 9
+INPUTS | 9 | csync  | columnCount<7>  | columnCount<3>  | columnCount<2>  | columnCount<1>  | columnCount<0>  | columnCount<4>  | columnCount<5>  | columnCount<6>
+INPUTMC | 8 | 0 | 13 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 11 | 0 | 3 | 0 | 5
 INPUTP | 1 | 12
 EQ | 5 | 
-   cm/columnCount<6>.T := csync & cm/columnCount<6>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3> & cm/columnCount<4> & 
-	cm/columnCount<5>;	// (2 pt, 8 inp)
-   cm/columnCount<6>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+   columnCount<7>.T := csync & columnCount<7>
+	# columnCount<3> & !csync & columnCount<2> & 
+	columnCount<1> & columnCount<0> & columnCount<4> & columnCount<5> & 
+	columnCount<6>;	// (2 pt, 9 inp)
+   columnCount<7>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 0 | 6 | cm/columnCount<7>_MC
-ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 0 | 1
-INPUTS | 9 | csync  | cm/columnCount<7>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>  | cm/columnCount<4>  | cm/columnCount<5>  | cm/columnCount<6>
-INPUTMC | 8 | 0 | 6 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4
-INPUTP | 1 | 12
-EQ | 5 | 
-   cm/columnCount<7>.T := csync & cm/columnCount<7>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6>;	// (2 pt, 9 inp)
-   cm/columnCount<7>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | clk4mhz
-
-MACROCELL | 0 | 14 | cm/columnCount<8>_MC
-ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 3 | 0 | 14 | 0 | 15 | 0 | 1
-INPUTS | 10 | csync  | cm/columnCount<8>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>  | cm/columnCount<4>  | cm/columnCount<5>  | cm/columnCount<6>  | cm/columnCount<7>
-INPUTMC | 9 | 0 | 14 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6
-INPUTP | 1 | 12
-EQ | 5 | 
-   cm/columnCount<8>.T := csync & cm/columnCount<8>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6> & cm/columnCount<7>;	// (2 pt, 10 inp)
-   cm/columnCount<8>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | clk4mhz
-
-MACROCELL | 0 | 13 | cm/lineCount<9>_MC
+MACROCELL | 0 | 7 | lineCount<8>_MC
 ATTRIBUTES | 2285896448 | 0
-OUTPUTMC | 2 | 0 | 13 | 0 | 1
-INPUTS | 11 | vsync  | cm/lineCount<9>  | cm/lineCount<1>  | cm/lineCount<0>  | cm/lineCount<3>  | cm/lineCount<2>  | cm/lineCount<4>  | cm/lineCount<5>  | cm/lineCount<6>  | cm/lineCount<7>  | cm/lineCount<8>
-INPUTMC | 10 | 0 | 13 | 1 | 3 | 1 | 8 | 1 | 12 | 1 | 2 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7
+OUTPUTMC | 4 | 0 | 7 | 0 | 1 | 0 | 15 | 2 | 4
+INPUTS | 10 | vsync  | lineCount<8>  | lineCount<2>  | lineCount<1>  | lineCount<0>  | lineCount<3>  | lineCount<4>  | lineCount<5>  | lineCount<6>  | lineCount<7>
+INPUTMC | 9 | 0 | 7 | 1 | 1 | 1 | 4 | 2 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6
 INPUTP | 1 | 17
 LCT | 1 | 2 | Internal_Name
-EQ | 6 | 
-   cm/lineCount<9>.T := vsync & cm/lineCount<9>
-	# cm/lineCount<1> & !vsync & cm/lineCount<0> & 
-	cm/lineCount<3> & cm/lineCount<2> & cm/lineCount<4> & 
-	cm/lineCount<5> & cm/lineCount<6> & cm/lineCount<7> & 
-	cm/lineCount<8>;	// (2 pt, 11 inp)
-    cm/lineCount<9>.CLK = csync;	// CTC	(1 pt, 1 inp)
+EQ | 5 | 
+   lineCount<8>.T := vsync & lineCount<8>
+	# lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0> & lineCount<3> & lineCount<4> & lineCount<5> & 
+	lineCount<6> & lineCount<7>;	// (2 pt, 10 inp)
+    lineCount<8>.CLK = csync;	// CTC	(1 pt, 1 inp)
 
-MACROCELL | 0 | 15 | cm/columnCount<9>_MC
+MACROCELL | 0 | 14 | columnCount<8>_MC
 ATTRIBUTES | 2151711488 | 0
-OUTPUTMC | 2 | 0 | 15 | 0 | 1
-INPUTS | 11 | csync  | cm/columnCount<9>  | cm/columnCount<2>  | cm/columnCount<1>  | cm/columnCounter/cnt<0>  | cm/columnCount<3>  | cm/columnCount<4>  | cm/columnCount<5>  | cm/columnCount<6>  | cm/columnCount<7>  | cm/columnCount<8>
-INPUTMC | 10 | 0 | 15 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14
+OUTPUTMC | 4 | 0 | 14 | 0 | 1 | 0 | 15 | 1 | 7
+INPUTS | 10 | csync  | columnCount<8>  | columnCount<3>  | columnCount<2>  | columnCount<1>  | columnCount<0>  | columnCount<4>  | columnCount<5>  | columnCount<6>  | columnCount<7>
+INPUTMC | 9 | 0 | 14 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 15 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13
 INPUTP | 1 | 12
-EQ | 6 | 
-   cm/columnCount<9>.T := csync & cm/columnCount<9>
-	# cm/columnCount<2> & !csync & cm/columnCount<1> & 
-	cm/columnCounter/cnt<0> & cm/columnCount<3> & cm/columnCount<4> & 
-	cm/columnCount<5> & cm/columnCount<6> & cm/columnCount<7> & 
-	cm/columnCount<8>;	// (2 pt, 11 inp)
-   cm/columnCount<9>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
+EQ | 5 | 
+   columnCount<8>.T := csync & columnCount<8>
+	# columnCount<3> & !csync & columnCount<2> & 
+	columnCount<1> & columnCount<0> & columnCount<4> & columnCount<5> & 
+	columnCount<6> & columnCount<7>;	// (2 pt, 10 inp)
+   columnCount<8>.CLK  =  clk4mhz;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | clk4mhz
 
-MACROCELL | 1 | 10 | N_PZ_144_MC
+MACROCELL | 1 | 10 | N_PZ_309_MC
 ATTRIBUTES | 536871680 | 0
 OUTPUTMC | 1 | 0 | 1
-INPUTS | 3 | cm/columnCount<2>  | cm/columnCount<3>  | cm/columnCount<1>
-INPUTMC | 3 | 1 | 13 | 0 | 2 | 1 | 14
-EQ | 3 | 
-   N_PZ_144 = !cm/columnCount<2> & !cm/columnCount<3>
-	# cm/columnCount<2> & cm/columnCount<1> & 
-	cm/columnCount<3>;	// (2 pt, 3 inp)
-
-MACROCELL | 2 | 2 | io<27>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 1 | vsync
-INPUTP | 1 | 17
-EQ | 1 | 
-   io<27> = vsync;	// (1 pt, 1 inp)
-
-MACROCELL | 2 | 1 | io<28>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 1 | burst
-INPUTP | 1 | 16
-EQ | 1 | 
-   io<28> = burst;	// (1 pt, 1 inp)
-
-MACROCELL | 2 | 0 | io<29>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 1 | field
-INPUTP | 1 | 13
-EQ | 1 | 
-   io<29> = field;	// (1 pt, 1 inp)
-
-MACROCELL | 0 | 12 | io<30>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 1 | csync
-INPUTP | 1 | 12
-EQ | 1 | 
-   io<30> = csync;	// (1 pt, 1 inp)
+INPUTS | 3 | columnCount<3>  | columnCount<2>  | columnCount<1>
+INPUTMC | 3 | 0 | 9 | 1 | 13 | 1 | 14
+EQ | 2 | 
+   N_PZ_309 = !columnCount<3> & !columnCount<2>
+	# columnCount<3> & columnCount<2> & columnCount<1>;	// (2 pt, 3 inp)
 
 MACROCELL | 2 | 11 | led<0>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 1 | io<33>
-INPUTP | 1 | 1
+ATTRIBUTES | 2156167938 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 10 | vsync  | led<0>  | azOut_1  | targetDetected  | targetColumn<3>  | targetColumn<7>  | targetColumn<8>  | targetColumn<4>  | targetColumn<5>  | targetColumn<6>
+INPUTMC | 9 | 2 | 11 | 2 | 5 | 1 | 3 | 1 | 8 | 1 | 9 | 1 | 7 | 1 | 2 | 1 | 12 | 1 | 11
+INPUTP | 1 | 17
+EQ | 11 | 
+   led<0> := !vsync & led<0>
+	# !azOut_1 & led<0>
+	# vsync & targetDetected & azOut_1 & 
+	!targetColumn<3> & !targetColumn<7> & !targetColumn<8>
+	# vsync & targetDetected & azOut_1 & 
+	!targetColumn<7> & !targetColumn<8> & !targetColumn<4>
+	# vsync & targetDetected & azOut_1 & 
+	!targetColumn<7> & !targetColumn<8> & !targetColumn<5>
+	# vsync & targetDetected & azOut_1 & 
+	!targetColumn<7> & !targetColumn<8> & !targetColumn<6>;	// (6 pt, 10 inp)
+   led<0>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 3 | targetDetected_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 3 | 15 | 3 | 11 | 1 | 3 | 2 | 11 | 2 | 13
+INPUTS | 4 | N_PZ_321  | vsync  | targetDetected  | targetDetected_or0002
+INPUTMC | 3 | 3 | 11 | 1 | 3 | 3 | 15
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetDetected := N_PZ_321
+	# !vsync & targetDetected & targetDetected_or0002;	// (2 pt, 4 inp)
+   targetDetected.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 15 | targetDetected_or0002_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 17 | 3 | 11 | 1 | 3 | 1 | 8 | 1 | 9 | 1 | 7 | 1 | 2 | 1 | 12 | 1 | 11 | 1 | 6 | 1 | 0 | 2 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 4 | 1 | 5 | 2 | 6
+INPUTS | 12 | csync  | targetDetected  | N_PZ_332  | numColumn<0>  | numColumn<1>  | numColumn<3>  | numColumn<4>  | numColumn<5>  | numColumn<6>  | numColumn<7>  | numColumn<8>  | numColumn<2>
+INPUTMC | 11 | 1 | 3 | 2 | 14 | 2 | 0 | 3 | 3 | 3 | 2 | 3 | 5 | 3 | 13 | 3 | 8 | 3 | 7 | 3 | 9 | 3 | 4
+INPUTP | 1 | 12
+EQ | 9 | 
+   targetDetected_or0002 = csync
+	# targetDetected
+	# !N_PZ_332
+	# numColumn<0> & !numColumn<1> & !numColumn<3> & 
+	!numColumn<4> & !numColumn<5> & !numColumn<6> & !numColumn<7> & 
+	!numColumn<8>
+	# !numColumn<0> & !numColumn<3> & !numColumn<2> & 
+	!numColumn<4> & !numColumn<5> & !numColumn<6> & !numColumn<7> & 
+	!numColumn<8>;	// (5 pt, 12 inp)
+
+MACROCELL | 2 | 0 | numColumn<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 2 | 0 | 3 | 3 | 3 | 4 | 3 | 14 | 3 | 15 | 3 | 11
+INPUTS | 3 | vsync  | numColumn<0>  | N_PZ_298
+INPUTMC | 2 | 2 | 0 | 2 | 3
+INPUTP | 1 | 17
+EQ | 3 | 
+   numColumn<0> := vsync & numColumn<0>
+	# !numColumn<0> & N_PZ_298;	// (2 pt, 3 inp)
+   numColumn<0>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 3 | N_PZ_298_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 2 | 0 | 3 | 3 | 3 | 4
+INPUTS | 6 | vsync  | lineCount<4>  | N_PZ_271  | lineCount<1>  | lineCount<3>  | lineCount<0>
+INPUTMC | 5 | 0 | 10 | 0 | 15 | 1 | 4 | 0 | 8 | 2 | 1
+INPUTP | 1 | 17
+EQ | 3 | 
+   N_PZ_298 = !vsync & !lineCount<4> & N_PZ_271
+	# !vsync & !lineCount<1> & !lineCount<3> & N_PZ_271
+	# !vsync & !lineCount<0> & !lineCount<3> & N_PZ_271;	// (3 pt, 6 inp)
+
+MACROCELL | 0 | 15 | N_PZ_271_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 2 | 3 | 2 | 14 | 0 | 2
+INPUTS | 17 | columnCount<3>  | csync  | columnCount<2>  | columnCount<1>  | lineCount<2>  | lineCount<3>  | lineCount<5>  | lineCount<6>  | lineCount<7>  | columnCount<4>  | columnCount<5>  | columnCount<6>  | columnCount<7>  | lineCount<8>  | columnCount<8>  | lineCount<4>  | columnCount<0>
+INPUTMC | 16 | 0 | 9 | 1 | 13 | 1 | 14 | 1 | 1 | 0 | 8 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 7 | 0 | 14 | 0 | 10 | 1 | 15
+INPUTP | 1 | 12
+EQ | 16 | 
+   N_PZ_271 = columnCount<3> & !csync & columnCount<2> & 
+	!columnCount<1> & lineCount<2> & lineCount<3> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & !columnCount<4> & !columnCount<5> & 
+	!columnCount<6> & columnCount<7> & !lineCount<8> & !columnCount<8>
+	# columnCount<3> & !csync & columnCount<2> & 
+	!columnCount<1> & !lineCount<2> & lineCount<4> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & !columnCount<4> & !columnCount<5> & 
+	!columnCount<6> & columnCount<7> & !lineCount<8> & !columnCount<8>
+	# columnCount<3> & !csync & columnCount<2> & 
+	!columnCount<0> & lineCount<2> & lineCount<3> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & !columnCount<4> & !columnCount<5> & 
+	!columnCount<6> & columnCount<7> & !lineCount<8> & !columnCount<8>
+	# columnCount<3> & !csync & columnCount<2> & 
+	!columnCount<0> & !lineCount<2> & lineCount<4> & !lineCount<5> & 
+	!lineCount<6> & lineCount<7> & !columnCount<4> & !columnCount<5> & 
+	!columnCount<6> & columnCount<7> & !lineCount<8> & !columnCount<8>;	// (4 pt, 17 inp)
+
+MACROCELL | 3 | 3 | numColumn<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 3 | 3 | 3 | 4 | 3 | 14 | 3 | 15 | 3 | 11
+INPUTS | 4 | vsync  | numColumn<1>  | numColumn<0>  | N_PZ_298
+INPUTMC | 3 | 3 | 3 | 2 | 0 | 2 | 3
+INPUTP | 1 | 17
+EQ | 4 | 
+   numColumn<1> := vsync & numColumn<1>
+	# numColumn<0> & N_PZ_298 & !numColumn<1>
+	# !numColumn<0> & N_PZ_298 & numColumn<1>;	// (3 pt, 4 inp)
+   numColumn<1>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 2 | numColumn<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 3 | 2 | 3 | 12 | 3 | 5 | 3 | 15 | 3 | 11
+INPUTS | 4 | vsync  | N_PZ_332  | numColumn<3>  | N_PZ_256
+INPUTMC | 3 | 2 | 14 | 3 | 2 | 3 | 14
+INPUTP | 1 | 17
+EQ | 4 | 
+   !numColumn<3> := !vsync & N_PZ_332
+	# numColumn<3> & N_PZ_256
+	# !numColumn<3> & !N_PZ_256;	// (3 pt, 4 inp)
+   numColumn<3>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 14 | N_PZ_332_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 3 | 2 | 3 | 8 | 3 | 9 | 3 | 15
+INPUTS | 5 | N_PZ_271  | lineCount<3>  | lineCount<4>  | lineCount<1>  | lineCount<0>
+INPUTMC | 5 | 0 | 15 | 0 | 8 | 0 | 10 | 1 | 4 | 2 | 1
+EQ | 3 | 
+   N_PZ_332 = !N_PZ_271
+	# lineCount<3> & lineCount<4>
+	# lineCount<1> & lineCount<0> & lineCount<4>;	// (3 pt, 5 inp)
+
+MACROCELL | 3 | 14 | N_PZ_256_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 3 | 4 | 3 | 2 | 3 | 12 | 3 | 5
+INPUTS | 4 | vsync  | numColumn<0>  | numColumn<1>  | numColumn<2>
+INPUTMC | 3 | 2 | 0 | 3 | 3 | 3 | 4
+INPUTP | 1 | 17
+EQ | 2 | 
+   N_PZ_256 = !vsync & numColumn<0> & numColumn<1> & 
+	numColumn<2>;	// (1 pt, 4 inp)
+
+MACROCELL | 3 | 4 | numColumn<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 3 | 4 | 3 | 14 | 3 | 15 | 3 | 11
+INPUTS | 6 | vsync  | numColumn<2>  | N_PZ_298  | N_PZ_256  | numColumn<0>  | numColumn<1>
+INPUTMC | 5 | 3 | 4 | 2 | 3 | 3 | 14 | 2 | 0 | 3 | 3
+INPUTP | 1 | 17
+EQ | 5 | 
+   numColumn<2> := vsync & numColumn<2>
+	# N_PZ_298 & !N_PZ_256 & numColumn<2>
+	# numColumn<0> & N_PZ_298 & numColumn<1> & 
+	!N_PZ_256;	// (3 pt, 6 inp)
+   numColumn<2>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 5 | numColumn<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 3 | 12 | 3 | 5 | 3 | 15 | 3 | 11
+INPUTS | 5 | numColumn<4>  | N_PZ_329  | N_PZ_361  | numColumn<3>  | N_PZ_256
+INPUTMC | 5 | 3 | 5 | 3 | 12 | 0 | 2 | 3 | 2 | 3 | 14
+EQ | 3 | 
+   numColumn<4> := numColumn<4> & !N_PZ_329 & !N_PZ_361
+	# numColumn<3> & N_PZ_256 & !N_PZ_329 & !N_PZ_361;	// (2 pt, 5 inp)
+   numColumn<4>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 12 | N_PZ_329_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 5 | 3 | 5 | 3 | 13 | 3 | 8 | 3 | 7 | 3 | 9
+INPUTS | 3 | numColumn<3>  | N_PZ_256  | numColumn<4>
+INPUTMC | 3 | 3 | 2 | 3 | 14 | 3 | 5
 EQ | 1 | 
-   led<0> = io<33>;	// (1 pt, 1 inp)
+   N_PZ_329 = numColumn<3> & N_PZ_256 & numColumn<4>;	// (1 pt, 3 inp)
+
+MACROCELL | 0 | 2 | N_PZ_361_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 3 | 5 | 3 | 13 | 3 | 7
+INPUTS | 7 | vsync  | N_PZ_271  | lineCount<2>  | lineCount<4>  | lineCount<3>  | lineCount<1>  | lineCount<0>
+INPUTMC | 6 | 0 | 15 | 1 | 1 | 0 | 10 | 0 | 8 | 1 | 4 | 2 | 1
+INPUTP | 1 | 17
+EQ | 5 | 
+   N_PZ_361 = !vsync & !N_PZ_271
+	# lineCount<2> & !vsync & lineCount<4>
+	# !lineCount<2> & !vsync & lineCount<3>
+	# !lineCount<2> & !vsync & lineCount<1> & 
+	lineCount<0>;	// (4 pt, 7 inp)
+
+MACROCELL | 3 | 13 | numColumn<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 6 | 3 | 13 | 3 | 8 | 3 | 7 | 3 | 9 | 3 | 15 | 3 | 11
+INPUTS | 3 | N_PZ_329  | N_PZ_361  | numColumn<5>
+INPUTMC | 3 | 3 | 12 | 0 | 2 | 3 | 13
+EQ | 3 | 
+   numColumn<5> := N_PZ_329 & !N_PZ_361 & !numColumn<5>
+	# !N_PZ_329 & !N_PZ_361 & numColumn<5>;	// (2 pt, 3 inp)
+   numColumn<5>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 8 | numColumn<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 3 | 8 | 3 | 7 | 3 | 9 | 3 | 15 | 3 | 11
+INPUTS | 5 | vsync  | N_PZ_329  | numColumn<5>  | N_PZ_332  | numColumn<6>
+INPUTMC | 4 | 3 | 12 | 3 | 13 | 2 | 14 | 3 | 8
+INPUTP | 1 | 17
+EQ | 4 | 
+   numColumn<6>.T := vsync & N_PZ_329 & numColumn<5>
+	# !vsync & N_PZ_332 & numColumn<6>
+	# !N_PZ_332 & N_PZ_329 & numColumn<5>;	// (3 pt, 5 inp)
+   numColumn<6>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 7 | numColumn<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 3 | 7 | 3 | 9 | 3 | 15 | 3 | 11
+INPUTS | 5 | N_PZ_361  | numColumn<7>  | N_PZ_329  | numColumn<5>  | numColumn<6>
+INPUTMC | 5 | 0 | 2 | 3 | 7 | 3 | 12 | 3 | 13 | 3 | 8
+EQ | 4 | 
+   numColumn<7>.T := N_PZ_361 & numColumn<7>
+	# N_PZ_329 & !N_PZ_361 & numColumn<5> & 
+	numColumn<6>;	// (2 pt, 5 inp)
+   numColumn<7>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 9 | numColumn<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 3 | 9 | 3 | 15 | 3 | 11
+INPUTS | 7 | vsync  | N_PZ_332  | numColumn<8>  | N_PZ_329  | numColumn<5>  | numColumn<6>  | numColumn<7>
+INPUTMC | 6 | 2 | 14 | 3 | 9 | 3 | 12 | 3 | 13 | 3 | 8 | 3 | 7
+INPUTP | 1 | 17
+EQ | 6 | 
+   numColumn<8>.T := !vsync & N_PZ_332 & numColumn<8>
+	# vsync & N_PZ_329 & numColumn<5> & numColumn<6> & 
+	numColumn<7>
+	# !N_PZ_332 & N_PZ_329 & numColumn<5> & 
+	numColumn<6> & numColumn<7>;	// (3 pt, 7 inp)
+   numColumn<8>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 3 | 11 | N_PZ_321_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 16 | 1 | 3 | 1 | 8 | 1 | 9 | 1 | 7 | 1 | 2 | 1 | 12 | 1 | 11 | 1 | 6 | 1 | 0 | 2 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 4 | 1 | 5 | 2 | 6
+INPUTS | 12 | vsync  | targetDetected  | targetDetected_or0002  | numColumn<0>  | numColumn<1>  | numColumn<3>  | numColumn<2>  | numColumn<4>  | numColumn<5>  | numColumn<6>  | numColumn<7>  | numColumn<8>
+INPUTMC | 11 | 1 | 3 | 3 | 15 | 2 | 0 | 3 | 3 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 13 | 3 | 8 | 3 | 7 | 3 | 9
+INPUTP | 1 | 17
+EQ | 8 | 
+   N_PZ_321 = !vsync & !targetDetected & !targetDetected_or0002 & 
+	numColumn<0> & numColumn<1> & !numColumn<3> & !numColumn<2> & 
+	!numColumn<4> & !numColumn<5> & !numColumn<6> & !numColumn<7> & 
+	!numColumn<8>
+	# !vsync & !targetDetected & !targetDetected_or0002 & 
+	!numColumn<0> & !numColumn<1> & !numColumn<3> & numColumn<2> & 
+	!numColumn<4> & !numColumn<5> & !numColumn<6> & !numColumn<7> & 
+	!numColumn<8>;	// (2 pt, 12 inp)
+
+MACROCELL | 2 | 5 | azOut_1_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 2 | 10 | 2 | 11
+INPUTS | 2 | vsync  | N_PZ_453
+INPUTMC | 1 | 2 | 10
+INPUTP | 1 | 17
+EQ | 3 | 
+   azOut_1 := !vsync;	// (1 pt, 1 inp)
+   azOut_1.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+    azOut_1.CE = !N_PZ_453;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 10 | N_PZ_453_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 2 | 5
+INPUTS | 2 | vsync  | azOut_1
+INPUTMC | 1 | 2 | 5
+INPUTP | 1 | 17
+EQ | 1 | 
+   N_PZ_453 = vsync & !azOut_1;	// (1 pt, 2 inp)
+
+MACROCELL | 1 | 8 | targetColumn<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 8 | 2 | 11
+INPUTS | 5 | columnCount<3>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<3>
+INPUTMC | 4 | 0 | 9 | 3 | 11 | 3 | 15 | 1 | 8
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<3> := columnCount<3> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<3>;	// (2 pt, 5 inp)
+   targetColumn<3>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 9 | targetColumn<7>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 9 | 2 | 11
+INPUTS | 5 | columnCount<7>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<7>
+INPUTMC | 4 | 0 | 13 | 3 | 11 | 3 | 15 | 1 | 9
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<7> := columnCount<7> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<7>;	// (2 pt, 5 inp)
+   targetColumn<7>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 7 | targetColumn<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 7 | 2 | 11
+INPUTS | 5 | columnCount<8>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<8>
+INPUTMC | 4 | 0 | 14 | 3 | 11 | 3 | 15 | 1 | 7
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<8> := columnCount<8> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<8>;	// (2 pt, 5 inp)
+   targetColumn<8>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 2 | targetColumn<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 2 | 2 | 11
+INPUTS | 5 | columnCount<4>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<4>
+INPUTMC | 4 | 0 | 11 | 3 | 11 | 3 | 15 | 1 | 2
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<4> := columnCount<4> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<4>;	// (2 pt, 5 inp)
+   targetColumn<4>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 12 | targetColumn<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 12 | 2 | 11
+INPUTS | 5 | columnCount<5>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<5>
+INPUTMC | 4 | 0 | 3 | 3 | 11 | 3 | 15 | 1 | 12
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<5> := columnCount<5> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<5>;	// (2 pt, 5 inp)
+   targetColumn<5>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 11 | targetColumn<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 11 | 2 | 11
+INPUTS | 5 | columnCount<6>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetColumn<6>
+INPUTMC | 4 | 0 | 5 | 3 | 11 | 3 | 15 | 1 | 11
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetColumn<6> := columnCount<6> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetColumn<6>;	// (2 pt, 5 inp)
+   targetColumn<6>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
 
 MACROCELL | 2 | 13 | led<1>_MC
-ATTRIBUTES | 1074004738 | 0
-INPUTS | 0
-EQ | 1 | 
-   !led<1> = Gnd;	// (0 pt, 0 inp)
+ATTRIBUTES | 2156167938 | 0
+OUTPUTMC | 1 | 2 | 13
+INPUTS | 13 | vsync  | led<1>  | elOut_1  | targetDetected  | targetLine<8>  | targetLine<7>  | targetLine<0>  | targetLine<2>  | targetLine<3>  | targetLine<4>  | targetLine<5>  | targetLine<6>  | targetLine<1>
+INPUTMC | 12 | 2 | 13 | 2 | 2 | 1 | 3 | 2 | 4 | 2 | 6 | 1 | 6 | 1 | 0 | 2 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 1 | 5
+INPUTP | 1 | 17
+EQ | 11 | 
+   led<1> := !vsync & led<1>
+	# !elOut_1 & led<1>
+	# vsync & targetDetected & elOut_1 & 
+	!targetLine<8> & !targetLine<7>
+	# vsync & targetDetected & elOut_1 & 
+	!targetLine<0> & !targetLine<2> & !targetLine<3> & !targetLine<4> & 
+	!targetLine<5> & !targetLine<6> & !targetLine<8>
+	# vsync & targetDetected & elOut_1 & 
+	!targetLine<2> & !targetLine<3> & !targetLine<4> & !targetLine<5> & 
+	!targetLine<6> & !targetLine<8> & !targetLine<1>;	// (5 pt, 13 inp)
+   led<1>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
 
-PIN | burst | 64 | 64 | LVCMOS33 | 16 | 1 | 2 | 1
-PIN | clk4mhz | 16384 | 64 | LVCMOS33 | 23 | 10 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15
-PIN | csync | 64 | 64 | LVCMOS33 | 12 | 11 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 2 | 0 | 9 | 0 | 11 | 0 | 4 | 0 | 6 | 0 | 14 | 0 | 15 | 0 | 12
-PIN | field | 64 | 64 | LVCMOS33 | 13 | 1 | 2 | 0
+MACROCELL | 2 | 2 | elOut_1_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 2 | 9 | 2 | 13
+INPUTS | 2 | vsync  | N_PZ_454
+INPUTMC | 1 | 2 | 9
+INPUTP | 1 | 17
+EQ | 3 | 
+   elOut_1 := !vsync;	// (1 pt, 1 inp)
+   elOut_1.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+    elOut_1.CE = !N_PZ_454;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 9 | N_PZ_454_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 2 | 2
+INPUTS | 2 | vsync  | elOut_1
+INPUTMC | 1 | 2 | 2
+INPUTP | 1 | 17
+EQ | 1 | 
+   N_PZ_454 = vsync & !elOut_1;	// (1 pt, 2 inp)
+
+MACROCELL | 1 | 6 | targetLine<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 6 | 2 | 13
+INPUTS | 5 | lineCount<0>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<0>
+INPUTMC | 4 | 2 | 1 | 3 | 11 | 3 | 15 | 1 | 6
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<0> := lineCount<0> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<0>;	// (2 pt, 5 inp)
+   targetLine<0>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 0 | targetLine<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 0 | 2 | 13
+INPUTS | 5 | lineCount<2>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<2>
+INPUTMC | 4 | 1 | 1 | 3 | 11 | 3 | 15 | 1 | 0
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<2> := lineCount<2> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<2>;	// (2 pt, 5 inp)
+   targetLine<2>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 15 | targetLine<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 15 | 2 | 13
+INPUTS | 5 | lineCount<3>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<3>
+INPUTMC | 4 | 0 | 8 | 3 | 11 | 3 | 15 | 2 | 15
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<3> := lineCount<3> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<3>;	// (2 pt, 5 inp)
+   targetLine<3>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 12 | targetLine<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 12 | 2 | 13
+INPUTS | 5 | lineCount<4>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<4>
+INPUTMC | 4 | 0 | 10 | 3 | 11 | 3 | 15 | 2 | 12
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<4> := lineCount<4> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<4>;	// (2 pt, 5 inp)
+   targetLine<4>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 8 | targetLine<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 8 | 2 | 13
+INPUTS | 5 | lineCount<5>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<5>
+INPUTMC | 4 | 0 | 12 | 3 | 11 | 3 | 15 | 2 | 8
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<5> := lineCount<5> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<5>;	// (2 pt, 5 inp)
+   targetLine<5>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 7 | targetLine<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 7 | 2 | 13
+INPUTS | 5 | lineCount<6>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<6>
+INPUTMC | 4 | 0 | 4 | 3 | 11 | 3 | 15 | 2 | 7
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<6> := lineCount<6> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<6>;	// (2 pt, 5 inp)
+   targetLine<6>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 4 | targetLine<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 4 | 2 | 13
+INPUTS | 5 | lineCount<8>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<8>
+INPUTMC | 4 | 0 | 7 | 3 | 11 | 3 | 15 | 2 | 4
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<8> := lineCount<8> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<8>;	// (2 pt, 5 inp)
+   targetLine<8>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 1 | 5 | targetLine<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 1 | 5 | 2 | 13
+INPUTS | 5 | lineCount<1>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<1>
+INPUTMC | 4 | 1 | 4 | 3 | 11 | 3 | 15 | 1 | 5
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<1> := lineCount<1> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<1>;	// (2 pt, 5 inp)
+   targetLine<1>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+MACROCELL | 2 | 6 | targetLine<7>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 2 | 6 | 2 | 13
+INPUTS | 5 | lineCount<7>  | N_PZ_321  | vsync  | targetDetected_or0002  | targetLine<7>
+INPUTMC | 4 | 0 | 6 | 3 | 11 | 3 | 15 | 2 | 6
+INPUTP | 1 | 17
+EQ | 3 | 
+   targetLine<7> := lineCount<7> & N_PZ_321
+	# !vsync & targetDetected_or0002 & targetLine<7>;	// (2 pt, 5 inp)
+   targetLine<7>.CLK  =  !clk4mhz;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | clk4mhz
+
+PIN | clk4mhz | 16384 | 64 | LVCMOS33 | 23 | 38 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 2 | 0 | 3 | 3 | 3 | 4 | 3 | 2 | 3 | 5 | 3 | 13 | 3 | 8 | 3 | 7 | 3 | 9 | 1 | 3 | 2 | 5 | 1 | 8 | 1 | 9 | 1 | 7 | 1 | 2 | 1 | 12 | 1 | 11 | 2 | 11 | 2 | 2 | 1 | 6 | 1 | 0 | 2 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 4 | 1 | 5 | 2 | 6 | 2 | 13
+PIN | csync | 64 | 64 | LVCMOS33 | 12 | 11 | 1 | 15 | 1 | 14 | 1 | 13 | 0 | 9 | 0 | 11 | 0 | 3 | 0 | 5 | 0 | 13 | 0 | 14 | 0 | 15 | 3 | 15
 PIN | io<32> | 64 | 64 | LVCMOS33 | 81 | 1 | 0 | 0
 PIN | io<31> | 64 | 64 | LVCMOS33 | 80 | 1 | 0 | 1
-PIN | vsync | 64 | 64 | LVCMOS33 | 17 | 11 | 1 | 8 | 1 | 3 | 1 | 2 | 1 | 12 | 0 | 8 | 0 | 10 | 0 | 3 | 0 | 5 | 0 | 7 | 0 | 13 | 2 | 2
-PIN | io<33> | 64 | 64 | LVCMOS33 | 1 | 1 | 2 | 11
-PIN | az | 536871040 | 0 | LVCMOS33 | 31
-PIN | el | 536871040 | 0 | LVCMOS33 | 32
+PIN | vsync | 64 | 64 | LVCMOS33 | 17 | 41 | 2 | 1 | 1 | 4 | 1 | 1 | 0 | 8 | 0 | 10 | 0 | 12 | 0 | 4 | 0 | 6 | 0 | 7 | 2 | 3 | 2 | 0 | 3 | 3 | 3 | 4 | 3 | 14 | 3 | 2 | 0 | 2 | 3 | 8 | 3 | 9 | 3 | 11 | 1 | 3 | 2 | 5 | 2 | 10 | 1 | 8 | 1 | 9 | 1 | 7 | 1 | 2 | 1 | 12 | 1 | 11 | 2 | 11 | 2 | 2 | 2 | 9 | 1 | 6 | 1 | 0 | 2 | 15 | 2 | 12 | 2 | 8 | 2 | 7 | 2 | 4 | 1 | 5 | 2 | 6 | 2 | 13
 PIN | gate_b | 536871040 | 0 | LVCMOS33 | 11
 PIN | gate_w | 536871040 | 0 | LVCMOS33 | 10
-PIN | io<27> | 536871040 | 0 | LVCMOS33 | 71
-PIN | io<28> | 536871040 | 0 | LVCMOS33 | 72
-PIN | io<29> | 536871040 | 0 | LVCMOS33 | 73
-PIN | io<30> | 536871040 | 0 | LVCMOS33 | 78
 PIN | led<0> | 536871040 | 0 | LVCMOS33 | 59
 PIN | led<1> | 536871040 | 0 | LVCMOS33 | 56

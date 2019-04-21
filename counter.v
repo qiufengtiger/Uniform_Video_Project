@@ -2,7 +2,7 @@ module counter(
 	input clk,
 	input en,
 	input reset,
-	output reg [9 : 0] cnt
+	output reg [8 : 0] cnt
     );
 
 	always @(posedge clk)

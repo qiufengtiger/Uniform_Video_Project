@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: cpld_toplevel.prj
 
@@ -75,15 +75,9 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "enDetector.v" in library work
 Compiling verilog file "counter.v" in library work
-Module <enDetector> compiled
-Compiling verilog file "tracking_module.v" in library work
-Module <counter> compiled
-Compiling verilog file "crosshair_module.v" in library work
-Module <tracking_module> compiled
 Compiling verilog file "cpld_toplevel.v" in library work
-Module <crosshair_module> compiled
+Module <counter> compiled
 Module <cpld_toplevel> compiled
 No errors in compilation
 Analysis of file <"cpld_toplevel.prj"> succeeded.
@@ -94,12 +88,6 @@ Analysis of file <"cpld_toplevel.prj"> succeeded.
 =========================================================================
 Analyzing hierarchy for module <cpld_toplevel> in library <work>.
 
-Analyzing hierarchy for module <crosshair_module> in library <work>.
-
-Analyzing hierarchy for module <tracking_module> in library <work>.
-
-Analyzing hierarchy for module <enDetector> in library <work>.
-
 Analyzing hierarchy for module <counter> in library <work>.
 
 
@@ -109,17 +97,8 @@ Analyzing hierarchy for module <counter> in library <work>.
 Analyzing top module <cpld_toplevel>.
 Module <cpld_toplevel> is correct for synthesis.
  
-Analyzing module <crosshair_module> in library <work>.
-Module <crosshair_module> is correct for synthesis.
- 
-Analyzing module <enDetector> in library <work>.
-Module <enDetector> is correct for synthesis.
- 
 Analyzing module <counter> in library <work>.
 Module <counter> is correct for synthesis.
- 
-Analyzing module <tracking_module> in library <work>.
-Module <tracking_module> is correct for synthesis.
  
 
 =========================================================================
@@ -127,45 +106,62 @@ Module <tracking_module> is correct for synthesis.
 =========================================================================
 
 Performing bidirectional port resolution...
-
-Synthesizing Unit <tracking_module>.
-    Related source file is "tracking_module.v".
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-Unit <tracking_module> synthesized.
-
-
-Synthesizing Unit <enDetector>.
-    Related source file is "enDetector.v".
-Unit <enDetector> synthesized.
-
+INFO:Xst:2679 - Register <azOut<0>> in unit <cpld_toplevel> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <elOut<0>> in unit <cpld_toplevel> has a constant value of 0 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <counter>.
     Related source file is "counter.v".
-    Found 10-bit up counter for signal <cnt>.
+    Found 9-bit up counter for signal <cnt>.
     Summary:
 	inferred   1 Counter(s).
 Unit <counter> synthesized.
 
 
-Synthesizing Unit <crosshair_module>.
-    Related source file is "crosshair_module.v".
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0000> created at line 21.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0001> created at line 21.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0002> created at line 21.
-    Found 10-bit comparator greatequal for signal <isCrosshair$cmp_ge0003> created at line 21.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0000> created at line 21.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0001> created at line 21.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0002> created at line 21.
-    Found 10-bit comparator lessequal for signal <isCrosshair$cmp_le0003> created at line 21.
-    Summary:
-	inferred   8 Comparator(s).
-Unit <crosshair_module> synthesized.
-
-
 Synthesizing Unit <cpld_toplevel>.
     Related source file is "cpld_toplevel.v".
+WARNING:Xst:1306 - Output <az> is never assigned.
+WARNING:Xst:1306 - Output <el> is never assigned.
+WARNING:Xst:647 - Input <field> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2565 - Inout <io<30>> is never assigned.
+WARNING:Xst:2565 - Inout <io<27>> is never assigned.
+WARNING:Xst:2565 - Inout <io<33>> is never assigned.
+WARNING:Xst:2565 - Inout <io<28>> is never assigned.
+WARNING:Xst:2565 - Inout <io<29>> is never assigned.
+WARNING:Xst:647 - Input <burst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <xCounterEn> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <isCrosshair> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit xor2 for signal <gate_w>.
+    Found 2-bit register for signal <led>.
+    Found 1-bit register for signal <azOut<1>>.
+    Found 1-bit register for signal <elOut<1>>.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0000> created at line 186.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0001> created at line 186.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0002> created at line 186.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0003> created at line 186.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0000> created at line 186.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0001> created at line 186.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0002> created at line 186.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0003> created at line 186.
+    Found 9-bit comparator greatequal for signal <isTarget$cmp_ge0000> created at line 51.
+    Found 9-bit comparator greatequal for signal <isTarget$cmp_ge0001> created at line 51.
+    Found 9-bit comparator lessequal for signal <isTarget$cmp_le0000> created at line 51.
+    Found 9-bit comparator lessequal for signal <isTarget$cmp_le0001> created at line 51.
+    Found 9-bit comparator less for signal <led_0$cmp_lt0000> created at line 113.
+    Found 9-bit comparator less for signal <led_1$cmp_lt0000> created at line 124.
+    Found 9-bit up counter for signal <numColumn>.
+    Found 9-bit register for signal <targetColumn>.
+    Found 1-bit register for signal <targetDetected>.
+    Found 9-bit comparator greatequal for signal <targetDetected$cmp_ge0000> created at line 79.
+    Found 9-bit comparator greater for signal <targetDetected$cmp_gt0000> created at line 79.
+    Found 9-bit comparator lessequal for signal <targetDetected$cmp_le0000> created at line 85.
+    Found 9-bit comparator lessequal for signal <targetDetected$cmp_le0001> created at line 79.
+    Found 9-bit comparator less for signal <targetDetected$cmp_lt0000> created at line 79.
+    Found 9-bit register for signal <targetLine>.
     Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred  19 Comparator(s).
 	inferred   1 Xor(s).
 Unit <cpld_toplevel> synthesized.
 
@@ -174,11 +170,16 @@ Unit <cpld_toplevel> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
- 10-bit up counter                                     : 2
-# Comparators                                          : 8
- 10-bit comparator greatequal                          : 4
- 10-bit comparator lessequal                           : 4
+# Counters                                             : 3
+ 9-bit up counter                                      : 3
+# Registers                                            : 7
+ 1-bit register                                        : 5
+ 9-bit register                                        : 2
+# Comparators                                          : 19
+ 9-bit comparator greatequal                           : 7
+ 9-bit comparator greater                              : 1
+ 9-bit comparator less                                 : 3
+ 9-bit comparator lessequal                            : 8
 # Xors                                                 : 1
  1-bit xor2                                            : 1
 
@@ -193,24 +194,23 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Counters                                             : 2
- 10-bit up counter                                     : 2
+# Counters                                             : 3
+ 9-bit up counter                                      : 3
+# Registers                                            : 2
+ Flip-Flops                                            : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:2677 - Node <targetColumn_0> of sequential type is unconnected in block <cpld_toplevel>.
+WARNING:Xst:2677 - Node <targetColumn_1> of sequential type is unconnected in block <cpld_toplevel>.
+WARNING:Xst:2677 - Node <targetColumn_2> of sequential type is unconnected in block <cpld_toplevel>.
 
 Optimizing unit <cpld_toplevel> ...
 
-Optimizing unit <tracking_module> ...
-
-Optimizing unit <enDetector> ...
-
 Optimizing unit <counter> ...
-
-Optimizing unit <crosshair_module> ...
 
 =========================================================================
 *                           Partition Report                            *
@@ -242,31 +242,32 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 147
-#      AND2                        : 54
-#      AND3                        : 5
-#      AND4                        : 2
-#      GND                         : 2
-#      INV                         : 52
-#      OR2                         : 11
-#      VCC                         : 2
-#      XOR2                        : 19
-# FlipFlops/Latches                : 20
-#      FDCE                        : 20
-# IO Buffers                       : 18
-#      IBUF                        : 8
-#      OBUF                        : 10
+# BELS                             : 315
+#      AND2                        : 115
+#      AND3                        : 16
+#      AND4                        : 3
+#      AND5                        : 1
+#      GND                         : 3
+#      INV                         : 126
+#      OR2                         : 25
+#      OR4                         : 1
+#      XOR2                        : 25
+# FlipFlops/Latches                : 47
+#      FDCE                        : 47
+# IO Buffers                       : 9
+#      IBUF                        : 5
+#      OBUF                        : 4
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.85 secs
+Total CPU time to Xst completion: 4.84 secs
  
 --> 
 
-Total memory usage is 4535424 kilobytes
+Total memory usage is 4535408 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    1 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

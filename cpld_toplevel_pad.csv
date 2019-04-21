@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4- 8-2019  9:23PM
+ 4-21-2019  1:04AM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -22,8 +22,8 @@ P1,clk4mhz,GCK,I/O/GCK2,,LVCMOS33,1,,FAST,,,,
 P2,TIE,,I/O,,,1,,,,,,,
 P3,TIE,,I/O,,,1,,,,,,,
 P4,GND,,GND,,,,,,,,,,
-P5,az,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
-P6,el,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P5,TIE,,I/O,,,1,,,,,,,
+P6,TIE,,I/O,,,1,,,,,,,
 P7,,VCCIO-3.3,VCCIO,,,1,,,,,,,
 P8,TIE,,I/O,,,1,,,,,,,
 P9,TDI,,TDI,,,,,,,,,,
@@ -44,21 +44,21 @@ P23,TIE,,I/O,,,2,,,,,,,
 P24,TDO,,TDO,,,,,,,,,,
 P25,GND,,GND,,,,,,,,,,
 P26,,VCCIO-3.3,VCCIO,,,2,,,,,,,
-P27,io<27>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
-P28,io<28>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
-P29,io<29>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
-P30,io<30>,O,I/O/GSR,OUTPUT,LVCMOS33,2,,FAST,,,,
+P27,TIE,,I/O,,,2,,,,,,,
+P28,TIE,,I/O,,,2,,,,,,,
+P29,TIE,,I/O,,,2,,,,,,,
+P30,TIE,,I/O/GSR,,,2,,,,,,,
 P31,io<31>,I,I/O/GTS2,INPUT,LVCMOS33,2,,FAST,,,,
 P32,io<32>,I,I/O/GTS3,INPUT,LVCMOS33,2,,FAST,,,,
-P33,io<33>,I,I/O/GTS0,INPUT,LVCMOS33,2,,FAST,,,,
+P33,TIE,,I/O/GTS0,,,2,,,,,,,
 P34,TIE,,I/O/GTS1,,,2,,,,,,,
 P35,,VCCAUX,VAUX,,,,,,,,,,
 P36,TIE,,I/O,,,2,,,,,,,
 P37,gate_w,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
 P38,gate_b,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
 P39,csync,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
-P40,field,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
-P41,burst,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
+P40,TIE,,I/O,,,1,,,,,,,
+P41,TIE,,I/O,,,1,,,,,,,
 P42,vsync,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
 P43,TIE,,I/O/GCK0,,,1,,,,,,,
 P44,TIE,,I/O/GCK1,,,1,,,,,,,

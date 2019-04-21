@@ -6,193 +6,342 @@
 ********** Mapped Logic **********
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_144 <= ((NOT cm/columnCount(2) AND NOT cm/columnCount(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3)));
+N_PZ_256 <= (NOT vsync AND numColumn(0) AND numColumn(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	numColumn(2));
 </td></tr><tr><td>
 </td></tr><tr><td>
-az <= NOT ('0');
-</td></tr><tr><td>
-FDCPE_cm/columnCount1: FDCPE port map (cm/columnCount(1),cm/columnCount_D(1),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_D(1) <= ((NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCounter/cnt(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount2: FTCPE port map (cm/columnCount(2),cm/columnCount_T(2),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(2) <= ((cm/columnCount(2) AND csync)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount3: FTCPE port map (cm/columnCount(3),cm/columnCount_T(3),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(3) <= ((csync AND cm/columnCount(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount4: FTCPE port map (cm/columnCount(4),cm/columnCount_T(4),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(4) <= ((csync AND cm/columnCount(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount5: FTCPE port map (cm/columnCount(5),cm/columnCount_T(5),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(5) <= ((csync AND cm/columnCount(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3) AND cm/columnCount(4)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount6: FTCPE port map (cm/columnCount(6),cm/columnCount_T(6),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(6) <= ((csync AND cm/columnCount(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount7: FTCPE port map (cm/columnCount(7),cm/columnCount_T(7),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(7) <= ((csync AND cm/columnCount(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount8: FTCPE port map (cm/columnCount(8),cm/columnCount_T(8),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(8) <= ((csync AND cm/columnCount(8))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6) AND cm/columnCount(7)));
-</td></tr><tr><td>
-FTCPE_cm/columnCount9: FTCPE port map (cm/columnCount(9),cm/columnCount_T(9),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCount_T(9) <= ((csync AND cm/columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/columnCount(2) AND NOT csync AND cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCounter/cnt(0) AND cm/columnCount(3) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6) AND cm/columnCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(8)));
-</td></tr><tr><td>
-FDCPE_cm/columnCounter/cnt0: FDCPE port map (cm/columnCounter/cnt(0),cm/columnCounter/cnt_D(0),clk4mhz,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/columnCounter/cnt_D(0) <= (NOT csync AND NOT cm/columnCounter/cnt(0));
-</td></tr><tr><td>
-FDCPE_cm/lineCount0: FDCPE port map (cm/lineCount(0),cm/lineCount_D(0),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_D(0) <= (NOT vsync AND NOT cm/lineCount(0));
-</td></tr><tr><td>
-FDCPE_cm/lineCount1: FDCPE port map (cm/lineCount(1),cm/lineCount_D(1),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_D(1) <= ((cm/lineCount(1) AND NOT vsync AND NOT cm/lineCount(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT cm/lineCount(1) AND NOT vsync AND cm/lineCount(0)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount2: FTCPE port map (cm/lineCount(2),cm/lineCount_T(2),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(2) <= ((vsync AND cm/lineCount(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount3: FTCPE port map (cm/lineCount(3),cm/lineCount_T(3),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(3) <= ((vsync AND cm/lineCount(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(2)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount4: FTCPE port map (cm/lineCount(4),cm/lineCount_T(4),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(4) <= ((vsync AND cm/lineCount(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount5: FTCPE port map (cm/lineCount(5),cm/lineCount_T(5),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(5) <= ((vsync AND cm/lineCount(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount6: FTCPE port map (cm/lineCount(6),cm/lineCount_T(6),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(6) <= ((vsync AND cm/lineCount(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount7: FTCPE port map (cm/lineCount(7),cm/lineCount_T(7),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(7) <= ((vsync AND cm/lineCount(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5) AND cm/lineCount(6)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount8: FTCPE port map (cm/lineCount(8),cm/lineCount_T(8),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(8) <= ((vsync AND cm/lineCount(8))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5) AND cm/lineCount(6) AND cm/lineCount(7)));
-</td></tr><tr><td>
-FTCPE_cm/lineCount9: FTCPE port map (cm/lineCount(9),cm/lineCount_T(9),csync,'0','0','1');
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cm/lineCount_T(9) <= ((vsync AND cm/lineCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND NOT vsync AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5) AND cm/lineCount(6) AND cm/lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(8)));
+N_PZ_271 <= ((columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(1) AND lineCount(2) AND lineCount(3) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT columnCount(4) AND NOT columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(6) AND columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(1) AND NOT lineCount(2) AND lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT columnCount(4) AND NOT columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(6) AND columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(0) AND lineCount(2) AND lineCount(3) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT columnCount(4) AND NOT columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(6) AND columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(0) AND NOT lineCount(2) AND lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND NOT columnCount(4) AND NOT columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(6) AND columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-el <= NOT ('0');
+N_PZ_298 <= ((NOT vsync AND NOT lineCount(4) AND N_PZ_271)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND NOT lineCount(1) AND NOT lineCount(3) AND N_PZ_271)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND NOT lineCount(0) AND NOT lineCount(3) AND N_PZ_271));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_309 <= ((NOT columnCount(3) AND NOT columnCount(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND columnCount(2) AND columnCount(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_321 <= ((NOT vsync AND NOT targetDetected AND NOT targetDetected_or0002 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	numColumn(0) AND numColumn(1) AND NOT numColumn(3) AND NOT numColumn(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(4) AND NOT numColumn(5) AND NOT numColumn(6) AND NOT numColumn(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND NOT targetDetected AND NOT targetDetected_or0002 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(0) AND NOT numColumn(1) AND NOT numColumn(3) AND numColumn(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(4) AND NOT numColumn(5) AND NOT numColumn(6) AND NOT numColumn(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(8)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_329 <= (numColumn(3) AND N_PZ_256 AND numColumn(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_332 <= ((NOT N_PZ_271)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(3) AND lineCount(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(1) AND lineCount(0) AND lineCount(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_361 <= ((NOT vsync AND NOT N_PZ_271)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT lineCount(2) AND NOT vsync AND lineCount(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_453 <= (vsync AND NOT azOut_1);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_454 <= (vsync AND NOT elOut_1);
+</td></tr><tr><td>
+FDCPE_azOut_1: FDCPE port map (azOut_1,NOT vsync,NOT clk4mhz,'0','0',NOT N_PZ_453);
+</td></tr><tr><td>
+FDCPE_columnCount0: FDCPE port map (columnCount(0),columnCount_D(0),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_D(0) <= (NOT csync AND NOT columnCount(0));
+</td></tr><tr><td>
+FDCPE_columnCount1: FDCPE port map (columnCount(1),columnCount_D(1),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_D(1) <= ((NOT csync AND columnCount(1) AND NOT columnCount(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND NOT columnCount(1) AND columnCount(0)));
+</td></tr><tr><td>
+FTCPE_columnCount2: FTCPE port map (columnCount(2),columnCount_T(2),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(2) <= ((csync AND columnCount(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(1) AND columnCount(0)));
+</td></tr><tr><td>
+FTCPE_columnCount3: FTCPE port map (columnCount(3),columnCount_T(3),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(3) <= ((columnCount(3) AND csync)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT csync AND columnCount(2) AND columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(0)));
+</td></tr><tr><td>
+FTCPE_columnCount4: FTCPE port map (columnCount(4),columnCount_T(4),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(4) <= ((csync AND columnCount(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(0)));
+</td></tr><tr><td>
+FTCPE_columnCount5: FTCPE port map (columnCount(5),columnCount_T(5),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(5) <= ((csync AND columnCount(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(0) AND columnCount(4)));
+</td></tr><tr><td>
+FTCPE_columnCount6: FTCPE port map (columnCount(6),columnCount_T(6),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(6) <= ((csync AND columnCount(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(0) AND columnCount(4) AND columnCount(5)));
+</td></tr><tr><td>
+FTCPE_columnCount7: FTCPE port map (columnCount(7),columnCount_T(7),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(7) <= ((csync AND columnCount(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(0) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6)));
+</td></tr><tr><td>
+FTCPE_columnCount8: FTCPE port map (columnCount(8),columnCount_T(8),clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columnCount_T(8) <= ((csync AND columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT csync AND columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(1) AND columnCount(0) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND columnCount(7)));
+</td></tr><tr><td>
+FDCPE_elOut_1: FDCPE port map (elOut_1,NOT vsync,NOT clk4mhz,'0','0',NOT N_PZ_454);
 </td></tr><tr><td>
 </td></tr><tr><td>
 gate_b <= NOT io(32);
 </td></tr><tr><td>
 </td></tr><tr><td>
 gate_w <= NOT io(31)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT cm/lineCount(1) AND NOT cm/lineCount(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(2) AND NOT cm/lineCount(4) AND NOT cm/lineCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(6) AND cm/lineCount(7) AND NOT cm/lineCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(4) AND cm/columnCount(5) AND cm/columnCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(9) AND NOT N_PZ_144)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND cm/lineCount(3) AND cm/lineCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(4) AND cm/lineCount(5) AND cm/lineCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(7) AND NOT cm/lineCount(8) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6) AND NOT cm/columnCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND NOT cm/columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (cm/lineCount(1) AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(2) AND cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(5) AND cm/lineCount(6) AND NOT cm/lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND NOT cm/lineCount(1) AND NOT cm/lineCount(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(4) AND NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(7) AND NOT cm/lineCount(8) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6) AND NOT cm/columnCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND NOT cm/columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND NOT cm/lineCount(3) AND NOT cm/lineCount(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(4) AND NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(7) AND NOT cm/lineCount(8) AND cm/columnCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(5) AND cm/columnCount(6) AND NOT cm/columnCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND NOT cm/columnCount(9))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(1) AND NOT cm/lineCount(3) AND NOT cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND cm/lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT io(31) AND NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(3) AND NOT cm/lineCount(2) AND NOT cm/lineCount(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(5) AND NOT cm/lineCount(6) AND cm/lineCount(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(8) AND cm/columnCount(4) AND cm/columnCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(6) AND NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/lineCount(9) AND NOT cm/columnCount(9) AND NOT N_PZ_144)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT cm/columnCount(2) AND NOT cm/columnCount(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(3) AND cm/lineCount(1) AND cm/lineCount(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(3) AND cm/lineCount(4) AND cm/lineCount(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/lineCount(6) AND NOT cm/lineCount(7) AND NOT cm/lineCount(8) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	cm/columnCount(4) AND cm/columnCount(5) AND cm/columnCount(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(7) AND NOT cm/columnCount(8) AND NOT cm/lineCount(9) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT cm/columnCount(9)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT lineCount(2) AND NOT lineCount(1) AND NOT lineCount(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(4) AND NOT lineCount(5) AND NOT lineCount(6) AND lineCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_309)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(2) AND NOT columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(2) AND NOT lineCount(3) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (columnCount(3) AND NOT columnCount(2) AND NOT columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(1) AND NOT lineCount(3) AND NOT lineCount(4) AND NOT lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(6) AND lineCount(7) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND lineCount(1) AND lineCount(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(3) AND lineCount(4) AND lineCount(5) AND lineCount(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(7) AND columnCount(4) AND columnCount(5) AND columnCount(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_309)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (io(31) AND columnCount(3) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(1) AND lineCount(2) AND lineCount(3) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT io(31) AND NOT columnCount(2) AND NOT columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(2) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND columnCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_309)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (io(31) AND columnCount(3) AND NOT columnCount(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(1) AND lineCount(1) AND lineCount(0) AND lineCount(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(4) AND lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT lineCount(8) AND NOT columnCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT io(31) AND NOT columnCount(2) AND NOT columnCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(1) AND lineCount(0) AND lineCount(3) AND lineCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT columnCount(8) AND NOT N_PZ_309));
+</td></tr><tr><td>
+FDCPE_led0: FDCPE port map (led(0),led_D(0),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;led_D(0) <= ((NOT vsync AND led(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT azOut_1 AND led(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND azOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetColumn(3) AND NOT targetColumn(7) AND NOT targetColumn(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND azOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetColumn(7) AND NOT targetColumn(8) AND NOT targetColumn(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND azOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetColumn(7) AND NOT targetColumn(8) AND NOT targetColumn(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND azOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetColumn(7) AND NOT targetColumn(8) AND NOT targetColumn(6)));
+</td></tr><tr><td>
+FDCPE_led1: FDCPE port map (led(1),led_D(1),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;led_D(1) <= ((NOT vsync AND led(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT elOut_1 AND led(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND elOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetLine(8) AND NOT targetLine(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND elOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetLine(0) AND NOT targetLine(2) AND NOT targetLine(3) AND NOT targetLine(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetLine(5) AND NOT targetLine(6) AND NOT targetLine(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND targetDetected AND elOut_1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetLine(2) AND NOT targetLine(3) AND NOT targetLine(4) AND NOT targetLine(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT targetLine(6) AND NOT targetLine(8) AND NOT targetLine(1)));
+</td></tr><tr><td>
+FDCPE_lineCount0: FDCPE port map (lineCount(0),lineCount_D(0),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_D(0) <= (NOT vsync AND NOT lineCount(0));
+</td></tr><tr><td>
+FDCPE_lineCount1: FDCPE port map (lineCount(1),lineCount_D(1),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_D(1) <= ((NOT vsync AND lineCount(1) AND NOT lineCount(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND NOT lineCount(1) AND lineCount(0)));
+</td></tr><tr><td>
+FTCPE_lineCount2: FTCPE port map (lineCount(2),lineCount_T(2),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(2) <= ((lineCount(2) AND vsync)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND lineCount(1) AND lineCount(0)));
+</td></tr><tr><td>
+FTCPE_lineCount3: FTCPE port map (lineCount(3),lineCount_T(3),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(3) <= ((vsync AND lineCount(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0)));
+</td></tr><tr><td>
+FTCPE_lineCount4: FTCPE port map (lineCount(4),lineCount_T(4),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(4) <= ((vsync AND lineCount(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3)));
+</td></tr><tr><td>
+FTCPE_lineCount5: FTCPE port map (lineCount(5),lineCount_T(5),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(5) <= ((vsync AND lineCount(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(4)));
+</td></tr><tr><td>
+FTCPE_lineCount6: FTCPE port map (lineCount(6),lineCount_T(6),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(6) <= ((vsync AND lineCount(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(4) AND lineCount(5)));
+</td></tr><tr><td>
+FTCPE_lineCount7: FTCPE port map (lineCount(7),lineCount_T(7),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(7) <= ((vsync AND lineCount(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6)));
+</td></tr><tr><td>
+FTCPE_lineCount8: FTCPE port map (lineCount(8),lineCount_T(8),csync,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineCount_T(8) <= ((vsync AND lineCount(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (lineCount(2) AND NOT vsync AND lineCount(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(0) AND lineCount(3) AND lineCount(4) AND lineCount(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	lineCount(6) AND lineCount(7)));
+</td></tr><tr><td>
+FDCPE_numColumn0: FDCPE port map (numColumn(0),numColumn_D(0),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(0) <= ((vsync AND numColumn(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT numColumn(0) AND N_PZ_298));
+</td></tr><tr><td>
+FDCPE_numColumn1: FDCPE port map (numColumn(1),numColumn_D(1),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(1) <= ((vsync AND numColumn(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (numColumn(0) AND N_PZ_298 AND NOT numColumn(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT numColumn(0) AND N_PZ_298 AND numColumn(1)));
+</td></tr><tr><td>
+FDCPE_numColumn2: FDCPE port map (numColumn(2),numColumn_D(2),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(2) <= ((vsync AND numColumn(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_298 AND NOT N_PZ_256 AND numColumn(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (numColumn(0) AND N_PZ_298 AND numColumn(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_256));
+</td></tr><tr><td>
+FDCPE_numColumn3: FDCPE port map (numColumn(3),numColumn_D(3),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(3) <= NOT (((NOT vsync AND N_PZ_332)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (numColumn(3) AND N_PZ_256)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT numColumn(3) AND NOT N_PZ_256)));
+</td></tr><tr><td>
+FDCPE_numColumn4: FDCPE port map (numColumn(4),numColumn_D(4),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(4) <= ((numColumn(4) AND NOT N_PZ_329 AND NOT N_PZ_361)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (numColumn(3) AND N_PZ_256 AND NOT N_PZ_329 AND NOT N_PZ_361));
+</td></tr><tr><td>
+FDCPE_numColumn5: FDCPE port map (numColumn(5),numColumn_D(5),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_D(5) <= ((N_PZ_329 AND NOT N_PZ_361 AND NOT numColumn(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_329 AND NOT N_PZ_361 AND numColumn(5)));
+</td></tr><tr><td>
+FTCPE_numColumn6: FTCPE port map (numColumn(6),numColumn_T(6),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_T(6) <= ((vsync AND N_PZ_329 AND numColumn(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND N_PZ_332 AND numColumn(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_332 AND N_PZ_329 AND numColumn(5)));
+</td></tr><tr><td>
+FTCPE_numColumn7: FTCPE port map (numColumn(7),numColumn_T(7),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_T(7) <= ((N_PZ_361 AND numColumn(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_329 AND NOT N_PZ_361 AND numColumn(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	numColumn(6)));
+</td></tr><tr><td>
+FTCPE_numColumn8: FTCPE port map (numColumn(8),numColumn_T(8),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numColumn_T(8) <= ((NOT vsync AND N_PZ_332 AND numColumn(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (vsync AND N_PZ_329 AND numColumn(5) AND numColumn(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	numColumn(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_332 AND N_PZ_329 AND numColumn(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	numColumn(6) AND numColumn(7)));
+</td></tr><tr><td>
+FDCPE_targetColumn3: FDCPE port map (targetColumn(3),targetColumn_D(3),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(3) <= ((columnCount(3) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(3)));
+</td></tr><tr><td>
+FDCPE_targetColumn4: FDCPE port map (targetColumn(4),targetColumn_D(4),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(4) <= ((columnCount(4) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(4)));
+</td></tr><tr><td>
+FDCPE_targetColumn5: FDCPE port map (targetColumn(5),targetColumn_D(5),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(5) <= ((columnCount(5) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(5)));
+</td></tr><tr><td>
+FDCPE_targetColumn6: FDCPE port map (targetColumn(6),targetColumn_D(6),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(6) <= ((columnCount(6) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(6)));
+</td></tr><tr><td>
+FDCPE_targetColumn7: FDCPE port map (targetColumn(7),targetColumn_D(7),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(7) <= ((columnCount(7) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(7)));
+</td></tr><tr><td>
+FDCPE_targetColumn8: FDCPE port map (targetColumn(8),targetColumn_D(8),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetColumn_D(8) <= ((columnCount(8) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetColumn(8)));
+</td></tr><tr><td>
+FDCPE_targetDetected: FDCPE port map (targetDetected,targetDetected_D,NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDetected_D <= ((N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected AND targetDetected_or0002));
 </td></tr><tr><td>
 </td></tr><tr><td>
-io(27) <= vsync;
+targetDetected_or0002 <= ((csync)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (targetDetected)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_332)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (numColumn(0) AND NOT numColumn(1) AND NOT numColumn(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(4) AND NOT numColumn(5) AND NOT numColumn(6) AND NOT numColumn(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT numColumn(0) AND NOT numColumn(3) AND NOT numColumn(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(4) AND NOT numColumn(5) AND NOT numColumn(6) AND NOT numColumn(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT numColumn(8)));
 </td></tr><tr><td>
+FDCPE_targetLine0: FDCPE port map (targetLine(0),targetLine_D(0),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(0) <= ((lineCount(0) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(0)));
 </td></tr><tr><td>
-io(28) <= burst;
+FDCPE_targetLine1: FDCPE port map (targetLine(1),targetLine_D(1),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(1) <= ((lineCount(1) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(1)));
 </td></tr><tr><td>
+FDCPE_targetLine2: FDCPE port map (targetLine(2),targetLine_D(2),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(2) <= ((lineCount(2) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(2)));
 </td></tr><tr><td>
-io(29) <= field;
+FDCPE_targetLine3: FDCPE port map (targetLine(3),targetLine_D(3),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(3) <= ((lineCount(3) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(3)));
 </td></tr><tr><td>
+FDCPE_targetLine4: FDCPE port map (targetLine(4),targetLine_D(4),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(4) <= ((lineCount(4) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(4)));
 </td></tr><tr><td>
-io(30) <= csync;
+FDCPE_targetLine5: FDCPE port map (targetLine(5),targetLine_D(5),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(5) <= ((lineCount(5) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(5)));
 </td></tr><tr><td>
+FDCPE_targetLine6: FDCPE port map (targetLine(6),targetLine_D(6),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(6) <= ((lineCount(6) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(6)));
 </td></tr><tr><td>
-led(0) <= io(33);
+FDCPE_targetLine7: FDCPE port map (targetLine(7),targetLine_D(7),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(7) <= ((lineCount(7) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(7)));
 </td></tr><tr><td>
-</td></tr><tr><td>
-led(1) <= NOT ('0');
+FDCPE_targetLine8: FDCPE port map (targetLine(8),targetLine_D(8),NOT clk4mhz,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetLine_D(8) <= ((lineCount(8) AND N_PZ_321)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT vsync AND targetDetected_or0002 AND targetLine(8)));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:
