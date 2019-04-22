@@ -61,15 +61,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1555821718" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1555821718">
+    <transform xil_pn:end_ts="1555883401" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1555883401">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555821718" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7184564964709065375" xil_pn:start_ts="1555821718">
+    <transform xil_pn:end_ts="1555883401" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7184564964709065375" xil_pn:start_ts="1555883401">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555823030" xil_pn:in_ck="-7103220436144931625" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="9185974396734334421" xil_pn:start_ts="1555823021">
+    <transform xil_pn:end_ts="1555897275" xil_pn:in_ck="-7103220436144931625" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="9185974396734334421" xil_pn:start_ts="1555897266">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -86,11 +86,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1555821729" xil_pn:in_ck="-3288758347413522762" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3432418569667606033" xil_pn:start_ts="1555821729">
+    <transform xil_pn:end_ts="1555883411" xil_pn:in_ck="-3288758347413522762" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-3432418569667606033" xil_pn:start_ts="1555883411">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1555823037" xil_pn:in_ck="6703612706539688489" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2257924951880178845" xil_pn:start_ts="1555823030">
+    <transform xil_pn:end_ts="1555897283" xil_pn:in_ck="6703612706539688489" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="2257924951880178845" xil_pn:start_ts="1555897275">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -99,7 +99,7 @@
       <outfile xil_pn:name="cpld_toplevel.ngd"/>
       <outfile xil_pn:name="cpld_toplevel_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1555823068" xil_pn:in_ck="1090995043377862836" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-2367196864036016223" xil_pn:start_ts="1555823037">
+    <transform xil_pn:end_ts="1555897315" xil_pn:in_ck="1090995043377862836" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-2367196864036016223" xil_pn:start_ts="1555897283">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -118,7 +118,7 @@
       <outfile xil_pn:name="cpld_toplevel_html"/>
       <outfile xil_pn:name="cpld_toplevel_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1555823072" xil_pn:in_ck="1090995043377871700" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1555823068">
+    <transform xil_pn:end_ts="1555897319" xil_pn:in_ck="1090995043377871700" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1555897315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="cpld_toplevel.jed"/>

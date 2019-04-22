@@ -23,8 +23,8 @@ NET "io<28>" LOC = "P28" | PULLUP;  # J3 Pin 3
 NET "io<29>" LOC = "P29" | PULLUP;  # J3 Pin 5
 NET "io<30>" LOC = "P30" | PULLUP;  # J3 Pin 7
 NET "io<31>" LOC = "P31" | PULLUP;  # J3 Pin 9
-NET "io<32>" LOC = "P32" | PULLUP;  # J3 Pin 11
-NET "io<33>" LOC = "P33" | PULLUP;  # J3 Pin 13
+NET "io<32>" LOC = "P32";  # J3 Pin 11
+NET "io<33>" LOC = "P33";  # J3 Pin 13
 
 #Video Sync
 NET "vsync" LOC = "P42";
@@ -37,7 +37,7 @@ NET "gate_b" LOC = "P38";
 NET "gate_w" LOC = "P37";
 
 #Other
-NET "az" LOC = "P5";
-NET "el" LOC = "P6";
+#NET "az" LOC = "P5";
+#NET "el" LOC = "P6";
 #NET "emitter" LOC = "P2";
 #NET "detector" LOC = "P3";

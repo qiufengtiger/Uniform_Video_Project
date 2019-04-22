@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-21-2019  1:04AM
+ 4-21-2019  9:41PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -44,12 +44,12 @@ P23,TIE,,I/O,,,2,,,,,,,
 P24,TDO,,TDO,,,,,,,,,,
 P25,GND,,GND,,,,,,,,,,
 P26,,VCCIO-3.3,VCCIO,,,2,,,,,,,
-P27,TIE,,I/O,,,2,,,,,,,
-P28,TIE,,I/O,,,2,,,,,,,
-P29,TIE,,I/O,,,2,,,,,,,
-P30,TIE,,I/O/GSR,,,2,,,,,,,
+P27,io<27>,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P28,io<28>,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P29,io<29>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
+P30,io<30>,O,I/O/GSR,OUTPUT,LVCMOS33,2,,FAST,,,,
 P31,io<31>,I,I/O/GTS2,INPUT,LVCMOS33,2,,FAST,,,,
-P32,io<32>,I,I/O/GTS3,INPUT,LVCMOS33,2,,FAST,,,,
+P32,TIE,,I/O/GTS3,,,2,,,,,,,
 P33,TIE,,I/O/GTS0,,,2,,,,,,,
 P34,TIE,,I/O/GTS1,,,2,,,,,,,
 P35,,VCCAUX,VAUX,,,,,,,,,,

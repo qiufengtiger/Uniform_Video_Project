@@ -3,11 +3,14 @@ Pin Freeze File:  version P.20131013
 2C64A44VQ XC2C64A-5-VQ44
 clk4mhz S:PIN1
 csync S:PIN39
+io<27> S:PIN27
+io<28> S:PIN28
 io<31> S:PIN31
-io<32> S:PIN32
 vsync S:PIN42
 gate_b S:PIN38
 gate_w S:PIN37
+io<29> S:PIN29
+io<30> S:PIN30
 led<0> S:PIN20
 led<1> S:PIN19
 
@@ -15,24 +18,23 @@ led<1> S:PIN19
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 gate_b gate_w N_PZ_361 columnCount<5>
-		 lineCount<6> columnCount<6> lineCount<7> lineCount<8>
+PARTITION FB1_1 gate_b gate_w columnCount<2> lineCount<5>
+		 columnCount<5> lineCount<6> columnCount<6> columnCount<7>
 		 lineCount<3> columnCount<3> lineCount<4> columnCount<4>
-		 lineCount<5> columnCount<7> columnCount<8> N_PZ_271
+		 io<30> columnCount<8> lineCount<7> lineCount<8>
 		
-PARTITION FB2_1 targetLine<2> lineCount<2> targetColumn<4> targetDetected
-		 lineCount<1> targetLine<1> targetLine<0> targetColumn<8>
-		 targetColumn<3> targetColumn<7> N_PZ_309 targetColumn<6>
-		 targetColumn<5> columnCount<2> columnCount<1> columnCount<0>
+PARTITION FB2_1 lineCount<0> targetDetected numColumn<4> numColumn<3>
+		 N_PZ_325 N_PZ_263 N_PZ_265 numColumn<8>
+		 numColumn<2> numColumn<7> numColumn<1> numColumn<6>
+		 numColumn<5> numColumn<0> columnCount<1> columnCounter/cnt<0>
 		
-PARTITION FB3_1 numColumn<0> lineCount<0> elOut_1 N_PZ_298
-		 targetLine<8> azOut_1 targetLine<7> targetLine<6>
-		 targetLine<5> N_PZ_454 N_PZ_453 led<0>
-		 targetLine<4> led<1> N_PZ_332 targetLine<3>
+PARTITION FB3_1 io<29> targetLine<4> targetLine<3> targetColumn<7>
+		 targetColumn<6> targetLine<2> targetColumn<5> targetColumn<4>
+		 targetColumn<3> targetLine<1> targetLine<0> led<0>
+		 refreshed led<1> targetColumn<8> N_PZ_437
 		
-PARTITION FB4_3 numColumn<3> numColumn<1> numColumn<2> numColumn<4>
-		
-PARTITION FB4_8 numColumn<7> numColumn<6> numColumn<8>
-PARTITION FB4_12 N_PZ_321 N_PZ_329 numColumn<5> N_PZ_256
-		 targetDetected_or0002
+PARTITION FB4_5 N_PZ_300 targetLine<8>
+PARTITION FB4_8 targetLine<7> targetLine<6> targetLine<5>
+PARTITION FB4_12 lineCount<1>
+PARTITION FB4_16 lineCount<2>
 

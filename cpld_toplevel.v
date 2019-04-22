@@ -26,10 +26,11 @@ module cpld_toplevel(
 	// wire [8 : 0] numLine;
 	reg [8 : 0] numColumn;
 	reg targetDetected;
+	reg refreshed;
 	reg [8 : 0] targetLine;
 	reg [8 : 0] targetColumn;
-	reg azOut [1 : 0];
-	reg elOut [1 : 0];
+	reg azOut;
+	reg elOut;
 
 	// assign io[27] = vsync;
  //    assign io[28] = burst;
@@ -41,15 +42,13 @@ module cpld_toplevel(
 	counter columnCounter(.clk(clk4mhz), .en(~csync), .reset(csync), .cnt(columnCount));
 
 	//test
-	assign isTarget = ((lineCount >= 140) && (lineCount <= 146) && (columnCount >= 140) && (columnCount <= 142));
+	// assign isTarget = ((lineCount >= 110) && (lineCount <= 116) && (columnCount >= 140) && (columnCount <= 147));
+	assign isTarget = io[27] & io[28];
 
-	always @(negedge clk4mhz) begin
+	always @(posedge clk4mhz) begin
 	//counter
 		if(~vsync) begin
-			azOut[1] <= 1;
-			azOut[0] <= 0;
-			elOut[1] <= 1;
-			elOut[0] <= 0;
+			refreshed <= 1;
 			//reset target counter when the line ends
 			if(csync)begin
 				numColumn <= 0;
@@ -57,7 +56,7 @@ module cpld_toplevel(
 			else begin
 				if(~isTarget) begin
 					//within limit
-					if((numColumn > 2) && (numColumn < 5) && ~targetDetected) begin
+					if((numColumn > 1) && (numColumn < 8) && ~targetDetected) begin
 						targetDetected <= 1;
 						targetColumn <= columnCount;
 						targetLine <= lineCount;
@@ -65,7 +64,7 @@ module cpld_toplevel(
 					end
 					//fix the flashing issue
 					//i don't know why
-					else if((numColumn > 5) && ~targetDetected) begin
+					else if((numColumn > 8) && ~targetDetected) begin
 						targetDetected <= 0;
 						targetColumn <= 0;
 						targetLine <= 0;
@@ -90,28 +89,36 @@ module cpld_toplevel(
 		end
 		//need to utilize here
 		else begin
-			if(azOut[1] == 1 && azOut[0] == 0) begin
-				azOut[1] <= 0;
+			if(refreshed == 1) begin
+				refreshed <= 0;
 				if(targetDetected == 1)begin
 					// azOut[0] <= (targetColumn < 120);
 					led[0] <= (targetColumn < 120);
+					azOut <= (targetColumn < 120);
+					led[1] <= (targetLine < 131);
+					elOut <= (targetLine < 131);
 				end
 				else begin
 					// azOut[0] <= 0;
 					led[0] <= 0;
-				end
-			end
-			if(elOut[1] == 1 && elOut[0] == 0) begin
-				elOut[1] <= 0;
-				if(targetDetected == 1)begin
-					// elOut[0] <= (targetLine < 131);
-					led[1] <= (targetLine < 131);
-				end
-				else begin
-					// elOut[0] <= 0;
+					azOut <= 0;
 					led[1] <= 0;
+					elOut <= 0;
 				end
+				// led[0] <= io[27];
+				// led[1] <= io[28];
 			end
+			// if(refreshed == 1) begin
+			// 	refreshed <= 0;
+			// 	if(targetDetected == 1)begin
+			// 		// elOut[0] <= (targetLine < 131);
+			// 		led[1] <= (targetLine < 131);
+			// 	end
+			// 	else begin
+			// 		// elOut[0] <= 0;
+			// 		led[1] <= 0;
+			// 	end
+			// end
 			targetDetected <= 0;
 			targetColumn <= 0;
 			targetLine <= 0;
@@ -120,7 +127,9 @@ module cpld_toplevel(
 
 	assign gate_w = ~io[31] ^ (((lineCount >= 10'd123) && (lineCount <= 10'd 133) && (columnCount >= 120) && (columnCount <= 121))
 						|| ((lineCount >= 10'd127) && (lineCount <= 10'd 129) && (columnCount >= 116) && (columnCount <= 125)));
-	assign gate_b = ~io[32];
+	assign gate_b = ~io[31];
+	assign io[29] = azOut;
+	assign io[30] = elOut;
 
 	// assign led[0] = azOut[0];
 	// assign led[1] = elOut[0];

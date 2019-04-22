@@ -5,19 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;30&gt;</arg>&apos; has no legal driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;27&gt;</arg>&apos; has no legal driver
+<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;32&gt;</arg>&apos; has no legal driver
 </msg>
 
 <msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;33&gt;</arg>&apos; has no legal driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;28&gt;</arg>&apos; has no legal driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="470" delta="old" ><arg fmt="%s" index="1">bidirect</arg> pad net &apos;<arg fmt="%s" index="2">io&lt;29&gt;</arg>&apos; has no legal driver
 </msg>
 
 </messages>
