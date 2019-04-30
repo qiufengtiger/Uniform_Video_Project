@@ -4,82 +4,78 @@
 ----------------------------------------
 0 Group(s)
 
-GCLK2: 0=clk4mhz.p
+GCLK2: 1=clk4mhz.p
 ----------------- B l o c k 0 ------------------
 PLApt(43/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(6/8), Mcell(16/16)
-PLApts[43/43] 157 158 159 164 160 165 166 185 89 91 7 93 94 7 171 173 174 176 69 87 65 67 62 64 59 61 101 102 103 104 105 106 54 58 56 9 53 8 52 55 57 10 12
-Fanins[38] io<30>.n io<32>.n io<33>.n N_PZ_335.n N_PZ_338.n N_PZ_363.n N_PZ_378.n columnCount<0>.n columnCount<1>.n columnCount<2>.n columnCount<3>.n columnCount<4>.n columnCount<5>.n columnCount<6>.n columnCount<7>.n columnCount<8>.n lineCount<0>.n lineCount<1>.n lineCount<2>.n lineCount<3>.n lineCount<4>.n lineCount<5>.n lineCount<6>.n lineCount<7>.n lineCount<8>.n targetColumn<8>.n targetDetected.n targetLine<0>.n targetLine<1>.n targetLine<2>.n targetLine<3>.n targetLine<4>.n targetLine<5>.n targetLine<6>.n targetLine<7>.n targetLine<8>.n csync.p io<31>.p
+PLApts[43/43] 95 99 101 102 111 114 115 103 105 106 7 107 110 173 118 119 104 108 109 116 117 22 120 132 155 125 156 121 150 8 62 9 63 64 68 69 71 72 74 75 77 79 84
+Fanins[38] io<30>.n io<32>.n io<33>.n N_PZ_258.n N_PZ_259.n columnCount<0>.n columnCount<1>.n columnCount<2>.n columnCount<3>.n columnCount<4>.n columnCount<5>.n columnCount<6>.n columnCount<7>.n columnCount<8>.n refreshed.n targetColumn<0>.n targetColumn<1>.n targetColumn<2>.n targetColumn<3>.n targetColumn<4>.n targetColumn<5>.n targetColumn<6>.n targetColumn<7>.n targetColumn<8>.n targetDetected.n targetLine<0>.n targetLine<1>.n targetLine<2>.n targetLine<3>.n targetLine<4>.n targetLine<5>.n targetLine<6>.n targetLine<7>.n targetLine<8>.n gate_w_BUFR.n csync.p io<31>.p vsync.p
 clk[1] clk4mhz 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[17] [io<30>(57),io<30>(30)] [io<32>(55),io<32>(32)] [io<33>(54),io<33>(33)] [gate_w(46),gate_w(37)]  
-           [gate_b(45),gate_b(38)] [io<31>(31)] [columnCount<8>(60)] [columnCount<7>(59)]  
-           [columnCount<6>(58)] [columnCount<5>(52)] [N_PZ_363(51)] [columnCount<4>(50)]  
-           [columnCount<3>(49)] [columnCount<2>(48)] [columnCount<1>(56)] [columnCount<0>(53)]  
-           [N_PZ_338(47)] 
-Signal[17] [ 0: gate_b(45) gate_b(38)  ][ 1: gate_w(46) gate_w(37)  ][ 2: N_PZ_338(47) (36)  ][ 3:  
-           columnCount<2>(48)  ][ 4: columnCount<3>(49)  ][ 5: columnCount<4>(50)  ][ 6: N_PZ_363(51)  ][ 7:  
-           columnCount<5>(52)  ][ 8: columnCount<0>(53) (34)  ][ 9: io<33>(54) io<33>(33)  ][ 10: io<32>(55)  
-           io<32>(32)  ][ 11: columnCount<1>(56) io<31>(31)  ][ 12: io<30>(57) io<30>(30)  ][ 13:  
-           columnCount<6>(58)  ][ 14: columnCount<7>(59)  ][ 15: columnCount<8>(60)  ]
+Signal[17] [io<32>(55),io<32>(32)] [io<33>(54),io<33>(33)] [io<30>(57),io<30>(30)] [gate_w(46),gate_w(37)]  
+           [gate_b(45),gate_b(38)] [io<31>(31)] [targetDetected(60)] [targetColumn<0>(59)]  
+           [targetColumn<1>(58)] [targetColumn<2>(52)] [columnCount<2>(51)] [columnCount<3>(50)]  
+           [columnCount<4>(49)] [columnCount<5>(48)] [columnCount<6>(56)] [columnCount<7>(53)]  
+           [columnCount<8>(47)] 
+Signal[17] [ 0: gate_b(45) gate_b(38)  ][ 1: gate_w(46) gate_w(37)  ][ 2: columnCount<8>(47) (36)  ][ 3:  
+           columnCount<5>(48)  ][ 4: columnCount<4>(49)  ][ 5: columnCount<3>(50)  ][ 6: columnCount<2>(51)  
+            ][ 7: targetColumn<2>(52)  ][ 8: columnCount<7>(53) (34)  ][ 9: io<33>(54) io<33>(33)  ][ 10:  
+           io<32>(55) io<32>(32)  ][ 11: columnCount<6>(56) io<31>(31)  ][ 12: io<30>(57) io<30>(30)  ][ 13:  
+           targetColumn<1>(58)  ][ 14: targetColumn<0>(59)  ][ 15: targetDetected(60)  ]
 ----------------- B l o c k 1 ------------------
-PLApt(37/56), Fanin(29/38), Clk(1/3), Bct(1/4), Pin(3/9), Mcell(16/16)
-PLApts[37/56] 3 18 115 127 1 151 120 147 116 148 117 134 98 100 109 111 97 113 128 135 129 136 130 137 131 138 133 149 121 139 118 140 14 17 11 13 () () () () () () () () () () () () () () () () () () () 152
-Fanins[29] N_PZ_287.n N_PZ_289.n N_PZ_496.n columnCount<0>.n columnCount<1>.n columnCount<2>.n columnCount<3>.n columnCount<4>.n columnCount<5>.n columnCount<6>.n columnCount<7>.n columnCount<8>.n lineCount<0>.n lineCount<1>.n lineCount<2>.n targetColumn<0>.n targetColumn<1>.n targetColumn<2>.n targetColumn<3>.n targetColumn<4>.n targetColumn<5>.n targetColumn<6>.n targetColumn<7>.n targetColumn<8>.n targetDetected.n targetLine<0>.n targetLine<1>.n csync.p vsync.p
+PLApt(37/56), Fanin(20/38), Clk(1/3), Bct(1/4), Pin(3/9), Mcell(16/16)
+PLApts[37/56] 65 67 13 14 0 56 57 60 20 21 59 61 58 170 80 171 81 172 4 6 22 92 93 157 158 2 5 16 18 19 11 15 17 23 29 40 () () () () () () () () () () () () () () () () () () () 66
+Fanins[20] N_PZ_259.n N_PZ_344.n columnCount<0>.n columnCount<1>.n lineCount<0>.n lineCount<1>.n lineCount<2>.n lineCount<3>.n lineCount<4>.n numColumn<0>.n numColumn<1>.n numColumn<2>.n numColumn<3>.n numColumn<4>.n numColumn<5>.n targetDetected.n csync.p io<27>.p io<28>.p vsync.p
 clk[1] clk4mhz 
-CTC: (pt=1) csync ;
+CTC: (pt=0) csync ;
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[19] [clk4mhz(1)] [csync(39)] [vsync(42)] [refreshed(76)] [targetDetected(75)] [targetColumn<0>(74)]  
-           [targetColumn<1>(71)] [targetColumn<2>(69)] [targetColumn<3>(64)] [N_PZ_378(63)]  
-           [targetColumn<4>(73)] [targetColumn<5>(72)] [targetColumn<6>(70)] [targetColumn<7>(68)]  
-           [targetColumn<8>(67)] [targetLine<0>(66)] [targetLine<1>(65)] [lineCount<1>(62)]  
-           [lineCount<2>(61)] 
-Signal[19] [ 0: lineCount<2>(61) csync(39)  ][ 1: lineCount<1>(62) (40)  ][ 2: N_PZ_378(63)  ][ 3:  
-           targetColumn<3>(64)  ][ 4: targetLine<1>(65) (41)  ][ 5: targetLine<0>(66) vsync(42)  ][ 6:  
-           targetColumn<8>(67) (43)  ][ 7: targetColumn<7>(68) (44)  ][ 8: targetColumn<2>(69)  ][ 9:  
-           targetColumn<6>(70) clk4mhz(1)  ][ 10: targetColumn<1>(71)  ][ 11: targetColumn<5>(72) (2)  ] 
-           [ 12: targetColumn<4>(73) (3)  ][ 13: targetColumn<0>(74)  ][ 14: targetDetected(75)  ][ 15:  
-           refreshed(76)  ]
+Signal[19] [clk4mhz(1)] [csync(39)] [vsync(42)] [columnCount<0>(76)] [columnCount<1>(75)] [numColumn<0>(74)]  
+           [numColumn<1>(71)] [numColumn<2>(69)] [numColumn<3>(64)] [numColumn<4>(63)] [numColumn<5>(73)]  
+           [N_PZ_259(72)] [N_PZ_258(70)] [N_PZ_344(68)] [lineCount<0>(67)] [lineCount<1>(66)]  
+           [lineCount<2>(65)] [lineCount<3>(62)] [lineCount<4>(61)] 
+Signal[19] [ 0: lineCount<4>(61) csync(39)  ][ 1: lineCount<3>(62) (40)  ][ 2: numColumn<4>(63)  ][ 3:  
+           numColumn<3>(64)  ][ 4: lineCount<2>(65) (41)  ][ 5: lineCount<1>(66) vsync(42)  ][ 6:  
+           lineCount<0>(67) (43)  ][ 7: N_PZ_344(68) (44)  ][ 8: numColumn<2>(69)  ][ 9: N_PZ_258(70)  
+           clk4mhz(1)  ][ 10: numColumn<1>(71)  ][ 11: N_PZ_259(72) (2)  ][ 12: numColumn<5>(73) (3)  ][ 13:  
+           numColumn<0>(74)  ][ 14: columnCount<1>(75)  ][ 15: columnCount<0>(76)  ]
 ----------------- B l o c k 2 ------------------
-PLApt(36/56), Fanin(33/38), Clk(1/3), Bct(1/4), Pin(5/9), Mcell(16/16)
-PLApts[36/36] 153 154 155 156 1 163 160 161 162 185 132 150 119 141 122 142 123 143 50 85 46 48 42 44 37 40 25 36 15 19 124 144 125 145 126 146
-Fanins[33] io<29>.n led<0>.n led<1>.n N_PZ_287.n N_PZ_289.n N_PZ_335.n N_PZ_363.n N_PZ_378.n lineCount<0>.n lineCount<1>.n lineCount<2>.n lineCount<3>.n lineCount<4>.n lineCount<5>.n lineCount<6>.n lineCount<7>.n lineCount<8>.n targetColumn<3>.n targetColumn<4>.n targetColumn<5>.n targetColumn<6>.n targetColumn<7>.n targetColumn<8>.n targetDetected.n targetLine<2>.n targetLine<3>.n targetLine<4>.n targetLine<5>.n targetLine<6>.n targetLine<7>.n targetLine<8>.n csync.p vsync.p
+PLApt(43/56), Fanin(35/38), Clk(1/3), Bct(1/4), Pin(3/9), Mcell(16/16)
+PLApts[43/56] 96 97 98 100 0 112 113 3 122 139 133 140 134 141 135 142 136 143 86 88 90 91 164 166 167 169 54 82 50 52 46 48 41 44 138 151 126 152 123 153 () () () () () () 159 () () () () () 7 () () 94
+Fanins[35] io<29>.n N_PZ_258.n N_PZ_259.n N_PZ_300.n N_PZ_439.n columnCount<1>.n columnCount<2>.n columnCount<3>.n columnCount<4>.n columnCount<5>.n columnCount<6>.n columnCount<7>.n columnCount<8>.n lineCount<0>.n lineCount<1>.n lineCount<2>.n lineCount<3>.n lineCount<4>.n lineCount<5>.n lineCount<6>.n lineCount<7>.n lineCount<8>.n refreshed.n targetColumn<3>.n targetColumn<4>.n targetColumn<5>.n targetColumn<6>.n targetColumn<7>.n targetColumn<8>.n targetDetected.n targetLine<0>.n targetLine<1>.n csync.p io<31>.p vsync.p
 clk[1] clk4mhz 
-CTC: (pt=1) csync ;
+CTC: (pt=0) csync ;
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[18] [io<29>(77),io<29>(29)] [led<0>(88),led<0>(20)] [led<1>(90),led<1>(19)] [io<27>(27)] [io<28>(28)]  
-           [targetLine<8>(92)] [targetLine<2>(89)] [targetLine<3>(85)] [targetLine<4>(84)]  
-           [lineCount<8>(83)] [lineCount<7>(81)] [lineCount<6>(80)] [lineCount<5>(91)] [lineCount<4>(87)]  
-           [lineCount<3>(86)] [targetLine<5>(82)] [targetLine<6>(79)] [targetLine<7>(78)] 
-Signal[18] [ 0: io<29>(77) io<29>(29)  ][ 1: targetLine<7>(78) io<28>(28)  ][ 2: targetLine<6>(79)  
-           io<27>(27)  ][ 3: lineCount<6>(80)  ][ 4: lineCount<7>(81)  ][ 5: targetLine<5>(82) (23)  ][ 6:  
-           lineCount<8>(83)  ][ 7: targetLine<4>(84)  ][ 8: targetLine<3>(85)  ][ 9: lineCount<3>(86) (22)  ] 
-           [ 10: lineCount<4>(87) (21)  ][ 11: led<0>(88) led<0>(20)  ][ 12: targetLine<2>(89)  ][ 13:  
-           led<1>(90) led<1>(19)  ][ 14: lineCount<5>(91) (18)  ][ 15: targetLine<8>(92)  ]
+Signal[18] [io<29>(77),io<29>(29)] [io<27>(27)] [io<28>(28)] [N_PZ_439(92)] [refreshed(89)]  
+           [targetColumn<3>(85)] [targetColumn<4>(84)] [targetColumn<5>(83)] [targetColumn<6>(81)]  
+           [targetColumn<7>(80)] [gate_w_BUFR(91)] [lineCount<8>(90)] [lineCount<7>(88)] [lineCount<6>(87)]  
+           [lineCount<5>(86)] [targetColumn<8>(82)] [targetLine<0>(79)] [targetLine<1>(78)] 
+Signal[18] [ 0: io<29>(77) io<29>(29)  ][ 1: targetLine<1>(78) io<28>(28)  ][ 2: targetLine<0>(79)  
+           io<27>(27)  ][ 3: targetColumn<7>(80)  ][ 4: targetColumn<6>(81)  ][ 5: targetColumn<8>(82) (23)  
+            ][ 6: targetColumn<5>(83)  ][ 7: targetColumn<4>(84)  ][ 8: targetColumn<3>(85)  ][ 9:  
+           lineCount<5>(86) (22)  ][ 10: lineCount<6>(87) (21)  ][ 11: lineCount<7>(88) (20)  ][ 12:  
+           refreshed(89)  ][ 13: lineCount<8>(90) (19)  ][ 14: gate_w_BUFR(91) (18)  ][ 15: N_PZ_439(92)  ]
 ----------------- B l o c k 3 ------------------
-PLApt(34/56), Fanin(17/38), Clk(1/3), Bct(1/4), Pin(0/7), Mcell(15/16)
-PLApts[34/41] 4 6 18 95 1 96 84 182 83 181 82 180 81 108 179 183 184 80 178 77 177 75 76 78 79 72 73 74 107 70 71 2 5 () () () () () () () 16
-Fanins[17] N_PZ_366.n lineCount<0>.n numColumn<0>.n numColumn<1>.n numColumn<2>.n numColumn<3>.n numColumn<4>.n numColumn<5>.n numColumn<6>.n numColumn<7>.n numColumn<8>.n refreshed.n targetDetected.n csync.p io<27>.p io<28>.p vsync.p
+PLApt(16/56), Fanin(19/38), Clk(1/3), Bct(0/4), Pin(0/7), Mcell(8/16)
+PLApts[16/16] 124 144 127 145 128 146 129 147 130 148 131 149 137 154 10 12
+Fanins[19] N_PZ_258.n N_PZ_259.n columnCount<1>.n columnCount<2>.n columnCount<3>.n lineCount<2>.n lineCount<3>.n lineCount<4>.n lineCount<5>.n lineCount<6>.n lineCount<7>.n lineCount<8>.n targetLine<2>.n targetLine<3>.n targetLine<4>.n targetLine<5>.n targetLine<6>.n targetLine<7>.n targetLine<8>.n
 clk[1] clk4mhz 
-CTC: (pt=1) csync ;
+CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[15] [N_PZ_289(108)] [numColumn<8>(104)] [numColumn<7>(102)] [numColumn<6>(101)] [numColumn<5>(100)]  
-           [N_PZ_287(98)] [numColumn<4>(97)] [numColumn<3>(96)] [numColumn<2>(95)] [numColumn<1>(107)]  
-           [numColumn<0>(106)] [N_PZ_366(105)] [lineCount<0>(103)] [N_PZ_335(99)] [N_PZ_496(94)] 
-Signal[15] [ 0: (5)  ][ 1: N_PZ_496(94) (6)  ][ 2: numColumn<2>(95)  ][ 3: numColumn<3>(96)  ][ 4:  
-           numColumn<4>(97)  ][ 5: N_PZ_287(98)  ][ 6: N_PZ_335(99) (8)  ][ 7: numColumn<5>(100)  ][ 8:  
-           numColumn<6>(101)  ][ 9: numColumn<7>(102)  ][ 10: lineCount<0>(103) (12)  ][ 11:  
-           numColumn<8>(104)  ][ 12: N_PZ_366(105) (13)  ][ 13: numColumn<0>(106) (14)  ][ 14:  
-           numColumn<1>(107) (16)  ][ 15: N_PZ_289(108)  ]
+Signal[ 8] [targetLine<2>(108)] [targetLine<3>(104)] [targetLine<4>(102)] [targetLine<5>(101)]  
+           [targetLine<6>(100)] [targetLine<7>(98)] [targetLine<8>(97)] [N_PZ_300(96)] 
+Signal[ 8] [ 0: (5)  ][ 1: (6)  ][ 2:  ][ 3: N_PZ_300(96)  ][ 4: targetLine<8>(97)  ][ 5: targetLine<7>(98)  
+            ][ 6: (8)  ][ 7: targetLine<6>(100)  ][ 8: targetLine<5>(101)  ][ 9: targetLine<4>(102)  ][ 10:  
+           (12)  ][ 11: targetLine<3>(104)  ][ 12: (13)  ][ 13: (14)  ][ 14: (16)  ][ 15: targetLine<2>(108)  
+            ]

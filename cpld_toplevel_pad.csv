@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.20131013
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 4-26-2019  1:58PM
+ 4-30-2019  2:36PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -36,8 +36,8 @@ P15,,VCC,VCC,,,,,,,,,,
 P16,TIE,,I/O,,,1,,,,,,,
 P17,GND,,GND,,,,,,,,,,
 P18,TIE,,I/O,,,2,,,,,,,
-P19,led<1>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
-P20,led<0>,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
+P19,TIE,,I/O,,,2,,,,,,,
+P20,TIE,,I/O,,,2,,,,,,,
 P21,TIE,,I/O,,,2,,,,,,,
 P22,TIE,,I/O,,,2,,,,,,,
 P23,TIE,,I/O,,,2,,,,,,,

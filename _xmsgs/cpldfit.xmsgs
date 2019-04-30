@@ -11,6 +11,12 @@
 <msg type="info" file="Cpld" num="0" delta="new" >Inferring BUFG constraint for signal &apos;<arg fmt="%s" index="1">clk4mhz</arg>&apos; based upon the LOC constraint &apos;<arg fmt="%s" index="2">P1</arg>&apos;. It is recommended that you declare this BUFG explicitedly in your design. Note that for certain device families the output of a BUFG constraint can not drive a gated clock, and the BUFG constraint will be ignored.
 </msg>
 
+<msg type="warning" file="Cpld" num="936" delta="new" >The output buffer &apos;<arg fmt="%s" index="1">led&lt;1&gt;_OBUF</arg>&apos; is missing an input and will be deleted.
+</msg>
+
+<msg type="warning" file="Cpld" num="936" delta="new" >The output buffer &apos;<arg fmt="%s" index="1">led&lt;0&gt;_OBUF</arg>&apos; is missing an input and will be deleted.
+</msg>
+
 <msg type="warning" file="Cpld" num="936" delta="old" >The output buffer &apos;<arg fmt="%s" index="1">el_OBUF</arg>&apos; is missing an input and will be deleted.
 </msg>
 
@@ -27,6 +33,9 @@
 </msg>
 
 <msg type="warning" file="Cpld" num="968" delta="old" >PULLUP specified for non tristated output &apos;<arg fmt="%s" index="1">io&lt;29&gt;</arg>&apos; is ignored.
+</msg>
+
+<msg type="warning" file="Cpld" num="0" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%s" index="1">1</arg>. Buffering output signal <arg fmt="%s" index="2">gate_w</arg> to allow all signals assigned to this function block to be placed.
 </msg>
 
 </messages>

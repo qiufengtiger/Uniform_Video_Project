@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: cpld_toplevel.prj
 
@@ -120,38 +120,37 @@ Synthesizing Unit <cpld_toplevel>.
 WARNING:Xst:1306 - Output <az> is never assigned.
 WARNING:Xst:1306 - Output <el> is never assigned.
 WARNING:Xst:647 - Input <field> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <led> is never assigned.
 WARNING:Xst:647 - Input <burst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1780 - Signal <switched> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <scanStarted> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <scanCount> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <test> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit xor2 for signal <gate_w>.
     Found 1-bit register for signal <azOut>.
-    Found 9-bit comparator less for signal <azOut$cmp_lt0000> created at line 95.
+    Found 9-bit comparator less for signal <azOut$cmp_lt0000> created at line 94.
     Found 1-bit register for signal <azSpeed>.
-    Found 9-bit comparator greater for signal <azSpeed$cmp_gt0000> created at line 97.
-    Found 9-bit comparator less for signal <azSpeed$cmp_lt0000> created at line 97.
+    Found 9-bit comparator greater for signal <azSpeed$cmp_gt0000> created at line 96.
+    Found 9-bit comparator less for signal <azSpeed$cmp_lt0000> created at line 96.
     Found 1-bit register for signal <elOut>.
-    Found 9-bit comparator less for signal <elOut$cmp_lt0000> created at line 96.
+    Found 9-bit comparator less for signal <elOut$cmp_lt0000> created at line 95.
     Found 1-bit register for signal <elSpeed>.
-    Found 9-bit comparator greater for signal <elSpeed$cmp_gt0000> created at line 98.
-    Found 9-bit comparator less for signal <elSpeed$cmp_lt0000> created at line 98.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0000> created at line 113.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0001> created at line 113.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0002> created at line 113.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0003> created at line 113.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0000> created at line 113.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0001> created at line 113.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0002> created at line 113.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0003> created at line 113.
-    Found 9-bit up counter for signal <numColumn>.
+    Found 9-bit comparator greater for signal <elSpeed$cmp_gt0000> created at line 97.
+    Found 9-bit comparator less for signal <elSpeed$cmp_lt0000> created at line 97.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0000> created at line 112.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0001> created at line 112.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0002> created at line 112.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0003> created at line 112.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0000> created at line 112.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0001> created at line 112.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0002> created at line 112.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0003> created at line 112.
+    Found 6-bit up counter for signal <numColumn>.
     Found 1-bit register for signal <refreshed>.
     Found 9-bit register for signal <targetColumn>.
     Found 1-bit register for signal <targetDetected>.
-    Found 9-bit comparator greatequal for signal <targetDetected$cmp_ge0000> created at line 59.
-    Found 9-bit comparator greater for signal <targetDetected$cmp_gt0000> created at line 59.
-    Found 9-bit comparator lessequal for signal <targetDetected$cmp_le0000> created at line 67.
-    Found 9-bit comparator lessequal for signal <targetDetected$cmp_le0001> created at line 59.
-    Found 9-bit comparator less for signal <targetDetected$cmp_lt0000> created at line 59.
+    Found 6-bit comparator greatequal for signal <targetDetected$cmp_ge0000> created at line 58.
+    Found 6-bit comparator greater for signal <targetDetected$cmp_gt0000> created at line 58.
+    Found 6-bit comparator lessequal for signal <targetDetected$cmp_le0000> created at line 66.
+    Found 6-bit comparator lessequal for signal <targetDetected$cmp_le0001> created at line 58.
+    Found 6-bit comparator less for signal <targetDetected$cmp_lt0000> created at line 58.
     Found 9-bit register for signal <targetLine>.
     Summary:
 	inferred   1 Counter(s).
@@ -166,15 +165,20 @@ HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 3
- 9-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+ 9-bit up counter                                      : 2
 # Registers                                            : 8
  1-bit register                                        : 6
  9-bit register                                        : 2
 # Comparators                                          : 19
- 9-bit comparator greatequal                           : 5
- 9-bit comparator greater                              : 3
- 9-bit comparator less                                 : 5
- 9-bit comparator lessequal                            : 6
+ 6-bit comparator greatequal                           : 1
+ 6-bit comparator greater                              : 1
+ 6-bit comparator less                                 : 1
+ 6-bit comparator lessequal                            : 2
+ 9-bit comparator greatequal                           : 4
+ 9-bit comparator greater                              : 2
+ 9-bit comparator less                                 : 4
+ 9-bit comparator lessequal                            : 4
 # Xors                                                 : 1
  1-bit xor2                                            : 1
 
@@ -190,7 +194,8 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # Counters                                             : 3
- 9-bit up counter                                      : 3
+ 6-bit up counter                                      : 1
+ 9-bit up counter                                      : 2
 # Registers                                            : 4
  Flip-Flops                                            : 4
 
@@ -234,34 +239,33 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 316
-#      AND2                        : 121
-#      AND3                        : 12
-#      AND4                        : 2
-#      AND8                        : 1
+# BELS                             : 303
+#      AND2                        : 119
+#      AND3                        : 13
+#      AND4                        : 1
 #      GND                         : 3
-#      INV                         : 116
-#      OR2                         : 32
-#      OR3                         : 1
+#      INV                         : 110
+#      OR2                         : 29
+#      OR3                         : 3
 #      OR4                         : 2
 #      OR5                         : 1
-#      XOR2                        : 25
-# FlipFlops/Latches                : 51
-#      FDCE                        : 51
-# IO Buffers                       : 14
+#      XOR2                        : 22
+# FlipFlops/Latches                : 48
+#      FDCE                        : 48
+# IO Buffers                       : 12
 #      IBUF                        : 6
-#      OBUF                        : 8
+#      OBUF                        : 6
 =========================================================================
 
 
-Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.75 secs
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.23 secs
  
 --> 
 
-Total memory usage is 4535404 kilobytes
+Total memory usage is 4535396 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

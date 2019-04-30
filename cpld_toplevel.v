@@ -19,18 +19,16 @@ module cpld_toplevel(
 
 	//we can possibly only store half of the rows/ columns
 	// wire [8 : 0] numLine;
-	reg [8 : 0] numColumn;
+	reg [5 : 0] numColumn;
 	reg targetDetected;
 	reg refreshed;
 	reg [8 : 0] targetLine;
 	reg [8 : 0] targetColumn;
 	reg azOut;
 	reg elOut;
-	wire [8 : 0] scanCount;
-	reg scanStarted;
-	reg switched;
 	reg azSpeed;
 	reg elSpeed;
+	reg test;
 
 	// assign io[27] = vsync;
  //    assign io[28] = burst;
@@ -48,6 +46,7 @@ module cpld_toplevel(
 	always @(posedge clk4mhz) begin
 	//counter
 		if(~vsync) begin
+		// if(~field) begin
 			refreshed <= 1;
 			//reset target counter when the line ends
 			if(csync)begin
@@ -56,7 +55,7 @@ module cpld_toplevel(
 			else begin
 				if(~isTarget) begin
 					//within limit
-					if((numColumn > 1) && (numColumn < 8) && ~targetDetected) begin
+					if((numColumn > 0) && (numColumn < 5) && ~targetDetected) begin
 						targetDetected <= 1;
 						targetColumn <= columnCount;
 						targetLine <= lineCount;
@@ -64,7 +63,7 @@ module cpld_toplevel(
 					end
 					//fix the flashing issue
 					//i don't know why
-					else if((numColumn > 8) && ~targetDetected) begin
+					else if((numColumn > 5) && ~targetDetected) begin
 						targetDetected <= 0;
 						targetColumn <= 0;
 						targetLine <= 0;
@@ -94,8 +93,8 @@ module cpld_toplevel(
 				if(targetDetected == 1) begin
 					azOut <= (targetColumn < 120);
 					elOut <= (targetLine < 131);
-					azSpeed <= ((targetColumn < 90) || (targetColumn > 150));
-					elSpeed <= ((targetLine < 95) || (targetLine > 166));
+					azSpeed <= ((targetColumn < 92) || (targetColumn > 148));
+					elSpeed <= ((targetLine < 100) || (targetLine > 160));
 				end
 				else begin
 					azOut <= 0;
@@ -117,7 +116,9 @@ module cpld_toplevel(
 	assign io[30] = elOut;
 	assign io[32] = azSpeed;
 	assign io[33] = elSpeed;
+	// assign io[32] = 1;
+	// assign io[33] = 1;
 
-	assign led[0] = azSpeed;
-	assign led[1] = elSpeed;
+	assign led[0] = azOut;
+	assign led[1] = elOut;
 endmodule
