@@ -10,17 +10,12 @@ module cpld_toplevel(
 	output el,
 	output gate_b,
 	output gate_w,
-	output reg [1 : 0] led
+	output [1 : 0] led
 	);
 
-	wire isCrosshair;
-	// wire azResult;
-	// wire elResult;
 	wire isTarget;
 	wire [8 : 0] lineCount;
 	wire [8 : 0] columnCount;
-	wire en;
-	wire xCounterEn;
 
 	//we can possibly only store half of the rows/ columns
 	// wire [8 : 0] numLine;
@@ -31,6 +26,11 @@ module cpld_toplevel(
 	reg [8 : 0] targetColumn;
 	reg azOut;
 	reg elOut;
+	wire [8 : 0] scanCount;
+	reg scanStarted;
+	reg switched;
+	reg azSpeed;
+	reg elSpeed;
 
 	// assign io[27] = vsync;
  //    assign io[28] = burst;
@@ -91,34 +91,19 @@ module cpld_toplevel(
 		else begin
 			if(refreshed == 1) begin
 				refreshed <= 0;
-				if(targetDetected == 1)begin
-					// azOut[0] <= (targetColumn < 120);
-					led[0] <= (targetColumn < 120);
+				if(targetDetected == 1) begin
 					azOut <= (targetColumn < 120);
-					led[1] <= (targetLine < 131);
 					elOut <= (targetLine < 131);
+					azSpeed <= ((targetColumn < 90) || (targetColumn > 150));
+					elSpeed <= ((targetLine < 95) || (targetLine > 166));
 				end
 				else begin
-					// azOut[0] <= 0;
-					led[0] <= 0;
 					azOut <= 0;
-					led[1] <= 0;
 					elOut <= 0;
+					azSpeed <= 1;
+					elSpeed <= 1;
 				end
-				// led[0] <= io[27];
-				// led[1] <= io[28];
 			end
-			// if(refreshed == 1) begin
-			// 	refreshed <= 0;
-			// 	if(targetDetected == 1)begin
-			// 		// elOut[0] <= (targetLine < 131);
-			// 		led[1] <= (targetLine < 131);
-			// 	end
-			// 	else begin
-			// 		// elOut[0] <= 0;
-			// 		led[1] <= 0;
-			// 	end
-			// end
 			targetDetected <= 0;
 			targetColumn <= 0;
 			targetLine <= 0;
@@ -130,15 +115,9 @@ module cpld_toplevel(
 	assign gate_b = ~io[31];
 	assign io[29] = azOut;
 	assign io[30] = elOut;
+	assign io[32] = azSpeed;
+	assign io[33] = elSpeed;
 
-	// assign led[0] = azOut[0];
-	// assign led[1] = elOut[0];
-	// always @(negedge vsync) begin
-	// 	led[0] <= azOut[0];
-	// 	led[1] <= elOut[0];
-	// end
-	// assign az = azResult;
-	// assign el = elResult;
-
-	//empty io
+	assign led[0] = azSpeed;
+	assign led[1] = elSpeed;
 endmodule

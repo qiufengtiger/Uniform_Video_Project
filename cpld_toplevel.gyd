@@ -11,6 +11,8 @@ gate_b S:PIN38
 gate_w S:PIN37
 io<29> S:PIN29
 io<30> S:PIN30
+io<32> S:PIN32
+io<33> S:PIN33
 led<0> S:PIN20
 led<1> S:PIN19
 
@@ -18,23 +20,23 @@ led<1> S:PIN19
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 gate_b gate_w columnCount<2> lineCount<5>
-		 columnCount<5> lineCount<6> columnCount<6> columnCount<7>
-		 lineCount<3> columnCount<3> lineCount<4> columnCount<4>
-		 io<30> columnCount<8> lineCount<7> lineCount<8>
+PARTITION FB1_1 gate_b gate_w N_PZ_338 columnCount<2>
+		 columnCount<3> columnCount<4> N_PZ_363 columnCount<5>
+		 columnCount<0> io<33> io<32> columnCount<1>
+		 io<30> columnCount<6> columnCount<7> columnCount<8>
 		
-PARTITION FB2_1 lineCount<0> targetDetected numColumn<4> numColumn<3>
-		 N_PZ_325 N_PZ_263 N_PZ_265 numColumn<8>
-		 numColumn<2> numColumn<7> numColumn<1> numColumn<6>
-		 numColumn<5> numColumn<0> columnCount<1> columnCounter/cnt<0>
+PARTITION FB2_1 lineCount<2> lineCount<1> N_PZ_378 targetColumn<3>
+		 targetLine<1> targetLine<0> targetColumn<8> targetColumn<7>
+		 targetColumn<2> targetColumn<6> targetColumn<1> targetColumn<5>
+		 targetColumn<4> targetColumn<0> targetDetected refreshed
 		
-PARTITION FB3_1 io<29> targetLine<4> targetLine<3> targetColumn<7>
-		 targetColumn<6> targetLine<2> targetColumn<5> targetColumn<4>
-		 targetColumn<3> targetLine<1> targetLine<0> led<0>
-		 refreshed led<1> targetColumn<8> N_PZ_437
+PARTITION FB3_1 io<29> targetLine<7> targetLine<6> lineCount<6>
+		 lineCount<7> targetLine<5> lineCount<8> targetLine<4>
+		 targetLine<3> lineCount<3> lineCount<4> led<0>
+		 targetLine<2> led<1> lineCount<5> targetLine<8>
 		
-PARTITION FB4_5 N_PZ_300 targetLine<8>
-PARTITION FB4_8 targetLine<7> targetLine<6> targetLine<5>
-PARTITION FB4_12 lineCount<1>
-PARTITION FB4_16 lineCount<2>
+PARTITION FB4_2 N_PZ_496 numColumn<2> numColumn<3> numColumn<4>
+		 N_PZ_287 N_PZ_335 numColumn<5> numColumn<6>
+		 numColumn<7> lineCount<0> numColumn<8> N_PZ_366
+		 numColumn<0> numColumn<1> N_PZ_289
 

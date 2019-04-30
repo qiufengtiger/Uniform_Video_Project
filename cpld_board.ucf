@@ -37,7 +37,7 @@ NET "gate_b" LOC = "P38";
 NET "gate_w" LOC = "P37";
 
 #Other
-#NET "az" LOC = "P5";
-#NET "el" LOC = "P6";
+NET "az" LOC = "P5";
+NET "el" LOC = "P6";
 #NET "emitter" LOC = "P2";
 #NET "detector" LOC = "P3";

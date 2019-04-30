@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.22 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Reading design: cpld_toplevel.prj
 
@@ -120,27 +120,29 @@ Synthesizing Unit <cpld_toplevel>.
 WARNING:Xst:1306 - Output <az> is never assigned.
 WARNING:Xst:1306 - Output <el> is never assigned.
 WARNING:Xst:647 - Input <field> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:2565 - Inout <io<32>> is never assigned.
-WARNING:Xst:2565 - Inout <io<33>> is never assigned.
 WARNING:Xst:647 - Input <burst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1780 - Signal <xCounterEn> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <isCrosshair> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <en> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-    Register <led<0>> equivalent to <azOut> has been removed
-    Register <led<1>> equivalent to <elOut> has been removed
+WARNING:Xst:1780 - Signal <switched> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <scanStarted> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <scanCount> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit xor2 for signal <gate_w>.
     Found 1-bit register for signal <azOut>.
-    Found 9-bit comparator less for signal <azOut$cmp_lt0000> created at line 97.
+    Found 9-bit comparator less for signal <azOut$cmp_lt0000> created at line 95.
+    Found 1-bit register for signal <azSpeed>.
+    Found 9-bit comparator greater for signal <azSpeed$cmp_gt0000> created at line 97.
+    Found 9-bit comparator less for signal <azSpeed$cmp_lt0000> created at line 97.
     Found 1-bit register for signal <elOut>.
-    Found 9-bit comparator less for signal <elOut$cmp_lt0000> created at line 99.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0000> created at line 128.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0001> created at line 128.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0002> created at line 128.
-    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0003> created at line 128.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0000> created at line 128.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0001> created at line 128.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0002> created at line 128.
-    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0003> created at line 128.
+    Found 9-bit comparator less for signal <elOut$cmp_lt0000> created at line 96.
+    Found 1-bit register for signal <elSpeed>.
+    Found 9-bit comparator greater for signal <elSpeed$cmp_gt0000> created at line 98.
+    Found 9-bit comparator less for signal <elSpeed$cmp_lt0000> created at line 98.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0000> created at line 113.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0001> created at line 113.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0002> created at line 113.
+    Found 9-bit comparator greatequal for signal <gate_w$cmp_ge0003> created at line 113.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0000> created at line 113.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0001> created at line 113.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0002> created at line 113.
+    Found 9-bit comparator lessequal for signal <gate_w$cmp_le0003> created at line 113.
     Found 9-bit up counter for signal <numColumn>.
     Found 1-bit register for signal <refreshed>.
     Found 9-bit register for signal <targetColumn>.
@@ -153,8 +155,8 @@ WARNING:Xst:1780 - Signal <en> is never used or assigned. This unconnected signa
     Found 9-bit register for signal <targetLine>.
     Summary:
 	inferred   1 Counter(s).
-	inferred   2 D-type flip-flop(s).
-	inferred  15 Comparator(s).
+	inferred   4 D-type flip-flop(s).
+	inferred  19 Comparator(s).
 	inferred   1 Xor(s).
 Unit <cpld_toplevel> synthesized.
 
@@ -165,13 +167,13 @@ HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 3
  9-bit up counter                                      : 3
-# Registers                                            : 6
- 1-bit register                                        : 4
+# Registers                                            : 8
+ 1-bit register                                        : 6
  9-bit register                                        : 2
-# Comparators                                          : 15
+# Comparators                                          : 19
  9-bit comparator greatequal                           : 5
- 9-bit comparator greater                              : 1
- 9-bit comparator less                                 : 3
+ 9-bit comparator greater                              : 3
+ 9-bit comparator less                                 : 5
  9-bit comparator lessequal                            : 6
 # Xors                                                 : 1
  1-bit xor2                                            : 1
@@ -189,17 +191,14 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 3
  9-bit up counter                                      : 3
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 4
+ Flip-Flops                                            : 4
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:2677 - Node <targetColumn_0> of sequential type is unconnected in block <cpld_toplevel>.
-WARNING:Xst:2677 - Node <targetColumn_1> of sequential type is unconnected in block <cpld_toplevel>.
-WARNING:Xst:2677 - Node <targetColumn_2> of sequential type is unconnected in block <cpld_toplevel>.
 
 Optimizing unit <cpld_toplevel> ...
 
@@ -235,32 +234,34 @@ Design Statistics
 # IOs                              : 18
 
 Cell Usage :
-# BELS                             : 265
-#      AND2                        : 106
-#      AND3                        : 10
+# BELS                             : 316
+#      AND2                        : 121
+#      AND3                        : 12
 #      AND4                        : 2
 #      AND8                        : 1
 #      GND                         : 3
-#      INV                         : 96
-#      OR2                         : 21
-#      OR4                         : 1
+#      INV                         : 116
+#      OR2                         : 32
+#      OR3                         : 1
+#      OR4                         : 2
+#      OR5                         : 1
 #      XOR2                        : 25
-# FlipFlops/Latches                : 46
-#      FDCE                        : 46
-# IO Buffers                       : 12
+# FlipFlops/Latches                : 51
+#      FDCE                        : 51
+# IO Buffers                       : 14
 #      IBUF                        : 6
-#      OBUF                        : 6
+#      OBUF                        : 8
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.81 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.75 secs
  
 --> 
 
-Total memory usage is 4535396 kilobytes
+Total memory usage is 4535404 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   12 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
