@@ -6,8 +6,6 @@ module cpld_toplevel(
 	input clk4mhz,
 	inout [33 : 27] io,
 	// inout [32 : 31] io,
-	output az,
-	output el,
 	output gate_b,
 	output gate_w,
 	output [1 : 0] led
@@ -28,7 +26,6 @@ module cpld_toplevel(
 	reg elOut;
 	reg azSpeed;
 	reg elSpeed;
-	reg test;
 
 	// assign io[27] = vsync;
  //    assign io[28] = burst;
@@ -119,6 +116,6 @@ module cpld_toplevel(
 	// assign io[32] = 1;
 	// assign io[33] = 1;
 
-	assign led[0] = azOut;
-	assign led[1] = elOut;
+	// assign led[0] = azOut;
+	// assign led[1] = elOut;
 endmodule

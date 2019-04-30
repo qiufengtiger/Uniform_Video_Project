@@ -1818,3 +1818,22 @@ cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -l
 XSLTProcess cpld_toplevel_build.xml 
 tsim -intstyle ise cpld_toplevel cpld_toplevel.nga 
 hprep6 -s IEEE1149 -i cpld_toplevel 
+xst -intstyle ise -ifn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.xst" -ofn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld_board.ucf -p xc2c64a-VQ44-5 cpld_toplevel.ngc cpld_toplevel.ngd  
+ngdbuild -intstyle ise -dd _ngo -uc cpld_board.ucf -p xc2c64a-VQ44-5 cpld_toplevel.ngc cpld_toplevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused float -terminate pullup -iostd LVCMOS33 cpld_toplevel.ngd 
+XSLTProcess cpld_toplevel_build.xml 
+tsim -intstyle ise cpld_toplevel cpld_toplevel.nga 
+hprep6 -s IEEE1149 -i cpld_toplevel 
+xst -intstyle ise -ifn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.xst" -ofn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld_board.ucf -p xc2c64a-VQ44-5 cpld_toplevel.ngc cpld_toplevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused float -terminate pullup -iostd LVCMOS33 cpld_toplevel.ngd 
+XSLTProcess cpld_toplevel_build.xml 
+tsim -intstyle ise cpld_toplevel cpld_toplevel.nga 
+hprep6 -s IEEE1149 -i cpld_toplevel 
+xst -intstyle ise -ifn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.xst" -ofn "P:/ece_scratch/ECE323_S2019/Uniform/Uniform_Video_Project/cpld_toplevel.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc cpld_board.ucf -p xc2c64a-VQ44-5 cpld_toplevel.ngc cpld_toplevel.ngd  
+cpldfit -intstyle ise -p xc2c64a-5-VQ44 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused float -terminate pullup -iostd LVCMOS33 cpld_toplevel.ngd 
+XSLTProcess cpld_toplevel_build.xml 
+tsim -intstyle ise cpld_toplevel cpld_toplevel.nga 
+hprep6 -s IEEE1149 -i cpld_toplevel 
