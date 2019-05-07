@@ -4,7 +4,6 @@ Pin Freeze File:  version P.20131013
 clk4mhz S:PIN1
 csync S:PIN39
 io<27> S:PIN27
-io<28> S:PIN28
 io<31> S:PIN31
 vsync S:PIN42
 gate_b S:PIN38
@@ -13,28 +12,29 @@ io<29> S:PIN29
 io<30> S:PIN30
 io<32> S:PIN32
 io<33> S:PIN33
+led<0> S:PIN20
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_1 gate_b gate_w columnCount<8> columnCount<5>
-		 columnCount<4> columnCount<3> columnCount<2> targetColumn<2>
-		 columnCount<7> io<33> io<32> columnCount<6>
-		 io<30> targetColumn<1> targetColumn<0> targetDetected
+PARTITION FB1_1 gate_b gate_w columnCount<6> columnCount<3>
+		 columnCount<2> targetColumn<2> targetColumn<1> targetColumn<0>
+		 columnCount<5> io<33> io<32> columnCount<4>
+		 io<30> targetDetected refreshed N_PZ_442
 		
-PARTITION FB2_1 lineCount<4> lineCount<3> numColumn<4> numColumn<3>
-		 lineCount<2> lineCount<1> lineCount<0> N_PZ_344
-		 numColumn<2> N_PZ_258 numColumn<1> N_PZ_259
-		 numColumn<5> numColumn<0> columnCount<1> columnCount<0>
+PARTITION FB2_1 numColumn<0> N_PZ_301 lineCount<7> lineCount<8>
+		 lineCount<0> lineCount<1> lineCount<2> lineCount<3>
+		 gate_w_BUFR lineCount<4> columnCount<8> lineCount<5>
+		 lineCount<6> columnCount<7> columnCount<1> columnCount<0>
 		
-PARTITION FB3_1 io<29> targetLine<1> targetLine<0> targetColumn<7>
-		 targetColumn<6> targetColumn<8> targetColumn<5> targetColumn<4>
-		 targetColumn<3> lineCount<5> lineCount<6> lineCount<7>
-		 refreshed lineCount<8> gate_w_BUFR N_PZ_439
+PARTITION FB3_1 io<29> targetLine<0> targetColumn<8> N_PZ_309
+		 N_PZ_259 targetColumn<7> numColumn<5> numColumn<4>
+		 numColumn<3> targetColumn<6> targetColumn<5> led<0>
+		 numColumn<2> targetColumn<4> targetColumn<3> numColumn<1>
 		
-PARTITION FB4_4 N_PZ_300 targetLine<8> targetLine<7>
-PARTITION FB4_8 targetLine<6> targetLine<5> targetLine<4>
-PARTITION FB4_12 targetLine<3>
-PARTITION FB4_16 targetLine<2>
+PARTITION FB4_4 targetLine<8> targetLine<7> targetLine<6>
+PARTITION FB4_8 targetLine<5> targetLine<4> targetLine<3>
+PARTITION FB4_12 targetLine<2>
+PARTITION FB4_16 targetLine<1>
 

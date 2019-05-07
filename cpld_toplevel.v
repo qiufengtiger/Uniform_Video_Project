@@ -4,6 +4,7 @@ module cpld_toplevel(
 	input field,
 	input csync,
 	input clk4mhz,
+	input gclk2,
 	inout [33 : 27] io,
 	// inout [32 : 31] io,
 	output gate_b,
@@ -26,7 +27,8 @@ module cpld_toplevel(
 	reg elOut;
 	reg azSpeed;
 	reg elSpeed;
-
+	reg azScanDir;
+	reg elScanDir;
 	// assign io[27] = vsync;
  //    assign io[28] = burst;
  //    assign io[29] = field;
@@ -38,7 +40,7 @@ module cpld_toplevel(
 
 	//test
 	// assign isTarget = ((lineCount >= 110) && (lineCount <= 116) && (columnCount >= 140) && (columnCount <= 147));
-	assign isTarget = io[27] & io[28];
+	assign isTarget = ~/*gclk2*/io[27]/* & io[28]*/;
 
 	always @(posedge clk4mhz) begin
 	//counter
@@ -94,8 +96,8 @@ module cpld_toplevel(
 					elSpeed <= ((targetLine < 100) || (targetLine > 160));
 				end
 				else begin
-					azOut <= 0;
-					elOut <= 0;
+					azOut <= /*azScanDir;*/0;
+					elOut <= /*elScanDir;*/0;
 					azSpeed <= 1;
 					elSpeed <= 1;
 				end
@@ -105,6 +107,23 @@ module cpld_toplevel(
 			targetLine <= 0;
 		end
 	end
+
+	// always @(posedge isMarginX) begin
+	// 	if(targetDetected) begin
+	// 		azScanDir <= 0;
+	// 	end
+	// 	else begin
+	// 		azScanDir <= ~azScanDir;	
+	// 	end
+	// end
+	// always @(posedge isMarginY) begin
+	// 	if(targetDetected) begin
+	// 		elScanDir <= 0;
+	// 	end
+	// 	else begin
+	// 		elScanDir <= ~elScanDir;	
+	// 	end
+	// end
 
 	assign gate_w = ~io[31] ^ (((lineCount >= 10'd123) && (lineCount <= 10'd 133) && (columnCount >= 120) && (columnCount <= 121))
 						|| ((lineCount >= 10'd127) && (lineCount <= 10'd 129) && (columnCount >= 116) && (columnCount <= 125)));
@@ -116,6 +135,6 @@ module cpld_toplevel(
 	// assign io[32] = 1;
 	// assign io[33] = 1;
 
-	// assign led[0] = azOut;
-	// assign led[1] = elOut;
+	assign led[0] = isTarget;
+	// assign led[1] = isTarget;
 endmodule

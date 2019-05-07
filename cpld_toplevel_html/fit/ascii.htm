@@ -3,7 +3,7 @@
  
 cpldfit:  version P.20131013                        Xilinx Inc.
                                   Fitter Report
-Design Name: cpld_toplevel                       Date:  4-30-2019,  2:49PM
+Design Name: cpld_toplevel                       Date:  5- 7-2019,  1:36PM
 Device Used: XC2C64A-5-VQ44
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-56 /64  ( 87%) 139 /224  ( 62%) 112 /160  ( 70%) 48 /64  ( 75%) 12 /33  ( 36%)
+56 /64  ( 87%) 139 /224  ( 62%) 107 /160  ( 67%) 48 /64  ( 75%) 12 /33  ( 36%)
 
 ** Function Block Resources **
 
 Function Mcells   FB Inps  Pterms   IO       CTC      CTR      CTS      CTE     
 Block    Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot Used/Tot
-FB1      16/16*    38/40*   43/56     5/ 8    0/1      0/1      0/1      0/1
-FB2      16/16*    20/40    37/56     0/ 9    1/1*     0/1      0/1      0/1
-FB3      16/16*    35/40    43/56     1/ 9    1/1*     0/1      0/1      0/1
-FB4       8/16     19/40    16/56     0/ 7    0/1      0/1      0/1      0/1
+FB1      16/16*    37/40    42/56     5/ 8    0/1      0/1      0/1      0/1
+FB2      16/16*    24/40    38/56     0/ 9    1/1*     0/1      0/1      0/1
+FB3      16/16*    28/40    43/56     2/ 9    0/1      0/1      0/1      0/1
+FB4       8/16     18/40    16/56     0/ 7    0/1      0/1      0/1      0/1
          -----    -------  -------   -----    ---      ---      ---      ---
-Total    56/64    112/160  139/224    6/33    2/4      0/4      0/4      0/4 
+Total    56/64    107/160  139/224    7/33    1/4      0/4      0/4      0/4 
 
 CTC - Control Term Clock
 CTR - Control Term Reset
@@ -43,8 +43,8 @@ Signal 'clk4mhz' mapped onto global clock net GCK2.
 
 Signal Type    Required     Mapped  |  Pin Type            Used    Total 
 ------------------------------------|------------------------------------
-Input         :    5           5    |  I/O              :     7     25
-Output        :    6           6    |  GCK/IO           :     1      3
+Input         :    4           4    |  I/O              :     7     25
+Output        :    7           7    |  GCK/IO           :     1      3
 Bidirectional :    0           0    |  GTS/IO           :     3      4
 GCK           :    1           1    |  GSR/IO           :     1      1
 GTS           :    0           0    |  
@@ -62,14 +62,25 @@ INFO:Cpld - Inferring BUFG constraint for signal 'clk4mhz' based upon the LOC
    your design. Note that for certain device families the output of a BUFG
    constraint can not drive a gated clock, and the BUFG constraint will be
    ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'gclk2' based upon the LOC
+   constraint 'P43'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
 WARNING:Cpld:936 - The output buffer 'led<1>_OBUF' is missing an input and will
-   be deleted.
-WARNING:Cpld:936 - The output buffer 'led<0>_OBUF' is missing an input and will
    be deleted.
 WARNING:Cpld:1007 - Removing unused input(s) 'burst'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
 WARNING:Cpld:1007 - Removing unused input(s) 'field'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'gclk2'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'io<28>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:968 - PULLUP specified for non tristated output 'io<33>' is
+   ignored.
+WARNING:Cpld:968 - PULLUP specified for non tristated output 'io<32>' is
+   ignored.
 WARNING:Cpld:968 - PULLUP specified for non tristated output 'io<30>' is
    ignored.
 WARNING:Cpld:968 - PULLUP specified for non tristated output 'io<29>' is
@@ -79,7 +90,7 @@ WARNING:Cpld - Unable to map all desired signals into function block, FB1.
    block to be placed.
 *************************  Summary of Mapped Logic  ************************
 
-** 6 Outputs **
+** 7 Outputs **
 
 Signal              Total Total Bank Loc     Pin   Pin       Pin     I/O      I/O       Slew Reg     Reg Init
 Name                Pts   Inps               No.   Type      Use     STD      Style     Rate Use     State
@@ -89,66 +100,66 @@ io<33>              7     13    2    FB1_10  33    GTS/I/O   O       LVCMOS33   
 io<32>              7     13    2    FB1_11  32    GTS/I/O   O       LVCMOS33           FAST DFF     RESET
 io<30>              5     13    2    FB1_13  30    GSR/I/O   O       LVCMOS33           FAST DFF     RESET
 io<29>              6     10    2    FB3_1   29    I/O       O       LVCMOS33           FAST DFF     RESET
+led<0>              1     1     2    FB3_12  20    I/O       O       LVCMOS33           FAST         
 
-** 50 Buried Nodes **
+** 49 Buried Nodes **
 
 Signal              Total Total Loc     Reg     Reg Init
 Name                Pts   Inps          Use     State
-columnCount<8>      2     10    FB1_3   TFF     RESET
-columnCount<5>      2     7     FB1_4   TFF     RESET
-columnCount<4>      2     6     FB1_5   TFF     RESET
-columnCount<3>      2     5     FB1_6   TFF     RESET
-columnCount<2>      2     4     FB1_7   TFF     RESET
-targetColumn<2>     2     4     FB1_8   DFF     RESET
-columnCount<7>      2     9     FB1_9   TFF     RESET
-columnCount<6>      2     8     FB1_12  TFF     RESET
-targetColumn<1>     2     4     FB1_14  DFF     RESET
-targetColumn<0>     2     4     FB1_15  DFF     RESET
-targetDetected      2     3     FB1_16  DFF     RESET
-lineCount<4>        3     7     FB2_1   TFF     RESET
-lineCount<3>        3     6     FB2_2   TFF     RESET
-numColumn<4>        2     10    FB2_3   TFF     RESET
-numColumn<3>        2     9     FB2_4   TFF     RESET
-lineCount<2>        3     5     FB2_5   TFF     RESET
+columnCount<6>      2     8     FB1_3   TFF     RESET
+columnCount<3>      2     5     FB1_4   TFF     RESET
+columnCount<2>      2     4     FB1_5   TFF     RESET
+targetColumn<2>     2     4     FB1_6   DFF     RESET
+targetColumn<1>     2     4     FB1_7   DFF     RESET
+targetColumn<0>     2     4     FB1_8   DFF     RESET
+columnCount<5>      2     7     FB1_9   TFF     RESET
+columnCount<4>      2     6     FB1_12  TFF     RESET
+targetDetected      2     3     FB1_14  DFF     RESET
+refreshed           2     2     FB1_15  DEFF    RESET
+N_PZ_442            1     2     FB1_16          
+numColumn<0>        2     4     FB2_1   DFF     RESET
+N_PZ_301            2     3     FB2_2           
+lineCount<7>        3     10    FB2_3   TFF     RESET
+lineCount<8>        3     11    FB2_4   TFF     RESET
+lineCount<0>        2     3     FB2_5   DFF     RESET
 lineCount<1>        3     4     FB2_6   DFF     RESET
-lineCount<0>        2     3     FB2_7   DFF     RESET
-N_PZ_344            2     4     FB2_8           
-numColumn<2>        4     7     FB2_9   DFF     RESET
-N_PZ_258            2     7     FB2_10          
-numColumn<1>        3     6     FB2_11  DFF     RESET
-N_PZ_259            5     11    FB2_12          
-numColumn<5>        2     11    FB2_13  TFF     RESET
-numColumn<0>        2     5     FB2_14  DFF     RESET
+lineCount<2>        3     5     FB2_7   TFF     RESET
+lineCount<3>        3     6     FB2_8   TFF     RESET
+gate_w_BUFR         9     19    FB2_9           
+lineCount<4>        3     7     FB2_10  TFF     RESET
+columnCount<8>      2     10    FB2_11  TFF     RESET
+lineCount<5>        3     8     FB2_12  TFF     RESET
+lineCount<6>        3     9     FB2_13  TFF     RESET
+columnCount<7>      2     9     FB2_14  TFF     RESET
 columnCount<1>      2     3     FB2_15  DFF     RESET
 columnCount<0>      1     2     FB2_16  DFF     RESET
-targetLine<1>       2     4     FB3_2   DFF     RESET
-targetLine<0>       2     4     FB3_3   DFF     RESET
-targetColumn<7>     2     4     FB3_4   DFF     RESET
-targetColumn<6>     2     4     FB3_5   DFF     RESET
-targetColumn<8>     2     4     FB3_6   DFF     RESET
-targetColumn<5>     2     4     FB3_7   DFF     RESET
-targetColumn<4>     2     4     FB3_8   DFF     RESET
-targetColumn<3>     2     4     FB3_9   DFF     RESET
-lineCount<5>        3     8     FB3_10  TFF     RESET
-lineCount<6>        3     9     FB3_11  TFF     RESET
-lineCount<7>        3     10    FB3_12  TFF     RESET
-refreshed           2     2     FB3_13  DEFF    RESET
-lineCount<8>        3     11    FB3_14  TFF     RESET
+targetLine<0>       2     4     FB3_2   DFF     RESET
+targetColumn<8>     2     4     FB3_3   DFF     RESET
+N_PZ_309            2     7     FB3_4           
+N_PZ_259            5     10    FB3_5           
+targetColumn<7>     2     4     FB3_6   DFF     RESET
+numColumn<5>        3     9     FB3_7   TFF     RESET
+numColumn<4>        3     8     FB3_8   TFF     RESET
+numColumn<3>        3     7     FB3_9   TFF     RESET
+targetColumn<6>     2     4     FB3_10  DFF     RESET
+targetColumn<5>     2     4     FB3_11  DFF     RESET
+numColumn<2>        3     6     FB3_13  TFF     RESET
+targetColumn<4>     2     4     FB3_14  DFF     RESET
+targetColumn<3>     2     4     FB3_15  DFF     RESET
 
 Signal              Total Total Loc     Reg     Reg Init
 Name                Pts   Inps          Use     State
-gate_w_BUFR         9     19    FB3_15          
-N_PZ_439            1     2     FB3_16          
-N_PZ_300            2     3     FB4_4           
-targetLine<8>       2     4     FB4_5   DFF     RESET
-targetLine<7>       2     4     FB4_6   DFF     RESET
-targetLine<6>       2     4     FB4_8   DFF     RESET
-targetLine<5>       2     4     FB4_9   DFF     RESET
-targetLine<4>       2     4     FB4_10  DFF     RESET
-targetLine<3>       2     4     FB4_12  DFF     RESET
-targetLine<2>       2     4     FB4_16  DFF     RESET
+numColumn<1>        3     5     FB3_16  DFF     RESET
+targetLine<8>       2     4     FB4_4   DFF     RESET
+targetLine<7>       2     4     FB4_5   DFF     RESET
+targetLine<6>       2     4     FB4_6   DFF     RESET
+targetLine<5>       2     4     FB4_8   DFF     RESET
+targetLine<4>       2     4     FB4_9   DFF     RESET
+targetLine<3>       2     4     FB4_10  DFF     RESET
+targetLine<2>       2     4     FB4_12  DFF     RESET
+targetLine<1>       2     4     FB4_16  DFF     RESET
 
-** 6 Inputs **
+** 5 Inputs **
 
 Signal              Bank Loc     Pin   Pin       Pin     I/O      I/O
 Name                             No.   Type      Use     STD      Style
@@ -156,7 +167,6 @@ io<31>              2    FB1_12  31    GTS/I/O   I       LVCMOS33 PU
 csync               1    FB2_1   39    I/O       I       LVCMOS33 PU
 vsync               1    FB2_6   42    I/O       I       LVCMOS33 PU
 clk4mhz             1    FB2_10  1     GCK/I/O   GCK     LVCMOS33 PU
-io<28>              2    FB3_2   28    I/O       I       LVCMOS33 PU
 io<27>              2    FB3_3   27    I/O       I       LVCMOS33 PU
 
 Legend:
@@ -185,177 +195,176 @@ Pin Type/Use - I  - Input             GCK - Global clock
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               38/2
+Number of function block inputs used/remaining:               37/3
 Number of function block control terms used/remaining:        0/4
-Number of PLA product terms used/remaining:                   43/13
+Number of PLA product terms used/remaining:                   42/14
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 gate_b                        1     FB1_1   38   I/O     O                 
 gate_w                        1     FB1_2   37   I/O     O                 
-columnCount<8>                2     FB1_3   36   I/O     (b)               
-columnCount<5>                2     FB1_4        (b)     (b)               
-columnCount<4>                2     FB1_5        (b)     (b)               
-columnCount<3>                2     FB1_6        (b)     (b)               
-columnCount<2>                2     FB1_7        (b)     (b)               
-targetColumn<2>               2     FB1_8        (b)     (b)               
-columnCount<7>                2     FB1_9   34   GTS/I/O (b)               
+columnCount<6>                2     FB1_3   36   I/O     (b)               
+columnCount<3>                2     FB1_4        (b)     (b)               
+columnCount<2>                2     FB1_5        (b)     (b)               
+targetColumn<2>               2     FB1_6        (b)     (b)               
+targetColumn<1>               2     FB1_7        (b)     (b)               
+targetColumn<0>               2     FB1_8        (b)     (b)               
+columnCount<5>                2     FB1_9   34   GTS/I/O (b)               
 io<33>                        7     FB1_10  33   GTS/I/O O                 
 io<32>                        7     FB1_11  32   GTS/I/O O                 
-columnCount<6>                2     FB1_12  31   GTS/I/O I                 
+columnCount<4>                2     FB1_12  31   GTS/I/O I                 
 io<30>                        5     FB1_13  30   GSR/I/O O                 
-targetColumn<1>               2     FB1_14       (b)     (b)               
-targetColumn<0>               2     FB1_15       (b)     (b)               
-targetDetected                2     FB1_16       (b)     (b)               
+targetDetected                2     FB1_14       (b)     (b)               
+refreshed                     2     FB1_15       (b)     (b)               
+N_PZ_442                      1     FB1_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: N_PZ_258          14: io<30>            27: targetColumn<8> 
-  2: N_PZ_259          15: io<31>            28: targetDetected 
-  3: columnCount<0>    16: io<32>            29: targetLine<0> 
-  4: columnCount<1>    17: io<33>            30: targetLine<1> 
-  5: columnCount<2>    18: refreshed         31: targetLine<2> 
-  6: columnCount<3>    19: targetColumn<0>   32: targetLine<3> 
-  7: columnCount<4>    20: targetColumn<1>   33: targetLine<4> 
-  8: columnCount<5>    21: targetColumn<2>   34: targetLine<5> 
-  9: columnCount<6>    22: targetColumn<3>   35: targetLine<6> 
- 10: columnCount<7>    23: targetColumn<4>   36: targetLine<7> 
- 11: columnCount<8>    24: targetColumn<5>   37: targetLine<8> 
- 12: csync             25: targetColumn<6>   38: vsync 
- 13: gate_w_BUFR       26: targetColumn<7>  
+  1: N_PZ_259          14: io<31>            26: targetColumn<8> 
+  2: N_PZ_309          15: io<32>            27: targetDetected 
+  3: N_PZ_442          16: io<33>            28: targetLine<0> 
+  4: columnCount<0>    17: refreshed         29: targetLine<1> 
+  5: columnCount<1>    18: targetColumn<0>   30: targetLine<2> 
+  6: columnCount<2>    19: targetColumn<1>   31: targetLine<3> 
+  7: columnCount<3>    20: targetColumn<2>   32: targetLine<4> 
+  8: columnCount<4>    21: targetColumn<3>   33: targetLine<5> 
+  9: columnCount<5>    22: targetColumn<4>   34: targetLine<6> 
+ 10: columnCount<6>    23: targetColumn<5>   35: targetLine<7> 
+ 11: csync             24: targetColumn<6>   36: targetLine<8> 
+ 12: gate_w_BUFR       25: targetColumn<7>   37: vsync 
+ 13: io<30>           
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-gate_b            ..............X......................... 1       
-gate_w            ............X........................... 1       
-columnCount<8>    ..XXXXXXXXXX............................ 10      
-columnCount<5>    ..XXXXXX...X............................ 7       
-columnCount<4>    ..XXXXX....X............................ 6       
-columnCount<3>    ..XXXX.....X............................ 5       
-columnCount<2>    ..XXX......X............................ 4       
-targetColumn<2>   XX..X...............X................... 4       
-columnCount<7>    ..XXXXXXXX.X............................ 9       
-io<33>            ................XX.........XXXXXXXXXXX.. 13      
-io<32>            ...............X.XXXXXXXXXXX.........X.. 13      
-columnCount<6>    ..XXXXXXX..X............................ 8       
-io<30>            .............X...X.........XXXXXXXXXXX.. 13      
-targetColumn<1>   XX.X...............X.................... 4       
-targetColumn<0>   XXX...............X..................... 4       
-targetDetected    X..........................X.........X.. 3       
+gate_b            .............X.......................... 1       
+gate_w            ...........X............................ 1       
+columnCount<6>    ...XXXXXXXX............................. 8       
+columnCount<3>    ...XXXX...X............................. 5       
+columnCount<2>    ...XXX....X............................. 4       
+targetColumn<2>   XX...X.............X.................... 4       
+targetColumn<1>   XX..X.............X..................... 4       
+targetColumn<0>   XX.X.............X...................... 4       
+columnCount<5>    ...XXXXXX.X............................. 7       
+io<33>            ...............XX.........XXXXXXXXXXX... 13      
+io<32>            ..............X.XXXXXXXXXXX.........X... 13      
+columnCount<4>    ...XXXXX..X............................. 6       
+io<30>            ............X...X.........XXXXXXXXXXX... 13      
+targetDetected    XX........................X............. 3       
+refreshed         ..X.................................X... 2       
+N_PZ_442          ................X...................X... 2       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB2  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               20/20
+Number of function block inputs used/remaining:               24/16
 Number of function block control terms used/remaining:        1/3
-Number of PLA product terms used/remaining:                   37/19
+Number of PLA product terms used/remaining:                   38/18
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
-lineCount<4>                  3     FB2_1   39   I/O     I      +          
-lineCount<3>                  3     FB2_2   40   I/O     (b)    +          
-numColumn<4>                  2     FB2_3        (b)     (b)               
-numColumn<3>                  2     FB2_4        (b)     (b)               
-lineCount<2>                  3     FB2_5   41   I/O     (b)    +          
+numColumn<0>                  2     FB2_1   39   I/O     I                 
+N_PZ_301                      2     FB2_2   40   I/O     (b)               
+lineCount<7>                  3     FB2_3        (b)     (b)    +          
+lineCount<8>                  3     FB2_4        (b)     (b)    +          
+lineCount<0>                  2     FB2_5   41   I/O     (b)    +          
 lineCount<1>                  3     FB2_6   42   I/O     I      +          
-lineCount<0>                  2     FB2_7   43   GCK/I/O (b)    +          
-N_PZ_344                      2     FB2_8   44   GCK/I/O (b)               
-numColumn<2>                  4     FB2_9        (b)     (b)               
-N_PZ_258                      2     FB2_10  1    GCK/I/O GCK               
-numColumn<1>                  3     FB2_11       (b)     (b)               
-N_PZ_259                      5     FB2_12  2    I/O     (b)               
-numColumn<5>                  2     FB2_13  3    I/O     (b)               
-numColumn<0>                  2     FB2_14       (b)     (b)               
+lineCount<2>                  3     FB2_7   43   GCK/I/O (b)    +          
+lineCount<3>                  3     FB2_8   44   GCK/I/O (b)    +          
+gate_w_BUFR                   9     FB2_9        (b)     (b)               
+lineCount<4>                  3     FB2_10  1    GCK/I/O GCK    +          
+columnCount<8>                2     FB2_11       (b)     (b)               
+lineCount<5>                  3     FB2_12  2    I/O     (b)    +          
+lineCount<6>                  3     FB2_13  3    I/O     (b)    +          
+columnCount<7>                2     FB2_14       (b)     (b)               
 columnCount<1>                2     FB2_15       (b)     (b)               
 columnCount<0>                1     FB2_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: N_PZ_259           8: lineCount<0>      15: numColumn<2> 
-  2: N_PZ_344           9: lineCount<1>      16: numColumn<3> 
-  3: columnCount<0>    10: lineCount<2>      17: numColumn<4> 
-  4: columnCount<1>    11: lineCount<3>      18: numColumn<5> 
-  5: csync             12: lineCount<4>      19: targetDetected 
-  6: io<27>            13: numColumn<0>      20: vsync 
-  7: io<28>            14: numColumn<1>     
+  1: N_PZ_301           9: columnCount<7>    17: lineCount<3> 
+  2: columnCount<0>    10: columnCount<8>    18: lineCount<4> 
+  3: columnCount<1>    11: csync             19: lineCount<5> 
+  4: columnCount<2>    12: io<27>            20: lineCount<6> 
+  5: columnCount<3>    13: io<31>            21: lineCount<7> 
+  6: columnCount<4>    14: lineCount<0>      22: lineCount<8> 
+  7: columnCount<5>    15: lineCount<1>      23: numColumn<0> 
+  8: columnCount<6>    16: lineCount<2>      24: vsync 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-lineCount<4>      ....X..XXXXX.......X.................... 7       
-lineCount<3>      ....X..XXXX........X.................... 6       
-numColumn<4>      .X..XXX.....XXXXX..X.................... 10      
-numColumn<3>      .X..XXX.....XXXX...X.................... 9       
-lineCount<2>      ....X..XXX.........X.................... 5       
-lineCount<1>      ....X..XX..........X.................... 4       
-lineCount<0>      ....X..X...........X.................... 3       
-N_PZ_344          ....XXX............X.................... 4       
-numColumn<2>      ....XXX.....XXX....X.................... 7       
-N_PZ_258          X............XXXXX.X.................... 7       
-numColumn<1>      ....XXX.....XX.....X.................... 6       
-N_PZ_259          ....XXX.....XXXXXXXX.................... 11      
-numColumn<5>      .X..XXX.....XXXXXX.X.................... 11      
-numColumn<0>      ....XXX.....X......X.................... 5       
-columnCount<1>    ..XXX................................... 3       
-columnCount<0>    ..X.X................................... 2       
+numColumn<0>      ..........XX..........XX................ 4       
+N_PZ_301          ..XXX................................... 3       
+lineCount<7>      ..........X..XXXXXXXX..X................ 10      
+lineCount<8>      ..........X..XXXXXXXXX.X................ 11      
+lineCount<0>      ..........X..X.........X................ 3       
+lineCount<1>      ..........X..XX........X................ 4       
+lineCount<2>      ..........X..XXX.......X................ 5       
+lineCount<3>      ..........X..XXXX......X................ 6       
+gate_w_BUFR       X.XXXXXXXX..XXXXXXXXXX.................. 19      
+lineCount<4>      ..........X..XXXXX.....X................ 7       
+columnCount<8>    .XXXXXXXXXX............................. 10      
+lineCount<5>      ..........X..XXXXXX....X................ 8       
+lineCount<6>      ..........X..XXXXXXX...X................ 9       
+columnCount<7>    .XXXXXXXX.X............................. 9       
+columnCount<1>    .XX.......X............................. 3       
+columnCount<0>    .X........X............................. 2       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB3  ***********************************
 This function block is part of I/O Bank number:               2
-Number of function block inputs used/remaining:               35/5
-Number of function block control terms used/remaining:        1/3
+Number of function block inputs used/remaining:               28/12
+Number of function block control terms used/remaining:        0/4
 Number of PLA product terms used/remaining:                   43/13
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
 Name                          Pt            No.  Type    Use   
 io<29>                        6     FB3_1   29   I/O     O                 
-targetLine<1>                 2     FB3_2   28   I/O     I                 
-targetLine<0>                 2     FB3_3   27   I/O     I                 
-targetColumn<7>               2     FB3_4        (b)     (b)               
-targetColumn<6>               2     FB3_5        (b)     (b)               
-targetColumn<8>               2     FB3_6   23   I/O     (b)               
-targetColumn<5>               2     FB3_7        (b)     (b)               
-targetColumn<4>               2     FB3_8        (b)     (b)               
-targetColumn<3>               2     FB3_9        (b)     (b)               
-lineCount<5>                  3     FB3_10  22   I/O     (b)    +          
-lineCount<6>                  3     FB3_11  21   I/O     (b)    +          
-lineCount<7>                  3     FB3_12  20   I/O     (b)    +          
-refreshed                     2     FB3_13       (b)     (b)               
-lineCount<8>                  3     FB3_14  19   I/O     (b)    +          
-gate_w_BUFR                   9     FB3_15  18   I/O     (b)               
-N_PZ_439                      1     FB3_16       (b)     (b)               
+targetLine<0>                 2     FB3_2   28   I/O     (b)               
+targetColumn<8>               2     FB3_3   27   I/O     I                 
+N_PZ_309                      2     FB3_4        (b)     (b)               
+N_PZ_259                      5     FB3_5        (b)     (b)               
+targetColumn<7>               2     FB3_6   23   I/O     (b)               
+numColumn<5>                  3     FB3_7        (b)     (b)               
+numColumn<4>                  3     FB3_8        (b)     (b)               
+numColumn<3>                  3     FB3_9        (b)     (b)               
+targetColumn<6>               2     FB3_10  22   I/O     (b)               
+targetColumn<5>               2     FB3_11  21   I/O     (b)               
+led<0>                        1     FB3_12  20   I/O     O                 
+numColumn<2>                  3     FB3_13       (b)     (b)               
+targetColumn<4>               2     FB3_14  19   I/O     (b)               
+targetColumn<3>               2     FB3_15  18   I/O     (b)               
+numColumn<1>                  3     FB3_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: N_PZ_258          13: csync             25: refreshed 
-  2: N_PZ_259          14: io<29>            26: targetColumn<3> 
-  3: N_PZ_300          15: io<31>            27: targetColumn<4> 
-  4: N_PZ_439          16: lineCount<0>      28: targetColumn<5> 
-  5: columnCount<1>    17: lineCount<1>      29: targetColumn<6> 
-  6: columnCount<2>    18: lineCount<2>      30: targetColumn<7> 
-  7: columnCount<3>    19: lineCount<3>      31: targetColumn<8> 
-  8: columnCount<4>    20: lineCount<4>      32: targetDetected 
-  9: columnCount<5>    21: lineCount<5>      33: targetLine<0> 
- 10: columnCount<6>    22: lineCount<6>      34: targetLine<1> 
- 11: columnCount<7>    23: lineCount<7>      35: vsync 
- 12: columnCount<8>    24: lineCount<8>     
+  1: N_PZ_259          11: io<29>            20: targetColumn<3> 
+  2: N_PZ_309          12: lineCount<0>      21: targetColumn<4> 
+  3: columnCount<3>    13: numColumn<0>      22: targetColumn<5> 
+  4: columnCount<4>    14: numColumn<1>      23: targetColumn<6> 
+  5: columnCount<5>    15: numColumn<2>      24: targetColumn<7> 
+  6: columnCount<6>    16: numColumn<3>      25: targetColumn<8> 
+  7: columnCount<7>    17: numColumn<4>      26: targetDetected 
+  8: columnCount<8>    18: numColumn<5>      27: targetLine<0> 
+  9: csync             19: refreshed         28: vsync 
+ 10: io<27>           
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-io<29>            .............X..........XXXXXXXX..X..... 10      
-targetLine<1>     XX..............X................X...... 4       
-targetLine<0>     XX.............X................X....... 4       
-targetColumn<7>   XX........X..................X.......... 4       
-targetColumn<6>   XX.......X..................X........... 4       
-targetColumn<8>   XX.........X..................X......... 4       
-targetColumn<5>   XX......X..................X............ 4       
-targetColumn<4>   XX.....X..................X............. 4       
-targetColumn<3>   XX....X..................X.............. 4       
-lineCount<5>      ............X..XXXXXX.............X..... 8       
-lineCount<6>      ............X..XXXXXXX............X..... 9       
-lineCount<7>      ............X..XXXXXXXX...........X..... 10      
-refreshed         ...X..............................X..... 2       
-lineCount<8>      ............X..XXXXXXXXX..........X..... 11      
-gate_w_BUFR       ..X.XXXXXXXX..XXXXXXXXXX................ 19      
-N_PZ_439          ........................X.........X..... 2       
+io<29>            ..........X.......XXXXXXXX.X............ 10      
+targetLine<0>     XX.........X..............X............. 4       
+targetColumn<8>   XX.....X................X............... 4       
+N_PZ_309          X............XXXXX.........X............ 7       
+N_PZ_259          ........XX..XXXXXX.......X.X............ 10      
+targetColumn<7>   XX....X................X................ 4       
+numColumn<5>      ........XX..XXXXXX.........X............ 9       
+numColumn<4>      ........XX..XXXXX..........X............ 8       
+numColumn<3>      ........XX..XXXX...........X............ 7       
+targetColumn<6>   XX...X................X................. 4       
+targetColumn<5>   XX..X................X.................. 4       
+led<0>            .........X.............................. 1       
+numColumn<2>      ........XX..XXX............X............ 6       
+targetColumn<4>   XX.X................X................... 4       
+targetColumn<3>   XXX................X.................... 4       
+numColumn<1>      ........XX..XX.............X............ 5       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *********************************** FB4  ***********************************
 This function block is part of I/O Bank number:               1
-Number of function block inputs used/remaining:               19/21
+Number of function block inputs used/remaining:               18/22
 Number of function block control terms used/remaining:        0/4
 Number of PLA product terms used/remaining:                   16/40
 Signal                        Total Loc     Pin  Pin     Pin   CTC CTR CTS CTE
@@ -363,39 +372,38 @@ Name                          Pt            No.  Type    Use
 (unused)                      0     FB4_1   5    I/O           
 (unused)                      0     FB4_2   6    I/O           
 (unused)                      0     FB4_3        (b)           
-N_PZ_300                      2     FB4_4        (b)     (b)               
-targetLine<8>                 2     FB4_5        (b)     (b)               
-targetLine<7>                 2     FB4_6        (b)     (b)               
+targetLine<8>                 2     FB4_4        (b)     (b)               
+targetLine<7>                 2     FB4_5        (b)     (b)               
+targetLine<6>                 2     FB4_6        (b)     (b)               
 (unused)                      0     FB4_7   8    I/O           
-targetLine<6>                 2     FB4_8        (b)     (b)               
-targetLine<5>                 2     FB4_9        (b)     (b)               
-targetLine<4>                 2     FB4_10       (b)     (b)               
+targetLine<5>                 2     FB4_8        (b)     (b)               
+targetLine<4>                 2     FB4_9        (b)     (b)               
+targetLine<3>                 2     FB4_10       (b)     (b)               
 (unused)                      0     FB4_11  12   I/O           
-targetLine<3>                 2     FB4_12       (b)     (b)               
+targetLine<2>                 2     FB4_12       (b)     (b)               
 (unused)                      0     FB4_13  13   I/O           
 (unused)                      0     FB4_14  14   I/O           
 (unused)                      0     FB4_15  16   I/O           
-targetLine<2>                 2     FB4_16       (b)     (b)               
+targetLine<1>                 2     FB4_16       (b)     (b)               
 
 Signals Used by Logic in Function Block
-  1: N_PZ_258           8: lineCount<4>      14: targetLine<3> 
-  2: N_PZ_259           9: lineCount<5>      15: targetLine<4> 
-  3: columnCount<1>    10: lineCount<6>      16: targetLine<5> 
-  4: columnCount<2>    11: lineCount<7>      17: targetLine<6> 
-  5: columnCount<3>    12: lineCount<8>      18: targetLine<7> 
-  6: lineCount<2>      13: targetLine<2>     19: targetLine<8> 
-  7: lineCount<3>     
+  1: N_PZ_259           7: lineCount<5>      13: targetLine<3> 
+  2: N_PZ_309           8: lineCount<6>      14: targetLine<4> 
+  3: lineCount<1>       9: lineCount<7>      15: targetLine<5> 
+  4: lineCount<2>      10: lineCount<8>      16: targetLine<6> 
+  5: lineCount<3>      11: targetLine<1>     17: targetLine<7> 
+  6: lineCount<4>      12: targetLine<2>     18: targetLine<8> 
 
 Signal                     1         2         3         4 FB      
 Name             0----+----0----+----0----+----0----+----0 Inputs  
-N_PZ_300          ..XXX................................... 3       
-targetLine<8>     XX.........X......X..................... 4       
-targetLine<7>     XX........X......X...................... 4       
-targetLine<6>     XX.......X......X....................... 4       
-targetLine<5>     XX......X......X........................ 4       
-targetLine<4>     XX.....X......X......................... 4       
-targetLine<3>     XX....X......X.......................... 4       
-targetLine<2>     XX...X......X........................... 4       
+targetLine<8>     XX.......X.......X...................... 4       
+targetLine<7>     XX......X.......X....................... 4       
+targetLine<6>     XX.....X.......X........................ 4       
+targetLine<5>     XX....X.......X......................... 4       
+targetLine<4>     XX...X.......X.......................... 4       
+targetLine<3>     XX..X.......X........................... 4       
+targetLine<2>     XX.X.......X............................ 4       
+targetLine<1>     XXX.......X............................. 4       
                  0----+----1----+----2----+----3----+----4
                            0         0         0         0
 *******************************  Equations  ********************************
@@ -403,30 +411,26 @@ targetLine<2>     XX...X......X........................... 4
 ********** Mapped Logic **********
 
 
-N_PZ_258 <= ((NOT vsync AND NOT numColumn(2) AND NOT numColumn(3) AND 
-	NOT numColumn(4) AND NOT numColumn(5) AND NOT N_PZ_259)
-	OR (NOT vsync AND NOT numColumn(1) AND NOT numColumn(3) AND 
-	NOT numColumn(4) AND NOT numColumn(5) AND NOT N_PZ_259));
-
-
 N_PZ_259 <= ((csync AND NOT vsync)
 	OR (NOT vsync AND targetDetected)
-	OR (NOT vsync AND io(28) AND io(27))
-	OR (NOT vsync AND numColumn(2) AND numColumn(0) AND 
-	NOT numColumn(1) AND NOT numColumn(3) AND NOT numColumn(4) AND NOT numColumn(5))
-	OR (NOT vsync AND NOT numColumn(2) AND NOT numColumn(0) AND 
-	NOT numColumn(1) AND NOT numColumn(3) AND NOT numColumn(4) AND NOT numColumn(5)));
+	OR (NOT vsync AND NOT io(27))
+	OR (NOT vsync AND numColumn(0) AND NOT numColumn(1) AND 
+	numColumn(2) AND NOT numColumn(3) AND NOT numColumn(4) AND NOT numColumn(5))
+	OR (NOT vsync AND NOT numColumn(0) AND NOT numColumn(1) AND 
+	NOT numColumn(2) AND NOT numColumn(3) AND NOT numColumn(4) AND NOT numColumn(5)));
 
 
-N_PZ_300 <= ((NOT columnCount(2) AND NOT columnCount(3))
+N_PZ_301 <= ((NOT columnCount(2) AND NOT columnCount(3))
 	OR (columnCount(2) AND columnCount(1) AND columnCount(3)));
 
 
-N_PZ_344 <= ((vsync)
-	OR (NOT csync AND io(28) AND io(27)));
+N_PZ_309 <= ((NOT vsync AND NOT N_PZ_259 AND NOT numColumn(1) AND NOT numColumn(3) AND 
+	NOT numColumn(4) AND NOT numColumn(5))
+	OR (NOT vsync AND NOT N_PZ_259 AND NOT numColumn(2) AND NOT numColumn(3) AND 
+	NOT numColumn(4) AND NOT numColumn(5)));
 
 
-N_PZ_439 <= (vsync AND NOT refreshed);
+N_PZ_442 <= (vsync AND NOT refreshed);
 
 FDCPE_columnCount0: FDCPE port map (columnCount(0),columnCount_D(0),clk4mhz,'0','0','1');
 columnCount_D(0) <= (NOT csync AND NOT columnCount(0));
@@ -479,7 +483,7 @@ gate_w_BUFR <= NOT io(31)
 	XOR ((NOT lineCount(1) AND NOT lineCount(3) AND NOT lineCount(2) AND 
 	NOT lineCount(4) AND NOT lineCount(5) AND NOT lineCount(6) AND lineCount(7) AND 
 	columnCount(4) AND columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND 
-	NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_300)
+	NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_301)
 	OR (NOT columnCount(2) AND NOT columnCount(1) AND columnCount(3) AND 
 	NOT lineCount(1) AND NOT lineCount(3) AND NOT lineCount(4) AND NOT lineCount(5) AND 
 	NOT lineCount(6) AND lineCount(7) AND columnCount(4) AND columnCount(5) AND 
@@ -491,7 +495,7 @@ gate_w_BUFR <= NOT io(31)
 	OR (lineCount(1) AND lineCount(0) AND lineCount(3) AND 
 	lineCount(2) AND lineCount(4) AND lineCount(5) AND lineCount(6) AND 
 	NOT lineCount(7) AND columnCount(4) AND columnCount(5) AND columnCount(6) AND 
-	NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_300)
+	NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8) AND NOT N_PZ_301)
 	OR (io(31) AND NOT columnCount(2) AND NOT columnCount(1) AND 
 	columnCount(3) AND lineCount(3) AND lineCount(2) AND lineCount(4) AND 
 	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND 
@@ -501,7 +505,7 @@ gate_w_BUFR <= NOT io(31)
 	lineCount(3) AND lineCount(2) AND lineCount(4) AND lineCount(5) AND 
 	lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND columnCount(5) AND 
 	columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND NOT columnCount(8) AND 
-	NOT N_PZ_300)
+	NOT N_PZ_301)
 	OR (io(31) AND NOT columnCount(2) AND NOT columnCount(1) AND 
 	columnCount(3) AND lineCount(1) AND lineCount(0) AND lineCount(3) AND 
 	lineCount(4) AND lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND 
@@ -511,7 +515,7 @@ gate_w_BUFR <= NOT io(31)
 	lineCount(1) AND lineCount(0) AND lineCount(3) AND lineCount(4) AND 
 	lineCount(5) AND lineCount(6) AND NOT lineCount(7) AND columnCount(4) AND 
 	columnCount(5) AND columnCount(6) AND NOT columnCount(7) AND NOT lineCount(8) AND 
-	NOT columnCount(8) AND NOT N_PZ_300));
+	NOT columnCount(8) AND NOT N_PZ_301));
 
 
 gate_w <= gate_w_BUFR;
@@ -577,6 +581,9 @@ io_D(33) <= NOT (((NOT vsync AND NOT io(33))
 	targetLine(7) AND NOT targetLine(8) AND NOT targetLine(2) AND NOT targetLine(3) AND 
 	NOT targetLine(4) AND NOT targetLine(6) AND NOT targetLine(0) AND NOT targetLine(1))));
 
+
+led(0) <= NOT io(27);
+
 FDCPE_lineCount0: FDCPE port map (lineCount(0),lineCount_D(0),csync,'0','0','1');
 lineCount_D(0) <= (NOT vsync AND NOT lineCount(0));
 
@@ -622,115 +629,115 @@ lineCount_T(8) <= ((vsync AND lineCount(8))
 
 FDCPE_numColumn0: FDCPE port map (numColumn(0),numColumn_D(0),clk4mhz,'0','0','1');
 numColumn_D(0) <= ((vsync AND numColumn(0))
-	OR (NOT csync AND NOT vsync AND io(28) AND io(27) AND NOT numColumn(0)));
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND NOT numColumn(0)));
 
 FDCPE_numColumn1: FDCPE port map (numColumn(1),numColumn_D(1),clk4mhz,'0','0','1');
 numColumn_D(1) <= ((vsync AND numColumn(1))
-	OR (NOT csync AND NOT vsync AND io(28) AND io(27) AND numColumn(0) AND 
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND numColumn(0) AND 
 	NOT numColumn(1))
-	OR (NOT csync AND NOT vsync AND io(28) AND io(27) AND NOT numColumn(0) AND 
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND NOT numColumn(0) AND 
 	numColumn(1)));
 
-FDCPE_numColumn2: FDCPE port map (numColumn(2),numColumn_D(2),clk4mhz,'0','0','1');
-numColumn_D(2) <= ((vsync AND numColumn(2))
-	OR (NOT csync AND NOT vsync AND numColumn(2) AND io(28) AND io(27) AND 
-	NOT numColumn(0))
-	OR (NOT csync AND NOT vsync AND numColumn(2) AND io(28) AND io(27) AND 
-	NOT numColumn(1))
-	OR (NOT csync AND NOT vsync AND NOT numColumn(2) AND io(28) AND io(27) AND 
-	numColumn(0) AND numColumn(1)));
+FTCPE_numColumn2: FTCPE port map (numColumn(2),numColumn_T(2),clk4mhz,'0','0','1');
+numColumn_T(2) <= ((csync AND NOT vsync AND numColumn(2))
+	OR (NOT vsync AND io(27) AND numColumn(2))
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND numColumn(0) AND 
+	numColumn(1)));
 
 FTCPE_numColumn3: FTCPE port map (numColumn(3),numColumn_T(3),clk4mhz,'0','0','1');
-numColumn_T(3) <= ((numColumn(3) AND NOT N_PZ_344)
-	OR (NOT csync AND NOT vsync AND numColumn(2) AND io(28) AND io(27) AND 
-	numColumn(0) AND numColumn(1)));
+numColumn_T(3) <= ((csync AND NOT vsync AND numColumn(3))
+	OR (NOT vsync AND io(27) AND numColumn(3))
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND numColumn(0) AND 
+	numColumn(1) AND numColumn(2)));
 
 FTCPE_numColumn4: FTCPE port map (numColumn(4),numColumn_T(4),clk4mhz,'0','0','1');
-numColumn_T(4) <= ((NOT N_PZ_344 AND numColumn(4))
-	OR (NOT csync AND NOT vsync AND numColumn(2) AND io(28) AND io(27) AND 
-	numColumn(0) AND numColumn(1) AND numColumn(3)));
+numColumn_T(4) <= ((csync AND NOT vsync AND numColumn(4))
+	OR (NOT vsync AND io(27) AND numColumn(4))
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND numColumn(0) AND 
+	numColumn(1) AND numColumn(2) AND numColumn(3)));
 
 FTCPE_numColumn5: FTCPE port map (numColumn(5),numColumn_T(5),clk4mhz,'0','0','1');
-numColumn_T(5) <= ((NOT N_PZ_344 AND numColumn(5))
-	OR (NOT csync AND NOT vsync AND numColumn(2) AND io(28) AND io(27) AND 
-	numColumn(0) AND numColumn(1) AND numColumn(3) AND numColumn(4)));
+numColumn_T(5) <= ((csync AND NOT vsync AND numColumn(5))
+	OR (NOT vsync AND io(27) AND numColumn(5))
+	OR (NOT csync AND NOT vsync AND NOT io(27) AND numColumn(0) AND 
+	numColumn(1) AND numColumn(2) AND numColumn(3) AND numColumn(4)));
 
-FDCPE_refreshed: FDCPE port map (refreshed,NOT vsync,clk4mhz,'0','0',NOT N_PZ_439);
+FDCPE_refreshed: FDCPE port map (refreshed,NOT vsync,clk4mhz,'0','0',NOT N_PZ_442);
 
 FDCPE_targetColumn0: FDCPE port map (targetColumn(0),targetColumn_D(0),clk4mhz,'0','0','1');
-targetColumn_D(0) <= ((columnCount(0) AND N_PZ_258)
+targetColumn_D(0) <= ((columnCount(0) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(0)));
 
 FDCPE_targetColumn1: FDCPE port map (targetColumn(1),targetColumn_D(1),clk4mhz,'0','0','1');
-targetColumn_D(1) <= ((columnCount(1) AND N_PZ_258)
+targetColumn_D(1) <= ((columnCount(1) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(1)));
 
 FDCPE_targetColumn2: FDCPE port map (targetColumn(2),targetColumn_D(2),clk4mhz,'0','0','1');
-targetColumn_D(2) <= ((columnCount(2) AND N_PZ_258)
+targetColumn_D(2) <= ((columnCount(2) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(2)));
 
 FDCPE_targetColumn3: FDCPE port map (targetColumn(3),targetColumn_D(3),clk4mhz,'0','0','1');
-targetColumn_D(3) <= ((columnCount(3) AND N_PZ_258)
+targetColumn_D(3) <= ((columnCount(3) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(3)));
 
 FDCPE_targetColumn4: FDCPE port map (targetColumn(4),targetColumn_D(4),clk4mhz,'0','0','1');
-targetColumn_D(4) <= ((columnCount(4) AND N_PZ_258)
+targetColumn_D(4) <= ((columnCount(4) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(4)));
 
 FDCPE_targetColumn5: FDCPE port map (targetColumn(5),targetColumn_D(5),clk4mhz,'0','0','1');
-targetColumn_D(5) <= ((columnCount(5) AND N_PZ_258)
+targetColumn_D(5) <= ((columnCount(5) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(5)));
 
 FDCPE_targetColumn6: FDCPE port map (targetColumn(6),targetColumn_D(6),clk4mhz,'0','0','1');
-targetColumn_D(6) <= ((columnCount(6) AND N_PZ_258)
+targetColumn_D(6) <= ((columnCount(6) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(6)));
 
 FDCPE_targetColumn7: FDCPE port map (targetColumn(7),targetColumn_D(7),clk4mhz,'0','0','1');
-targetColumn_D(7) <= ((columnCount(7) AND N_PZ_258)
+targetColumn_D(7) <= ((columnCount(7) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(7)));
 
 FDCPE_targetColumn8: FDCPE port map (targetColumn(8),targetColumn_D(8),clk4mhz,'0','0','1');
-targetColumn_D(8) <= ((columnCount(8) AND N_PZ_258)
+targetColumn_D(8) <= ((columnCount(8) AND N_PZ_309)
 	OR (N_PZ_259 AND targetColumn(8)));
 
 FDCPE_targetDetected: FDCPE port map (targetDetected,targetDetected_D,clk4mhz,'0','0','1');
-targetDetected_D <= ((N_PZ_258)
-	OR (NOT vsync AND targetDetected));
+targetDetected_D <= ((N_PZ_309)
+	OR (targetDetected AND N_PZ_259));
 
 FDCPE_targetLine0: FDCPE port map (targetLine(0),targetLine_D(0),clk4mhz,'0','0','1');
-targetLine_D(0) <= ((lineCount(0) AND N_PZ_258)
+targetLine_D(0) <= ((lineCount(0) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(0)));
 
 FDCPE_targetLine1: FDCPE port map (targetLine(1),targetLine_D(1),clk4mhz,'0','0','1');
-targetLine_D(1) <= ((lineCount(1) AND N_PZ_258)
+targetLine_D(1) <= ((lineCount(1) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(1)));
 
 FDCPE_targetLine2: FDCPE port map (targetLine(2),targetLine_D(2),clk4mhz,'0','0','1');
-targetLine_D(2) <= ((lineCount(2) AND N_PZ_258)
+targetLine_D(2) <= ((lineCount(2) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(2)));
 
 FDCPE_targetLine3: FDCPE port map (targetLine(3),targetLine_D(3),clk4mhz,'0','0','1');
-targetLine_D(3) <= ((lineCount(3) AND N_PZ_258)
+targetLine_D(3) <= ((lineCount(3) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(3)));
 
 FDCPE_targetLine4: FDCPE port map (targetLine(4),targetLine_D(4),clk4mhz,'0','0','1');
-targetLine_D(4) <= ((lineCount(4) AND N_PZ_258)
+targetLine_D(4) <= ((lineCount(4) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(4)));
 
 FDCPE_targetLine5: FDCPE port map (targetLine(5),targetLine_D(5),clk4mhz,'0','0','1');
-targetLine_D(5) <= ((lineCount(5) AND N_PZ_258)
+targetLine_D(5) <= ((lineCount(5) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(5)));
 
 FDCPE_targetLine6: FDCPE port map (targetLine(6),targetLine_D(6),clk4mhz,'0','0','1');
-targetLine_D(6) <= ((lineCount(6) AND N_PZ_258)
+targetLine_D(6) <= ((lineCount(6) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(6)));
 
 FDCPE_targetLine7: FDCPE port map (targetLine(7),targetLine_D(7),clk4mhz,'0','0','1');
-targetLine_D(7) <= ((lineCount(7) AND N_PZ_258)
+targetLine_D(7) <= ((lineCount(7) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(7)));
 
 FDCPE_targetLine8: FDCPE port map (targetLine(8),targetLine_D(8),clk4mhz,'0','0','1');
-targetLine_D(8) <= ((lineCount(8) AND N_PZ_258)
+targetLine_D(8) <= ((lineCount(8) AND N_PZ_309)
 	OR (N_PZ_259 AND targetLine(8)));
 
 
@@ -770,7 +777,7 @@ No. Name                           No. Name
   3 TIE                              25 GND                           
   4 GND                              26 VCCIO-3.3                     
   5 TIE                              27 io<27>                        
-  6 TIE                              28 io<28>                        
+  6 TIE                              28 TIE                           
   7 VCCIO-3.3                        29 io<29>                        
   8 TIE                              30 io<30>                        
   9 TDI                              31 io<31>                        
@@ -784,7 +791,7 @@ No. Name                           No. Name
  17 GND                              39 csync                         
  18 TIE                              40 TIE                           
  19 TIE                              41 TIE                           
- 20 TIE                              42 vsync                         
+ 20 led<0>                           42 vsync                         
  21 TIE                              43 TIE                           
  22 TIE                              44 TIE                           
 

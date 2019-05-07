@@ -17,6 +17,7 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:470 - bidirect pad net 'io<28>' has no legal driver
 
 Partition Implementation Status
 -------------------------------
@@ -27,9 +28,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   0
+  Number of warnings:   1
 
-Total memory usage is 4419828 kilobytes
+Total memory usage is 4419836 kilobytes
 
 Writing NGD file "cpld_toplevel.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

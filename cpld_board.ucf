@@ -5,7 +5,7 @@
 NET "clk4mhz"  LOC = "P1"   ; #    4      Mz clock
 #NET "clk1khz"  LOC = "P44"  ; #    976.5625 Hz clock
 
-#NET "gclk2"    LOC = "P43"  ; #    Mapped to pin 6 of J3 through resistor
+NET "gclk2"    LOC = "P43"  | PULLUP; #    Mapped to pin 6 of J3 through resistor
                               #    Can be used as clock or I/O
 
 #LEDs
@@ -23,8 +23,8 @@ NET "io<28>" LOC = "P28" | PULLUP;  # J3 Pin 3
 NET "io<29>" LOC = "P29" | PULLUP;  # J3 Pin 5
 NET "io<30>" LOC = "P30" | PULLUP;  # J3 Pin 7
 NET "io<31>" LOC = "P31" | PULLUP;  # J3 Pin 9
-NET "io<32>" LOC = "P32";  # J3 Pin 11
-NET "io<33>" LOC = "P33";  # J3 Pin 13
+NET "io<32>" LOC = "P32" | PULLUP;  # J3 Pin 11
+NET "io<33>" LOC = "P33" | PULLUP;  # J3 Pin 13
 #NET "azSpeed" LOC = "P32";  # J3 Pin 11
 #NET "elSpeed" LOC = "P33";  # J3 Pin 13
 
